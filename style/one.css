@@ -1,0 +1,22 @@
+@charset 'utf-8';
+body{
+	padding:5em;
+}
+.mid{
+	
+		margin:0 auto;
+		width:20em;
+	text-align:center;
+}
+.outside{
+	
+	width:20em;
+	margin:0 auto;
+	text-align:center;
+}
+a{
+	color:#666;
+}
+h1{
+	text-align:center;
+}
