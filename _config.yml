@@ -3,14 +3,14 @@
 # # # # # # # # # # # # #
 
 # Basic
-name:               "Kiko Plus"
+name:               "赵小白的博客"
 
 author:
-  facebook:         your-id
+  facebook:         15136858562
   youtubeUser:      your-id
   youtubeChannel:   your-id
   twitter:          your-id
-  github:           your-id
+  github:           zzzxb.github.io
   stackoverflow:    your-id
   quora:            your-id
   linkedin:         your-id
@@ -20,11 +20,11 @@ author:
   reddit:           your-id
   medium:           your-id
   tumblr:           your-id
-  email:            your-id@your-email.com
+  email:            15136858562@163.com
 
 copyright:
   year:             2017
-  name:             Kiko
+  name:             赵小白
 
 # Google-analytics
 google-analytics:
