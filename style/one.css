@@ -1,15 +1,16 @@
 @charset 'utf-8';
 body{
 	padding:5em;
+	background-image:url("../images/bgp.jpg");
 }
 .mid{
-		border:1px black solid;
+		
 		margin:0 auto;
 		width:40em;
 	text-align:center;
 }
 .outside{
-	border:1px black solid;
+	
 	width:20em;
 	margin:4px auto;
 	text-align:center;
