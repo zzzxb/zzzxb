@@ -40,20 +40,20 @@ All configuration is done via `_config.yml` file which you will find in your mai
 - Config your blog name.
 
 ```yml
-name: <blog-name>
+name: <赵小白的博客>
 ```
 
 - These configuration in `author:` is for links to icons in footer. If you want to add more link icons, modify `_includes/footer.html` file.
 
 ```yml
 author:
-  facebook:         your-id
+  facebook:         15136858562
   twitter:          your-id
-  github:           your-id
+  github:           zzzxb
   linkedin:         your-id
   medium:           your-id
   tumblr:           your-id
-  email:            your-id@your-email.com
+  email:            15136858562@163.com
 ```
 
 - Change copyright year and name in footer.
@@ -61,7 +61,7 @@ author:
 ```yml
 copyright:
   year:             2017
-  name:             Kiko
+  name:             ZXB
 ```
 
 ### Google analytics
