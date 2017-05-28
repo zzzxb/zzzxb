@@ -5,31 +5,61 @@
     <description>Actually, less is more!</description>
     <link>http://www.idearfree.com/</link>
     <atom:link href="http://www.idearfree.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 28 May 2017 20:12:09 +0800</pubDate>
-    <lastBuildDate>Sun, 28 May 2017 20:12:09 +0800</lastBuildDate>
+    <pubDate>Sun, 28 May 2017 22:47:39 +0800</pubDate>
+    <lastBuildDate>Sun, 28 May 2017 22:47:39 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
+        <title>About Git!</title>
         <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;诫子书&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#git&quot; id=&quot;markdown-toc-git&quot;&gt;关于Git我遇到的问题&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;First POST build by Jekyll.&lt;/p&gt;
+&lt;h2 id=&quot;git&quot;&gt;关于Git我遇到的问题&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.yiibai.com/git/&quot;&gt;Git教程&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;诫子书&lt;/h2&gt;
+&lt;p&gt;    今晚在使用git push时出现的问题&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/styles/images/jiezishu.jpg&quot; alt=&quot;诫子书&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;warning: push.default is unset; its implicit value has changed in
+Git 2.0 from &#39;matching&#39; to &#39;simple&#39;. To squelch this message
+and maintain the traditional behavior, use:
+  	git config --global push.default matching
+To squelch this message and adopt the new behavior now, use:
+  	git config --global push.default simple
+When push.default is set to &#39;matching&#39;, git will push local branches
+to the remote branches that already exist with the same name.
+Since Git 2.0, Git defaults to the more conservative &#39;simple&#39;
+behavior, which only pushes the current branch to the corresponding
+remote branch that &#39;git pull&#39; uses to update the current branch.
+See &#39;git help config&#39; and search for &#39;push.default&#39; for further information.
+(the &#39;simple&#39; mode was introduced in Git 1.7.11. Use the similar mode
+&#39;current&#39; instead of &#39;simple&#39; if you sometimes use older versions of Git)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&quot;#&quot;&gt;诸葛亮&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;    Git 从git 2.0版本以后开始使用matching(上边的信息就是来提示用户设置默认值的)&lt;/p&gt;
 
-&lt;p&gt;夫君子之行，静以修身，俭以养德。非淡泊(澹泊)无以明志，非宁静无以致远。夫学须静也，才须学也。非学无以广才，非志无以成学。淫慢则不能励精，险躁则不能冶性。
-年与时驰，意与日去，遂成枯落，多不接世，悲守穷庐，将复何及！&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#matching（匹配所有分支)
+matching 参数是 Git 1.x 的默认参数，也就是老的执行方式。其意是如果你执行 git push但没有指定分支，它将 push 所有你本地的分支到远程仓库中对应匹配的分支。
+&amp;lt;big&amp;gt;simple（匹配单个分支）&amp;lt;/big&amp;gt;
+simple参数是 Git 2.x 默认参数，意思是执行 git push 没有指定分支时，只有当前分支会被 push 到远程仓库。 所以如果我们想使用matching方式，可以在命令行输入： git config --global push.default matching 如果我们想使用simple方式，可以在命令行输入： git config --global push.default simple
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;    git push 失败总是无法上传&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;根据出错所提示的内容来解决问题,我遇到的是GitHub上电子邮件私密的问题,由于设置为私密外部访问时会拒绝访问并报错提示，然后百度了一下答案都是零零散散的达非所问，没搜出来我就把错误信息翻译了一下，提示到邮件无法访问的问题，修改后OK了.
+有时候搜索答案并非解决一个问题的好方法，只有在不断的报错中去自行摸索才是学习的好方法，他会让你对这个错误进行那么点了解，所以在摸爬滚打中成长并非不是一个好办法。
+最后也提醒下大家也是提醒我自己，不会英语并不是无法成功，但他可以使你少费很多时间去查看问题。 对计算机专业的人来讲,英语仅次于编程语言的重要性。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;                    &lt;img src=&quot;/styles/images/cheer.jpg&quot; alt=&quot;加油&quot; /&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 17 May 2017 13:31:01 +0800</pubDate>
-        <link>http://www.idearfree.com/jekyll/2017/05/17/welcome-to-jeky.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/jekyll/2017/05/17/welcome-to-jeky.html</guid>
+        <pubDate>Sat, 27 May 2017 22:03:01 +0800</pubDate>
+        <link>http://www.idearfree.com/jekyll/2017/05/27/About-Git.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/jekyll/2017/05/27/About-Git.html</guid>
         
         <category>jekyll</category>
         
@@ -56,11 +86,38 @@
 &lt;a href=&quot;http://jekyll.com.cn/&quot;&gt;Jekyll&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll Themes&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Wed, 17 May 2017 13:31:01 +0800</pubDate>
-        <link>http://www.idearfree.com/jekyll/2017/05/17/Welcome-to-Blog.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/jekyll/2017/05/17/Welcome-to-Blog.html</guid>
+        <pubDate>Sat, 27 May 2017 13:31:01 +0800</pubDate>
+        <link>http://www.idearfree.com/jekyll/2017/05/27/Welcome-to-Blog.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/jekyll/2017/05/27/Welcome-to-Blog.html</guid>
         
         <category>Blog</category>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;诫子书&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;诫子书&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/styles/images/jiezishu.jpg&quot; alt=&quot;诫子书&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot;&gt;诸葛亮&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;夫君子之行，静以修身，俭以养德。非淡泊(澹泊)无以明志，非宁静无以致远。夫学须静也，才须学也。非学无以广才，非志无以成学。淫慢则不能励精，险躁则不能冶性。
+年与时驰，意与日去，遂成枯落，多不接世，悲守穷庐，将复何及！&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 17 May 2017 13:31:01 +0800</pubDate>
+        <link>http://www.idearfree.com/jekyll/2017/05/17/welcome-to-jeky.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/jekyll/2017/05/17/welcome-to-jeky.html</guid>
+        
+        <category>jekyll</category>
         
         
         <category>jekyll</category>
