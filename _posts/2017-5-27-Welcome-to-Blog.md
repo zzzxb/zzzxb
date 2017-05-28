@@ -11,7 +11,6 @@ tag:About jekyll
 
 
 
-{{ '/styles/images/bsyj.png' | prepend: site.baseurl  }}
 关于建立博客
 ---------------------------
 	&nbsp;&nbsp;&nbsp;&nbsp;起初想建立一个博客，但是什么都不知到，然后稀里糊涂的到阿里云上去购买了一个万网域名和ESC空间结果什么都不会，
