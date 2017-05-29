@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>小白的书单 - 赵小白的博客</title>
+	<title>About Git! - 赵小白的博客</title>
 
 	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
 	<link rel="icon" href="/styles/images/favicon.jpg">
@@ -13,10 +13,10 @@
 	<link rel="stylesheet" href="/styles/css/index.css">
 	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/styles/css/syntax.css">
-	<link rel="canonical" href="/books/">
+	<link rel="canonical" href="/hello-blog/2017/05/27/About-Git.html">
 	<link rel="alternate" type="application/rss+xml" title="赵小白的博客" href="/feed.xml">
 	
-	<meta name="keywords" content="小白的书单, 赵小白的博客, 远方有多远,请你告诉我!">
+	<meta name="keywords" content="About Git!, 赵小白的博客, 远方有多远,请你告诉我!">
 	<meta name="description" content="远方有多远,请你告诉我!">
 
 	<script src="/styles/js/jquery.min.js"></script>
@@ -90,10 +90,10 @@
   <div class="container">
   	
   		<!--
-		    <h1>小白的书单</h1>
-		    <p>Post on  by <a href="/about">赵赵赵小白</a></p>
+		    <h1>About Git!</h1>
+		    <p>Post on May 27, 2017 by <a href="/about">赵赵赵小白</a></p>
 		-->
-		    <h1>远方有多远,请你告诉我!</h1>
+		    <h1>It's our wits that make us men.</h1>
     
   </div>
 </div>
@@ -102,7 +102,8 @@
 <div class="banner">
   <div class="container">
   	
-    	学而不思则罔，思而不学则殆。
+    	<a href="/categories/#Hello-Blog-ref">Hello-Blog</a>	/
+    	<a href="/tag/#Hello-Blog-ref">Hello-Blog</a>
     
   </div>
 </div>
@@ -156,32 +157,6 @@
       
 
       
-            
-          
-        
-      
-    
-      
-      
-      
-      
-
-      
-
-      
-            
-          
-        
-      
-    
-      
-      
-      
-      
-
-      
-
-      
             </ul>
           </li>
       
@@ -195,24 +170,78 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">小白的书单</h1>
+              <h1 class="post-title">About Git!</h1>
               <!--
-                <p class="post-meta"></p>
+                <p class="post-meta">May 27, 2017</p>
               -->
-              <div class="meta">Posted on <span class="postdate"></span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
+              <div class="meta">Posted on <span class="postdate">May 27, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
               <br />
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#section" id="markdown-toc-section">2017书单</a></li>
+  <li><a href="#git" id="markdown-toc-git">关于Git我遇到的问题</a></li>
 </ul>
 
-<h2 id="section">2017书单</h2>
+<h2 id="git">关于Git我遇到的问题</h2>
+<p><a href="http://www.yiibai.com/git/">Git教程</a></p>
 
-<ul>
-  <li>《拆掉思维的墙》-古典</li>
-  <li>《简单的逻辑思维》-D.Q.麦克伦尼</li>
-</ul>
+<p>    1. 今晚在使用git push时出现的问题<br /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+  	git config --global push.default matching
+To squelch this message and adopt the new behavior now, use:
+  	git config --global push.default simple
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+</code></pre>
+</div>
+
+<p>    2. Git 从git 2.0版本以后开始使用matching(上边的信息就是来提示用户设置默认值的)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>#matching（匹配所有分支)
+matching 参数是 Git 1.x 的默认参数，也就是老的执行方式。其意是如果你执行 git push但没有指定分支，它将 push 所有你本地的分支到远程仓库中对应匹配的分支。
+&lt;big&gt;simple（匹配单个分支）&lt;/big&gt;
+simple参数是 Git 2.x 默认参数，意思是执行 git push 没有指定分支时，只有当前分支会被 push 到远程仓库。 所以如果我们想使用matching方式，可以在命令行输入： git config --global push.default matching 如果我们想使用simple方式，可以在命令行输入： git config --global push.default simple
+</code></pre>
+</div>
+
+<p>    3. git push 失败总是无法上传</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>根据出错所提示的内容来解决问题,我遇到的是GitHub上电子邮件私密的问题,由于设置为私密外部访问时会拒绝访问并报错提示，然后百度了一下答案都是零零散散的达非所问，没搜出来我就把错误信息翻译了一下，提示到邮件无法访问的问题，修改后OK了.
+有时候搜索答案并非解决一个问题的好方法，只有在不断的报错中去自行摸索才是学习的好方法，他会让你对这个错误进行那么点了解，所以在摸爬滚打中成长并非不是一个好办法。
+最后也提醒下大家也是提醒我自己，不会英语并不是无法成功，但他可以使你少费很多时间去查看问题。 对计算机专业的人来讲,英语仅次于编程语言的重要性。
+</code></pre>
+</div>
+
+<p>附录一：常用git命令：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ git clone  //本地如果无远程代码，先做这步，不然就忽略
+$ cd //定位到你blog的目录下
+$ git status //查看本地自己修改了多少文件
+$ git add . //添加远程不存在的git文件
+$ git commit  -m "what I want told to someone" //提交修改
+$ git push  //更新到远程服务器上
+$ git rm //移除文件
+</code></pre>
+</div>
+
+<p>附录二：如何修改你的网页？</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>方法一：在github上的master分支中直接进行修改。（如果不添加新的文件推荐此法）
+方法二：在github客户端进行修改在同步。（如果添加了新的文集推荐此法）
+</code></pre>
+</div>
+
+<p>                    <img src="/styles/images/cheer.jpg" alt="加油" /></p>
+
 
             </article>
         </div>

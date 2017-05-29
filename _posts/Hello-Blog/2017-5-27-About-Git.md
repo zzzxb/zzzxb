@@ -2,8 +2,8 @@
 layout: post
 title:  "About Git!"
 date:   2017-5-27 22:03:01 +0800
-categories: jekyll
-tag: jekyll
+categories: HelloBlog
+tag: HelloBlog
 ---
 
 * content

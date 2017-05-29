@@ -2,12 +2,54 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <description>Actually, less is more!</description>
+    <description>远方有多远,请你告诉我!</description>
     <link>http://www.idearfree.com/</link>
     <atom:link href="http://www.idearfree.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 28 May 2017 22:55:03 +0800</pubDate>
-    <lastBuildDate>Sun, 28 May 2017 22:55:03 +0800</lastBuildDate>
+    <pubDate>Mon, 29 May 2017 11:54:58 +0800</pubDate>
+    <lastBuildDate>Mon, 29 May 2017 11:54:58 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Vim键盘图!</title>
+        <description>
+&lt;p&gt;[copy]过来了一张Vim的键盘图,能方便直观的看到每个按键的用处,收藏起来备用.
+&lt;img src=&quot;/styles/images/vim.png&quot; alt=&quot;Vim&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 29 May 2017 11:49:01 +0800</pubDate>
+        <link>http://www.idearfree.com/linux/2017/05/29/About-Git.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/linux/2017/05/29/About-Git.html</guid>
+        
+        <category>Vim</category>
+        
+        
+        <category>Linux</category>
+        
+      </item>
+    
+      <item>
+        <title>端午节来了！</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;端午节快乐!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;端午节快乐!&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/styles/images/dw.jpg&quot; alt=&quot;端午节&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;一年一度的端午节又到了，可惜放假我没回去，因为我想建立起一个自己的博客，怕回家什么都干不成就没回家。
+不说了，以后不回家了提前给家里人都打个电话说一声，有时候该回去的回去，见见爸妈,爷爷奶奶。&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;right&quot;&gt;2017-5-29--&amp;gt;赵小白-(大一于宿舍)&lt;/p&gt;
+</description>
+        <pubDate>Mon, 29 May 2017 11:28:01 +0800</pubDate>
+        <link>http://www.idearfree.com/life/2017/05/29/%E7%AB%AF-%E5%8D%88.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/life/2017/05/29/%E7%AB%AF-%E5%8D%88.html</guid>
+        
+        <category>Life</category>
+        
+        
+        <category>Life</category>
+        
+      </item>
     
       <item>
         <title>About Git!</title>
@@ -77,13 +119,13 @@ $ git rm //移除文件
 
 </description>
         <pubDate>Sat, 27 May 2017 22:03:01 +0800</pubDate>
-        <link>http://www.idearfree.com/jekyll/2017/05/27/About-Git.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/jekyll/2017/05/27/About-Git.html</guid>
+        <link>http://www.idearfree.com/helloblog/2017/05/27/About-Git.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/helloblog/2017/05/27/About-Git.html</guid>
         
-        <category>jekyll</category>
+        <category>HelloBlog</category>
         
         
-        <category>jekyll</category>
+        <category>HelloBlog</category>
         
       </item>
     
@@ -106,13 +148,13 @@ $ git rm //移除文件
 &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll Themes&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 27 May 2017 13:31:01 +0800</pubDate>
-        <link>http://www.idearfree.com/jekyll/2017/05/27/Welcome-to-Blog.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/jekyll/2017/05/27/Welcome-to-Blog.html</guid>
+        <link>http://www.idearfree.com/helloblog/2017/05/27/Welcome-to-Blog.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/helloblog/2017/05/27/Welcome-to-Blog.html</guid>
         
-        <category>Blog</category>
+        <category>HelloBlog</category>
         
         
-        <category>jekyll</category>
+        <category>HelloBlog</category>
         
       </item>
     
@@ -133,13 +175,13 @@ $ git rm //移除文件
 
 </description>
         <pubDate>Wed, 17 May 2017 13:31:01 +0800</pubDate>
-        <link>http://www.idearfree.com/jekyll/2017/05/17/welcome-to-jeky.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/jekyll/2017/05/17/welcome-to-jeky.html</guid>
+        <link>http://www.idearfree.com/helloblog/2017/05/17/welcome-to-jeky.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/helloblog/2017/05/17/welcome-to-jeky.html</guid>
         
-        <category>jekyll</category>
+        <category>HelloBlog</category>
         
         
-        <category>jekyll</category>
+        <category>HelloBlog</category>
         
       </item>
     
