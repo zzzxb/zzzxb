@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>端午节来了！ - 赵小白的博客</title>
+	<title>Linux下禁用触摸板! - 赵小白的博客</title>
 
 	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
 	<link rel="icon" href="/styles/images/favicon.jpg">
@@ -13,10 +13,10 @@
 	<link rel="stylesheet" href="/styles/css/index.css">
 	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/styles/css/syntax.css">
-	<link rel="canonical" href="/life/2017/05/29/%E7%AB%AF-%E5%8D%88.html">
+	<link rel="canonical" href="/linux/2017/05/30/Linux%E4%B8%8B%E7%A6%81%E7%94%A8%E8%A7%A6%E6%91%B8%E6%9D%BF.html">
 	<link rel="alternate" type="application/rss+xml" title="赵小白的博客" href="/feed.xml">
 	
-	<meta name="keywords" content="端午节来了！, 赵小白的博客, 远方有多远,请你告诉我!">
+	<meta name="keywords" content="Linux下禁用触摸板!, 赵小白的博客, 远方有多远,请你告诉我!">
 	<meta name="description" content="远方有多远,请你告诉我!">
 
 	<script src="/styles/js/jquery.min.js"></script>
@@ -90,8 +90,8 @@
   <div class="container">
   	
   		<!--
-		    <h1>端午节来了！</h1>
-		    <p>Post on May 29, 2017 by <a href="/about">赵赵赵小白</a></p>
+		    <h1>Linux下禁用触摸板!</h1>
+		    <p>Post on May 30, 2017 by <a href="/about">赵赵赵小白</a></p>
 		-->
 		    <h1>远方有多远,请你告诉我!</h1>
     
@@ -102,8 +102,8 @@
 <div class="banner">
   <div class="container">
   	
-    	<a href="/categories/#Life-ref">Life</a>	/
-    	<a href="/tag/#Life-ref">Life</a>
+    	<a href="/categories/#Linux-ref">Linux</a>	/
+    	<a href="/tag/#Linux-ref">Linux</a>
     
   </div>
 </div>
@@ -209,24 +209,23 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">端午节来了！</h1>
+              <h1 class="post-title">Linux下禁用触摸板!</h1>
               <!--
-                <p class="post-meta">May 29, 2017</p>
+                <p class="post-meta">May 30, 2017</p>
               -->
-              <div class="meta">Posted on <span class="postdate">May 29, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
+              <div class="meta">Posted on <span class="postdate">May 30, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
               <br />
             </header>
             <article class="post-content">
-              <ul id="markdown-toc">
-  <li><a href="#section" id="markdown-toc-section">端午节快乐!</a></li>
-</ul>
+              
+<hr />
 
-<h1 id="section">端午节快乐!</h1>
-<p><img src="/styles/images/dw.jpg" alt="端午节" /></p>
-
-<p>一年一度的端午节又到了，可惜放假我没回去，因为我想建立起一个自己的博客，怕回家什么都干不成就没回家。
-不说了，以后不回家了提前给家里人都打个电话说一声，有时候该回去的回去，见见爸妈,爷爷奶奶。<br /></p>
-<p align="right">2017-5-29--&gt;赵小白-(大一于宿舍)</p>
+<p>由于笔记本没有使用外接键盘，打字时使用笔记本上的自带键盘时经常会碰到触摸板所以呢，Get了一个关闭
+触摸板的命令。<br />
+临时禁止触摸板：sudo modprobe -r psmouse <br />
+开启触摸板：sudo modprobe -a psmouse <br />
+永远禁用触摸板：sudo vi /etc/modprobe.d/blacklist.conf<br />
+打开文件后输入旁边的操作：blacklist psmouse</p>
 
             </article>
         </div>
