@@ -10,4 +10,5 @@ permalink: /reference/
 
 Jekyll Blog 作者
 =====================
-[博客模板作者](http://blog.csdn.net/cutesource/article/details/4901506)
+点击左下角的 Freud Kang 也能找到作者.<br>
+[博客模板作者](http://www.hifreud.com/)
