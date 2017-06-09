@@ -5,9 +5,43 @@
     <description>远方有多远,请你告诉我!</description>
     <link>http://www.idearfree.com/</link>
     <atom:link href="http://www.idearfree.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 30 May 2017 20:11:10 +0800</pubDate>
-    <lastBuildDate>Tue, 30 May 2017 20:11:10 +0800</lastBuildDate>
+    <pubDate>Fri, 09 Jun 2017 22:25:02 +0800</pubDate>
+    <lastBuildDate>Fri, 09 Jun 2017 22:25:02 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>VIM启航!</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#linux&quot; id=&quot;markdown-toc-linux&quot;&gt;小白使用Linux的杂谈&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#vim-&quot; id=&quot;markdown-toc-vim-&quot;&gt;Vim-好是好可怎么用呢？&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;linux&quot;&gt;小白使用Linux的杂谈&lt;/h1&gt;
+&lt;p&gt;    在我大一刚开学的时候在网上看到了Linux系统并且着重说Vim编译器之神和Emacs神之编译器多好多好，大家都说Linux好，但是具体好在哪里谁也没说清，各有各的说法，之后我就也在开始在电脑上安装Linux，满打满算废了一星期才安装好一台机器安装上了使用别扭的Vim，然后和别然一样到处宣扬他的好，可是好在哪里，那就。。。无从说起了,到现在用Linux也半年多了，还停留在X window下玩耍，跟windows一样只不过换了个文件系统而已(Linux下的所有程序或系统都是文件)，Vim的使用也仅仅停留在蹩脚的使用方法上，完全没有进展。&lt;br /&gt;
+    我其实就像看见用工具登上珠穆拉玛峰的人说山峰多好，多气派，于是我也买了一套同样的工具然后惊叹珠穆拉玛峰的好，却从不层向山顶爬去，所以呢我要真正开始学习Linux了，最近在呢在看《鸟哥的Linux私房菜》准备学习一下，可能会过很久才会来写博客，不过我会在这段时间潜心修炼，达到初窥门径的境界吧，然后呢回来跟大家谈谈感受，总结后再来的分享一下我学习的历程与干货。&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;vim-&quot;&gt;Vim-好是好可怎么用呢？&lt;/h1&gt;
+&lt;p&gt;    今天呢翻看Vim的技巧时看到了一篇博客，跟着简单操作了几下后，说真的我有种想哭的冲动，那种激动的想哭的冲动，以前到现在一直是在vim上运用gedit方式去操作的，高效?根本谈不上，甚至还有点搞笑，知道Vim强大却不会用，就像听别人说红酒多么美多么醇，却只看见过柜台前的红酒瓶一样，就开始跟别人说我喝过，然后大肆宣扬，不过今天想哭是我刚见到vim真正的高效快速的地方，当我在vim上使用简单的快捷键和组合时，是它让我惊呆了，我之前在哪看过说，我们不能重复造方法，就像车轮一样，一个是独轮车，两个是自行车，摩托车，架子车等，三个是三轮车，四个汽车，也就是我们解决问题不是在于方法的多少，而是把现有的方法组合起来变成更高效的方法，这就是Vim中的组合，它摒弃了鼠标，完全依靠键盘来快速编辑文本，在编写代码上比IDE强了太多，现在我不是在吹嘘，在不懂Linux和vim的时候大多数人都认为他是用来装X的，它还不如Windows和IDE，当然了，我只能说各有各的好处，但是相对下Linux还是好一点的，并且VIM做为一款编辑器它不愧对神这个称号，绝对的高效。&lt;br /&gt;
+    我呢是今天没事了才去看Vim使用技巧的，不然我可能一直停留在把vim当作一款蹩脚又装X的编辑器的行列中，我在推荐博客中添加了今天看到的Vim技巧的博客，有兴趣的朋友可以去看下，作为小白的我就不再吹嘘它多好了，我也需要学习啊，我相信当你开始用vim并决定把它学好时你也会惊叹他的强大，作为一款编辑器的它。&lt;br /&gt;
+    跟Linux一样，我呢需要潜心修行，也先破一年时间吧，把linux和vim先学好，在来跟大家分享我的经验，路呢越走宽也越来越长，我要先赶紧上路了，当我学会了它之后，分享我的经验让你们能快速掌握它，而不是像现在的我一样，道听途说却不曾见识过他的强大。&lt;br /&gt;
+    那我们就一年之后再见了，在vim和linux专栏下为大家分享我的历程。&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;                    &lt;img src=&quot;/styles/images/yuanfang.jpeg&quot; alt=&quot;远方&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 09 Jun 2017 21:13:01 +0800</pubDate>
+        <link>http://www.idearfree.com/linux/2017/06/09/Vim-%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/linux/2017/06/09/Vim-%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0.html</guid>
+        
+        <category>Vim</category>
+        
+        
+        <category>Linux</category>
+        
+      </item>
     
       <item>
         <title>Linux下禁用触摸板!</title>
@@ -40,8 +74,8 @@
 
 </description>
         <pubDate>Mon, 29 May 2017 11:49:01 +0800</pubDate>
-        <link>http://www.idearfree.com/linux/2017/05/29/About-Git.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/linux/2017/05/29/About-Git.html</guid>
+        <link>http://www.idearfree.com/linux/2017/05/29/VIM-%E9%94%AE%E7%9B%98%E5%9B%BE.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/linux/2017/05/29/VIM-%E9%94%AE%E7%9B%98%E5%9B%BE.html</guid>
         
         <category>Vim</category>
         
