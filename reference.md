@@ -7,6 +7,10 @@ permalink: /reference/
 * content
 {:toc}
 
+常用API文档
+=====================
+[常用API文档](http://tool.oschina.net/apidocs)
+
 PChou的博客
 =====================
 [vim使用技巧](https://segmentfault.com/a/1190000007446170)
