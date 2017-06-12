@@ -11,9 +11,11 @@ permalink: /reference/
 =====================
 [常用API文档](http://tool.oschina.net/apidocs)
 
-PChou的博客
+Linux下技巧
 =====================
 [vim使用技巧](https://segmentfault.com/a/1190000007446170)
+[Emacs](http://blog.csdn.net/redguardtoo/article/details/7222501/)
+[Linux下编程](http://blog.binchen.org/)
 
 Jekyll Blog 作者
 =====================
