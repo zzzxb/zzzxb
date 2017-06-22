@@ -5,9 +5,66 @@
     <description>远方有多远,请你告诉我!</description>
     <link>http://www.idearfree.com/</link>
     <atom:link href="http://www.idearfree.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 21 Jun 2017 11:58:39 +0800</pubDate>
-    <lastBuildDate>Wed, 21 Jun 2017 11:58:39 +0800</lastBuildDate>
+    <pubDate>Thu, 22 Jun 2017 11:23:16 +0800</pubDate>
+    <lastBuildDate>Thu, 22 Jun 2017 11:23:16 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Ubuntu下安装MySQL!</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#mysql&quot; id=&quot;markdown-toc-mysql&quot;&gt;安装Mysql&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#workbench&quot; id=&quot;markdown-toc-workbench&quot;&gt;WorkBench&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;mysql&quot;&gt;安装Mysql&lt;/h2&gt;
+
+&lt;p&gt;今天安装MySQL只会下载WorkBench不会下载Mysql数据库,所以记录一下安装过程方便下次忘记了使用.&lt;/p&gt;
+
+&lt;p&gt;CTRL+ALT+T打开终端,输入 sudo apt-get update 不然那可能会出现无法下载的错误&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;然后输入 sudo apt-get install mysql-server mysql-client 下载mysql服务器和客户端&lt;/li&gt;
+  &lt;li&gt;安装时都会问你希望继续执行吗，输入Y就行.
+&lt;img src=&quot;/styles/images/2017-06-22 10-48-31屏幕截图.png&quot; alt=&quot;2017-06-22 10-48-31屏幕截图&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;安装过程中会出现让设置MySQL的root密码的框框,输入你的密码确认即可.
+&lt;img src=&quot;/styles/images/2017-06-22 10-47-08屏幕截图.png&quot; alt=&quot;2017-06-22 10-47-08屏幕截图&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;安装完成之后终端输入 mysql -uroot -p你的密码 看是否能进入MySQL
+&lt;img src=&quot;/styles/images/2017-06-22 10-49-31屏幕截图.png&quot; alt=&quot;2017-06-22 10-49-31屏幕截图&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;workbench&quot;&gt;WorkBench&lt;/h2&gt;
+&lt;p&gt;安装mysql workbench&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;sudo dpkg -i mysql-workbench-community-6.3.5-1ubu1504-amd64.deb 如果安装不成功:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;apt-get-f install&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;然后重新输入命令&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sudo dpkg -i mysql-workbench-community-6.3.5-1ubu1504-amd64.deb&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;直接打开：
+&lt;img src=&quot;/styles/images/2017-06-22 10-51-01屏幕截图.png&quot; alt=&quot;2017-06-22 10-51-01屏幕截图&quot; /&gt;
+&lt;img src=&quot;/styles/images/2017-06-22 10-51-17屏幕截图.png&quot; alt=&quot;2017-06-22 10-51-17屏幕截图&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 22 Jun 2017 10:54:00 +0800</pubDate>
+        <link>http://www.idearfree.com/linux/2017/06/22/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Mysql.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/linux/2017/06/22/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Mysql.html</guid>
+        
+        <category>Linux</category>
+        
+        
+        <category>Linux</category>
+        
+      </item>
     
       <item>
         <title>英语考试好简单啊！</title>
@@ -230,14 +287,15 @@ simple参数是 Git 2.x 默认参数，意思是执行 git push 没有指定分�
 
 &lt;p&gt;附录一：常用git命令：&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;$ git clone  //本地如果无远程代码，先做这步，不然就忽略
-$ cd //定位到你blog的目录下
-$ git status //查看本地自己修改了多少文件
-$ git add . //添加远程不存在的git文件
-$ git commit  -m &quot;what I want told to someone&quot; //提交修改
-$ git push  //更新到远程服务器上
-$ git rm //移除文件
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;$ git clone  //本地如果无远程代码，先做这步，不然就忽略&lt;/li&gt;
+  &lt;li&gt;$ cd //定位到你blog的目录下&lt;/li&gt;
+  &lt;li&gt;$ git status //查看本地自己修改了多少文件&lt;/li&gt;
+  &lt;li&gt;$ git add . //添加远程不存在的git文件&lt;/li&gt;
+  &lt;li&gt;$ git commit  -m “what I want told to someone” //提交修改&lt;/li&gt;
+  &lt;li&gt;$ git push  //更新到远程服务器上&lt;/li&gt;
+  &lt;li&gt;$ git rm //移除文件&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;附录二：如何修改你的网页？&lt;/p&gt;
 
@@ -271,42 +329,17 @@ $ git rm //移除文件
     就像大家现在看到的这个博客，废了不少事情才弄好的，但还是有太多不会的，还需要努力学习啊！我现在看到的只是冰山一角，还有太多东西需要学习，在建立博客时也看了好多博客然我懂了不少，如果你有兴趣也想建立博客的话可以看看他们的博客。&lt;/p&gt;
 
 &lt;h2 id=&quot;section-1&quot;&gt;博客建立参考的网站及博客&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.houye.xyz/&quot;&gt;侯爷的博客&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;http://blog.csdn.net/lmj623565791/article/details/51319147&quot;&gt;鸿洋&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;http://www.cnblogs.com/lijiayi/p/githubpages.html&quot;&gt;李佳怡&lt;/a&gt;&lt;br /&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.houye.xyz/&quot;&gt;侯爷的博客&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://blog.csdn.net/lmj623565791/article/details/51319147&quot;&gt;鸿洋&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/lijiayi/p/githubpages.html&quot;&gt;李佳怡&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;http://jekyll.com.cn/&quot;&gt;Jekyll&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll Themes&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll Themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Sat, 27 May 2017 13:31:01 +0800</pubDate>
         <link>http://www.idearfree.com/helloblog/2017/05/27/Welcome-to-Blog.html</link>
         <guid isPermaLink="true">http://www.idearfree.com/helloblog/2017/05/27/Welcome-to-Blog.html</guid>
-        
-        <category>HelloBlog</category>
-        
-        
-        <category>HelloBlog</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;诫子书&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;诫子书&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/styles/images/jiezishu.jpg&quot; alt=&quot;诫子书&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;#&quot;&gt;诸葛亮&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;夫君子之行，静以修身，俭以养德。非淡泊(澹泊)无以明志，非宁静无以致远。夫学须静也，才须学也。非学无以广才，非志无以成学。淫慢则不能励精，险躁则不能冶性。
-年与时驰，意与日去，遂成枯落，多不接世，悲守穷庐，将复何及！&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 17 May 2017 13:31:01 +0800</pubDate>
-        <link>http://www.idearfree.com/helloblog/2017/05/17/welcome-to-jeky.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/helloblog/2017/05/17/welcome-to-jeky.html</guid>
         
         <category>HelloBlog</category>
         

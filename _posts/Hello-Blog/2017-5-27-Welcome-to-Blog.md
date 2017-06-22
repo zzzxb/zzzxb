@@ -19,8 +19,8 @@ tag: HelloBlog
 
 博客建立参考的网站及博客
 ---------------------------
-[侯爷的博客](http://www.houye.xyz/)<br>
++ [侯爷的博客](http://www.houye.xyz/)<br>
 [鸿洋](http://blog.csdn.net/lmj623565791/article/details/51319147)<br>
-[李佳怡](http://www.cnblogs.com/lijiayi/p/githubpages.html)<br>
++ [李佳怡](http://www.cnblogs.com/lijiayi/p/githubpages.html)<br>
 [Jekyll](http://jekyll.com.cn/)<br>
 [Jekyll Themes](http://jekyllthemes.org/)

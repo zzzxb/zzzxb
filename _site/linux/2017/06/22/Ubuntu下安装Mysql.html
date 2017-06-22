@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>MMP！ - 赵小白的博客</title>
+	<title>Ubuntu下安装MySQL! - 赵小白的博客</title>
 
 	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
 	<link rel="icon" href="/styles/images/favicon.jpg">
@@ -13,10 +13,10 @@
 	<link rel="stylesheet" href="/styles/css/index.css">
 	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/styles/css/syntax.css">
-	<link rel="canonical" href="/life/2017/06/10/MMP.html">
+	<link rel="canonical" href="/linux/2017/06/22/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Mysql.html">
 	<link rel="alternate" type="application/rss+xml" title="赵小白的博客" href="/feed.xml">
 	
-	<meta name="keywords" content="MMP！, 赵小白的博客, 远方有多远,请你告诉我!">
+	<meta name="keywords" content="Ubuntu下安装MySQL!, 赵小白的博客, 远方有多远,请你告诉我!">
 	<meta name="description" content="远方有多远,请你告诉我!">
 
 	<script src="/styles/js/jquery.min.js"></script>
@@ -90,8 +90,8 @@
   <div class="container">
   	
   		<!--
-		    <h1>MMP！</h1>
-		    <p>Post on Jun 10, 2017 by <a href="/about">赵赵赵小白</a></p>
+		    <h1>Ubuntu下安装MySQL!</h1>
+		    <p>Post on Jun 22, 2017 by <a href="/about">赵赵赵小白</a></p>
 		-->
 		    <h1>远方有多远,请你告诉我!</h1>
     
@@ -102,8 +102,8 @@
 <div class="banner">
   <div class="container">
   	
-    	<a href="/categories/#Life-ref">Life</a>	/
-    	<a href="/tag/#Life-ref">Life</a>
+    	<a href="/categories/#Linux-ref">Linux</a>	/
+    	<a href="/tag/#Linux-ref">Linux</a>
     
   </div>
 </div>
@@ -276,22 +276,57 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">MMP！</h1>
+              <h1 class="post-title">Ubuntu下安装MySQL!</h1>
               <!--
-                <p class="post-meta">Jun 10, 2017</p>
+                <p class="post-meta">Jun 22, 2017</p>
               -->
-              <div class="meta">Posted on <span class="postdate">Jun 10, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
+              <div class="meta">Posted on <span class="postdate">Jun 22, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
               <br />
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#section" id="markdown-toc-section">你妹的证书!</a></li>
+  <li><a href="#mysql" id="markdown-toc-mysql">安装Mysql</a></li>
+  <li><a href="#workbench" id="markdown-toc-workbench">WorkBench</a></li>
 </ul>
 
-<h2 id="section">你妹的证书!</h2>
+<h2 id="mysql">安装Mysql</h2>
 
-<p>MMP找不到计算机等级考试入口，大爷的我不报了,考一张证的时间还不如去学点其它又用的,我的实力不局限在证书上,我要的是实力不是证书,考证考证考你MMP(拒绝考证不是我拒绝学习的理由,合理考证,不被证书束缚.)<br /></p>
-<p align="right">2017-6-10--&gt;赵小白-(大一于宿舍)</p>
+<p>今天安装MySQL只会下载WorkBench不会下载Mysql数据库,所以记录一下安装过程方便下次忘记了使用.</p>
+
+<p>CTRL+ALT+T打开终端,输入 sudo apt-get update 不然那可能会出现无法下载的错误</p>
+
+<ul>
+  <li>然后输入 sudo apt-get install mysql-server mysql-client 下载mysql服务器和客户端</li>
+  <li>安装时都会问你希望继续执行吗，输入Y就行.
+<img src="/styles/images/2017-06-22 10-48-31屏幕截图.png" alt="2017-06-22 10-48-31屏幕截图" /></li>
+  <li>安装过程中会出现让设置MySQL的root密码的框框,输入你的密码确认即可.
+<img src="/styles/images/2017-06-22 10-47-08屏幕截图.png" alt="2017-06-22 10-47-08屏幕截图" /></li>
+  <li>安装完成之后终端输入 mysql -uroot -p你的密码 看是否能进入MySQL
+<img src="/styles/images/2017-06-22 10-49-31屏幕截图.png" alt="2017-06-22 10-49-31屏幕截图" /></li>
+</ul>
+
+<h2 id="workbench">WorkBench</h2>
+<p>安装mysql workbench</p>
+
+<ul>
+  <li>
+    <p>sudo dpkg -i mysql-workbench-community-6.3.5-1ubu1504-amd64.deb 如果安装不成功:</p>
+  </li>
+  <li>
+    <p>apt-get-f install</p>
+  </li>
+</ul>
+
+<p>然后重新输入命令</p>
+
+<ul>
+  <li>sudo dpkg -i mysql-workbench-community-6.3.5-1ubu1504-amd64.deb</li>
+</ul>
+
+<p>直接打开：
+<img src="/styles/images/2017-06-22 10-51-01屏幕截图.png" alt="2017-06-22 10-51-01屏幕截图" />
+<img src="/styles/images/2017-06-22 10-51-17屏幕截图.png" alt="2017-06-22 10-51-17屏幕截图" /></p>
+
 
             </article>
         </div>
