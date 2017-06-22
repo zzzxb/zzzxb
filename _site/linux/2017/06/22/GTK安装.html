@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ubuntu下安装MySQL! - 赵小白的博客</title>
+	<title>GTK安装 - 赵小白的博客</title>
 
 	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
 	<link rel="icon" href="/styles/images/favicon.jpg">
@@ -13,10 +13,10 @@
 	<link rel="stylesheet" href="/styles/css/index.css">
 	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/styles/css/syntax.css">
-	<link rel="canonical" href="/linux/2017/06/22/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Mysql.html">
+	<link rel="canonical" href="/linux/2017/06/22/GTK%E5%AE%89%E8%A3%85.html">
 	<link rel="alternate" type="application/rss+xml" title="赵小白的博客" href="/feed.xml">
 	
-	<meta name="keywords" content="Ubuntu下安装MySQL!, 赵小白的博客, 远方有多远,请你告诉我!">
+	<meta name="keywords" content="GTK安装, 赵小白的博客, 远方有多远,请你告诉我!">
 	<meta name="description" content="远方有多远,请你告诉我!">
 
 	<script src="/styles/js/jquery.min.js"></script>
@@ -90,7 +90,7 @@
   <div class="container">
   	
   		<!--
-		    <h1>Ubuntu下安装MySQL!</h1>
+		    <h1>GTK安装</h1>
 		    <p>Post on Jun 22, 2017 by <a href="/about">赵赵赵小白</a></p>
 		-->
 		    <h1>远方有多远,请你告诉我!</h1>
@@ -289,7 +289,7 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">Ubuntu下安装MySQL!</h1>
+              <h1 class="post-title">GTK安装</h1>
               <!--
                 <p class="post-meta">Jun 22, 2017</p>
               -->
@@ -298,48 +298,97 @@
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#mysql" id="markdown-toc-mysql">安装Mysql</a></li>
-  <li><a href="#workbench" id="markdown-toc-workbench">WorkBench</a></li>
+  <li><a href="#gtk" id="markdown-toc-gtk">GTK的安装</a></li>
 </ul>
 
-<h2 id="mysql">安装Mysql</h2>
+<h2 id="gtk">GTK的安装</h2>
+<p><a href="https://zhidao.baidu.com/question/323664703.html">GTK安装1</a><br />
+<a href="http://blog.csdn.net/ouyangzhan/article/details/5734832">GTK安装2</a><br /></p>
 
-<p>今天安装MySQL只会下载WorkBench不会下载Mysql数据库,所以记录一下安装过程方便下次忘记了使用.</p>
+<p>sudo apt-get install vim #使用vim来编写代码，当然您可以使用任何自己喜欢的编辑器</p>
 
-<p>CTRL+ALT+T打开终端,输入 sudo apt-get update 不然那可能会出现无法下载的错误</p>
+<p>sudo apt-get install build-essential #这将安装gcc/g++/gdb/make 等基本编程工具</p>
 
-<ul>
-  <li>然后输入 sudo apt-get install mysql-server mysql-client 下载mysql服务器和客户端</li>
-  <li>安装时都会问你希望继续执行吗，输入Y就行.
-<img src="/styles/images/2017-06-22 10-48-31屏幕截图.png" alt="2017-06-22 10-48-31屏幕截图" /></li>
-  <li>安装过程中会出现让设置MySQL的root密码的框框,输入你的密码确认即可.
-<img src="/styles/images/2017-06-22 10-47-08屏幕截图.png" alt="2017-06-22 10-47-08屏幕截图" /></li>
-  <li>安装完成之后终端输入 mysql -uroot -p你的密码 看是否能进入MySQL
-<img src="/styles/images/2017-06-22 10-49-31屏幕截图.png" alt="2017-06-22 10-49-31屏幕截图" /></li>
-</ul>
+<p>sudo apt-get install gnome-core-devel #这将安装 libgtk2.0-dev libglib2.0-dev 等开发相关的库文件</p>
 
-<h2 id="workbench">WorkBench</h2>
-<p>安装mysql workbench</p>
+<p>sudo apt-get install pkg-config #用于在编译GTK程序时自动找出头文件及库文件位置</p>
 
-<ul>
-  <li>
-    <p>sudo dpkg -i mysql-workbench-community-6.3.5-1ubu1504-amd64.deb 如果安装不成功:</p>
-  </li>
-  <li>
-    <p>apt-get-f install</p>
-  </li>
-</ul>
+<p>sudo apt-get install devhelp #这将安装 devhelp GTK文档查看程序</p>
 
-<p>然后重新输入命令</p>
+<p>sudo apt-get install libglib2.0-doc libgtk2.0-doc #这将安装 gtk/glib 的API参考手册及其它帮助文档</p>
 
-<ul>
-  <li>sudo dpkg -i mysql-workbench-community-6.3.5-1ubu1504-amd64.deb</li>
-</ul>
+<p>sudo apt-get instal glade libglade2-dev #这将安装基于GTK的界面GTK是开发Gnome窗口的c/c++语言图形库。在Ubuntu的机器上折腾了一下，复制了网上教程的代码在本机上编译。代码的文件名：t1.c。按照教程，用以下命令编译：<br /></p>
 
-<p>直接打开：
-<img src="/styles/images/2017-06-22 10-51-01屏幕截图.png" alt="2017-06-22 10-51-01屏幕截图" />
-<img src="/styles/images/2017-06-22 10-51-17屏幕截图.png" alt="2017-06-22 10-51-17屏幕截图" /></p>
+<p>gcc t1.c ‘pkg-config –cflags –libs gtk+-2.0`<br /></p>
 
+<p>编译结果：找不到gtk/gtk.h。<br /></p>
+
+<p>因为我的Ubuntu是Gnome系统，所以我以为gtk+2.0的开发程序（头文件和库文件）应该已经安装在计算机上了。其实不然，如果在Ubuntu 上开发gtk+2.0的程序，需要安装相应的头文件和库。在控制台窗口输入sudo apt-get install libgtk2.0*, gtk+2.0所需的所有文件统通下载安装完毕。再次应用编译命令：gcc t1.c ‘pkg-config –cflags –libs gtk+-2.0，编译通过，运行。<br /></p>
+
+<p>pkg-config是一个用来管理包的程序，在控制台输入 pkg-config –cflags –libs gtk+-2.0 的运行结果：<br /></p>
+
+<p>-DPNG_NO_MMX_CODE -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12 -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lfontconfig -lXext -lXrender -lXinerama -lXi -lXrandr -lXcursor -lXcomposite -lXdamage -lpango-1.0 -lcairo -lX11 -lXfixes -lgobject-2.0 -lgmodule-2.0 -ldl -lglib-2.0</p>
+
+<p>可以看出，输出的文本包括了gcc编译gtk+2.0所需要的所有选项（头文件目录和库文件）。<br /></p>
+
+<p>这里有一点需要注意， gcc t1.c <code class="highlighter-rouge">pkg-config --cflags --libs gtk+-2.0</code>, pkg-config –cflags –libs gtk+-2.0两侧的引号并不是真正的引号，而是键盘数字件那一行，最左边的那个字符。如果错用了单引号，gcc无法使用 pkg-config –cflags –libs gtk+-2.0产生的文本作为编译选项。构造程序。<br />
+$ gcc gtkhello.c -o gtktest <code class="highlighter-rouge">pkg-config --cflags --libs gtk+-2.0</code> <br />
+$ ./gtktest <br />
+gcc gtk1.c <code class="highlighter-rouge">pkg-config --cflags --libs gtk+-2.0</code> <br /></p>
+
+<hr />
+
+<p>首先获得超级用户权限</p>
+
+<p>apt-get install vim         #使用vim来编写代码，当然您可以使用任何自己喜欢的编辑器
+apt-get install build-essential         #这将安装gcc/g++/gdb/make 等基本编程工具
+apt-get install gnome-core-devel          #这将安装 libgtk2.0-dev libglib2.0-dev 等开发相关的库文件
+apt-get install pkg-config                #用于在编译GTK程序时自动找出头文件及库文件位置
+apt-get install devhelp                    #这将安装 devhelp GTK文档查看程序
+apt-get install libglib2.0-doc libgtk2.0-doc             #这将安装 gtk/glib 的API参考手册及其它帮助文档
+apt-get instal glade libglade2-dev                      #这将安装基于GTK的界面构造程序</p>
+
+<p>都是安装好后测试一下程序hello.c<br /></p>
+
+<p>#include   &lt;gtk/gtk.h&gt; <br />
+我编译时老是说找不到头文件，后来在/usr/include里找到gtk-2.0/gtk/gtk.h，原来是路径错误，最后将头文件路径修改为&lt;gtk-2.0/gtk/gtk.h&gt;，终于好了！</p>
+
+<p>void hello(GtkWidget <em>widget,gpointer data)<br />
+{<br />
+      g_print(“Hello 大家好\n”);<br />
+}<br />
+gint delete_event(GtkWidget *widget,GdkEvent *event,gpointer data)<br />
+{<br />
+      g_print (“delete event occurred\n”);<br />
+     return(TRUE);<br />
+}<br />
+void destroy(GtkWidget *widget,gpointer data)<br />
+{<br />
+      gtk_main_quit();<br />
+}
+int main( int argc, char *argv[] )<br />
+{<br />
+      GtkWidget *window;<br />
+      GtkWidget *button;<br />
+      gtk_init (&amp;argc, &amp;argv);<br />
+      window=gtk_window_new (GTK_WINDOW_TOPLEVEL);<br />	
+      gtk_signal_connect (GTK_OBJECT(window),”delete_event”,GTK_SIGNAL_FUNC(delete_event),NULL);<br />
+      gtk_signal_connect (GTK_OBJECT (window), “destroy”,GTK_SIGNAL_FUNC (destroy), NULL);<br />	
+      gtk_container_set_border_width (GTK_CONTAINER (window), 10);<br />	
+      button = gtk_button_new_with_label (“Hello 大家好”);<br />
+      gtk_signal_connect (GTK_OBJECT (button), “clicked”,GTK_SIGNAL_FUNC (hello), NULL);<br />
+      gtk_signal_connect_object (GTK_OBJECT (button), “clicked”,GTK_SIGNAL_FUNC(gtk_widget_destroy),GTK_OBJECT (window));<br />
+      gtk_container_add (GTK_CONTAINER (window), button);<br />
+      gtk_widget_show (button);<br />
+      gtk_widget_show (window); /</em>显示一个窗口<em>/<br />
+      gtk_main(); /</em>进入主循环*/<br />
+      return(0);<br />
+}<br /></p>
+
+<p>最后编译运行：<br /></p>
+
+<p>$ gcc hello.c -o hello <code class="highlighter-rouge">pkg-config --cflags --libs gtk+-2.0</code> <br />
+$ . /hello</p>
 
             </article>
         </div>
