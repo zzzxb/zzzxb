@@ -5,9 +5,57 @@
     <description>远方有多远,请你告诉我!</description>
     <link>http://www.idearfree.com/</link>
     <atom:link href="http://www.idearfree.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 03 Jul 2017 15:50:21 +0800</pubDate>
-    <lastBuildDate>Mon, 03 Jul 2017 15:50:21 +0800</lastBuildDate>
+    <pubDate>Fri, 07 Jul 2017 16:04:08 +0800</pubDate>
+    <lastBuildDate>Fri, 07 Jul 2017 16:04:08 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Python类的定义!</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;关于定义默认方法时报错&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;关于定义默认方法时报错&lt;/h2&gt;
+
+&lt;p&gt;3 class Dog():&lt;br /&gt;
+  2     “&quot;”一次模拟小狗的简单尝试””“&lt;br /&gt;
+  1 &lt;br /&gt;
+  0     def &lt;strong&gt;init&lt;/strong&gt;(self, name, age):&lt;br /&gt;
+  1         “&quot;”初始化属性name和age””“&lt;br /&gt;
+  2         self.name = name;&lt;br /&gt;
+  3         self.age = age;&lt;br /&gt;
+  4 &lt;br /&gt;
+  5     def sit(self):&lt;br /&gt;
+  6         “&quot;”模拟小狗被命令时蹲下””“&lt;br /&gt;
+  7         print(self.name.title()+” is now sitting.”);&lt;br /&gt;
+  8 &lt;br /&gt;
+  9     def roll_over(self):&lt;br /&gt;
+ 10         “&quot;”模拟小狗被命令时打滚””“&lt;br /&gt;
+ 11         print(self.name.title()+” rolled over!”);&lt;br /&gt;
+ 12 &lt;br /&gt;
+ 13 my_dog = Dog(‘willie’, 6);&lt;br /&gt;
+ 14 &lt;br /&gt;
+ 15 print(“My dog’s name is” + my_dog.name.title() + “.”);&lt;br /&gt;
+ 16 print(“My dog is “ + str(my_dog.age) + “ years old.”);&lt;br /&gt;
+&lt;br /&gt;
+之前定义函数_init_两边使用的是一条下滑线就出现错误了&lt;br /&gt;
+Traceback (most recent call last):&lt;br /&gt;
+  File “dog.py”, line 17, in &lt;module&gt; &lt;br /&gt;
+    my_dog = Dog(&#39;willie&#39;, 6);&lt;br /&gt;
+TypeError: object() takes no parameters&lt;br /&gt;
+改正后为__init__各在两边多加一条下划线就行了。&lt;br /&gt;&lt;/module&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 05 Jul 2017 15:00:00 +0800</pubDate>
+        <link>http://www.idearfree.com/python/2017/07/05/Python%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/python/2017/07/05/Python%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89.html</guid>
+        
+        <category>python</category>
+        
+        
+        <category>Python</category>
+        
+      </item>
     
       <item>
         <title>得到了物质，却过不上自己想要的生活！</title>
@@ -395,31 +443,6 @@ $ . /hello&lt;/p&gt;
         
         
         <category>Linux</category>
-        
-      </item>
-    
-      <item>
-        <title>端午节来了！</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;端午节快乐!&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;端午节快乐!&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/styles/images/dw.jpg&quot; alt=&quot;端午节&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;一年一度的端午节又到了，可惜放假我没回去，因为我想建立起一个自己的博客，怕回家什么都干不成就没回家。
-不说了，以后不回家了提前给家里人都打个电话说一声，有时候该回去的回去，见见爸妈,爷爷奶奶。&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;right&quot;&gt;2017-5-29--&amp;gt;赵小白-(大一于宿舍)&lt;/p&gt;
-</description>
-        <pubDate>Mon, 29 May 2017 11:28:01 +0800</pubDate>
-        <link>http://www.idearfree.com/life/2017/05/29/%E7%AB%AF-%E5%8D%88.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/life/2017/05/29/%E7%AB%AF-%E5%8D%88.html</guid>
-        
-        <category>Life</category>
-        
-        
-        <category>Life</category>
         
       </item>
     
