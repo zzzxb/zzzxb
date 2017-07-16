@@ -5,8 +5,8 @@
     <description>远方有多远,请你告诉我!</description>
     <link>http://www.idearfree.com/</link>
     <atom:link href="http://www.idearfree.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 16 Jul 2017 18:58:27 +0800</pubDate>
-    <lastBuildDate>Sun, 16 Jul 2017 18:58:27 +0800</lastBuildDate>
+    <pubDate>Sun, 16 Jul 2017 22:15:10 +0800</pubDate>
+    <lastBuildDate>Sun, 16 Jul 2017 22:15:10 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -14,6 +14,8 @@
         <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#linuxpip&quot; id=&quot;markdown-toc-linuxpip&quot;&gt;Linux中安装pip&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#linuxpagame&quot; id=&quot;markdown-toc-linuxpagame&quot;&gt;Linux中安装Pagame&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#pippygame&quot; id=&quot;markdown-toc-pippygame&quot;&gt;关于pip安装pygame出错的问题&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#dpkg&quot; id=&quot;markdown-toc-dpkg&quot;&gt;关于出现的dpkg的狗血错误&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;今天在Ubuntu 17.04上安装pip的时候，给我来了一大串狗血错误，md系统都直接弹出崩溃—_—|||
@@ -88,8 +90,8 @@ $ sudo apt-get install libsdl-image1.2-dev  libportmidi-dev
     &lt;p&gt;Pygame高级功能&lt;/p&gt;
     &lt;blockquote&gt;
       &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;$ sudo apt-get install libsdl-mixer1.2-dev libportmidi-dev
-$ apt-get install libswscale-dev libsmpeg-dev libavformat-dev libavcodec-dev
-$ spt-get install python-numpy
+$ sudo apt-get install libswscale-dev libsmpeg-dev libavformat-dev libavcodec-dev
+$ sudo apt-get install python-numpy
 &lt;/code&gt;&lt;/pre&gt;      &lt;/div&gt;
     &lt;/blockquote&gt;
   &lt;/li&gt;
@@ -114,6 +116,130 @@ $ spt-get install python-numpy
     &lt;/blockquote&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;pippygame&quot;&gt;关于pip安装pygame出错的问题&lt;/h2&gt;
+
+&lt;p&gt;2017-7-16-21:54添加&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;用pip安装时出现了以下错误,我去抓狂啊…..百度上的教程让人抓狂啊，看不懂。。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;zpp@xb:~$ pip install –user hg+http://bitbucket.org/pygame/pygame&lt;br /&gt;
+Collecting hg+http://bitbucket.org/pygame/pygame&lt;br /&gt;
+  Cloning hg http://bitbucket.org/pygame/pygame to /tmp/pip-3g6ldpay-build&lt;br /&gt;
+Traceback (most recent call last):&lt;br /&gt;
+  File “/usr/bin/hg”, line 39, in &amp;lt;module&amp;gt;&lt;br /&gt;
+    import mercurial.util&lt;br /&gt;
+ImportError: No module named ‘mercurial’&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;不过好在pygame模块再github上挂着–高兴啊!!!好在我用过github&lt;br /&gt;
+进入正题开始解决问题
+pip install –user hg+http://bitucket.org/pygame/pygame&lt;br /&gt;
+他是通过克隆pygame仓库来安装的根据这个方法&lt;br /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;我们放弃pip改用git&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt; 没有git的可以用以下命令在终端安装
+ sudo apt-get install git
+&lt;/code&gt;&lt;/pre&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;好，安装之后开始克隆pygame仓库&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt; git clone https://github.com/pygame/pygame
+&lt;/code&gt;&lt;/pre&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;克隆完成后开始把它移动到python3+的目录中&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt; sudo mv pygame /usr/lib/python3.5
+&lt;/code&gt;&lt;/pre&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;我用的是python3.5 你们可以看看你们用的多少把它改改&lt;br /&gt;
+只要把模块移动到python3+的文件中就能用了。&lt;br /&gt;
+如果有什么问题可以在右上角邮件私信我，欢迎一起探讨.&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;dpkg&quot;&gt;关于出现的dpkg的狗血错误&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;以下内容转自&lt;a href=&quot;http://blog.csdn.net/u010426270/article/details/52028620&quot;&gt;郑斌的博客&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;我的ubuntu是16.04版本，今天安装软件(sudo apt-get install ssh)突然安装不上，有如下提示：&lt;/p&gt;
+
+&lt;p&gt;/××××××××××××××××××××××××××&lt;/p&gt;
+
+&lt;p&gt;dpkg: 处理软件包 gir1.2-unity-5.0:amd64 (–configure)时出错：&lt;/p&gt;
+
+&lt;p&gt;该软件包正处于非常不稳定的状态；&lt;/p&gt;
+
+&lt;p&gt;您最好在配置它之前，先重新安装它&lt;/p&gt;
+
+&lt;p&gt;正在设置 ssh (1:7.2p2-4ubuntu1) …&lt;/p&gt;
+
+&lt;p&gt;在处理时有错误发生：&lt;/p&gt;
+
+&lt;p&gt;gir1.2-unity-5.0:amd64&lt;/p&gt;
+
+&lt;p&gt;E: Sub-process /usr/bin/dpkg returned an error code (1)&lt;/p&gt;
+
+&lt;p&gt;××××××××××××××××××××××××××××/&lt;/p&gt;
+
+&lt;p&gt;解决办法如下：&lt;/p&gt;
+
+&lt;p&gt;1.将info文件夹更名&lt;/p&gt;
+
+&lt;p&gt;[plain] view plain copy&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;sudo mv /var/lib/dpkg/info /var/lib/dpkg/info_old  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;2再新建一个新的info文件夹&lt;/p&gt;
+
+&lt;p&gt;[plain] view plain copy&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;sudo mkdir /var/lib/dpkg/info  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;3.更新
+[plain] view plain copy&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;sudo apt-get update  
+&amp;lt;pre name=&quot;code&quot; class=&quot;plain&quot;&amp;gt;sudo apt-get -f install  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;4.执行完上一步操作后会在新的info文件夹下生成一些文件，现将这些文件全部移到info_old文件夹下&lt;/p&gt;
+
+&lt;p&gt;[html] view plain copy&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;sudo mv /var/lib/dpkg/info/* /var/lib/dpkg/info_old   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;5.把自己新建的info文件夹删掉&lt;/p&gt;
+
+&lt;p&gt;[plain] view plain copy&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;sudo rm -rf /var/lib/dpkg/info  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;6.把以前的info文件夹重新改回名字&lt;/p&gt;
+
+&lt;p&gt;[plain] view plain copy&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;sudo mv /var/lib/dpkg/info_old /var/lib/dpkg/info   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;问题解决。&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 16 Jul 2017 18:13:01 +0800</pubDate>
