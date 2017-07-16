@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>小白的书单 - 赵小白的博客</title>
+	<title>安装pip及Pygame! - 赵小白的博客</title>
 
 	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
 	<link rel="icon" href="/styles/images/favicon.jpg">
@@ -13,10 +13,10 @@
 	<link rel="stylesheet" href="/styles/css/index.css">
 	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/styles/css/syntax.css">
-	<link rel="canonical" href="/books/">
+	<link rel="canonical" href="/python/2017/07/16/%E5%AE%89%E8%A3%85pip.html">
 	<link rel="alternate" type="application/rss+xml" title="赵小白的博客" href="/feed.xml">
 	
-	<meta name="keywords" content="小白的书单, 赵小白的博客, 远方有多远,请你告诉我!">
+	<meta name="keywords" content="安装pip及Pygame!, 赵小白的博客, 远方有多远,请你告诉我!">
 	<meta name="description" content="远方有多远,请你告诉我!">
 
 	<script src="/styles/js/jquery.min.js"></script>
@@ -90,8 +90,8 @@
   <div class="container">
   	
   		<!--
-		    <h1>小白的书单</h1>
-		    <p>Post on  by <a href="/about">赵赵赵小白</a></p>
+		    <h1>安装pip及Pygame!</h1>
+		    <p>Post on Jul 16, 2017 by <a href="/about">赵赵赵小白</a></p>
 		-->
 		    <h1>远方有多远,请你告诉我!</h1>
     
@@ -102,7 +102,8 @@
 <div class="banner">
   <div class="container">
   	
-    	学而不思则罔，思而不学则殆。
+    	<a href="/categories/#Python-ref">Python</a>	/
+    	<a href="/tag/#Python-ref">Python</a>
     
   </div>
 </div>
@@ -355,26 +356,118 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">小白的书单</h1>
+              <h1 class="post-title">安装pip及Pygame!</h1>
               <!--
-                <p class="post-meta"></p>
+                <p class="post-meta">Jul 16, 2017</p>
               -->
-              <div class="meta">Posted on <span class="postdate"></span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
+              <div class="meta">Posted on <span class="postdate">Jul 16, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
               <br />
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#section" id="markdown-toc-section">2017书单</a></li>
+  <li><a href="#linuxpip" id="markdown-toc-linuxpip">Linux中安装pip</a></li>
+  <li><a href="#linuxpagame" id="markdown-toc-linuxpagame">Linux中安装Pagame</a></li>
 </ul>
 
-<h2 id="section">2017书单</h2>
+<p>今天在Ubuntu 17.04上安装pip的时候，给我来了一大串狗血错误，md系统都直接弹出崩溃—_—|||
+下面来分享一下我在书上get的安装方法(Python 从入门到实践)</p>
+
+<h2 id="linuxpip">Linux中安装pip</h2>
 
 <ul>
-  <li>《拆掉思维的墙》-古典</li>
-  <li>《简单的逻辑思维》-D.Q.麦克伦尼</li>
-  <li>《瓦尔澄湖》-亨利.戴维.梭罗</li>
-  <li>《鸟哥的Linux私房菜》</li>
+  <li>如果安装的版本太多请看上一篇Linux中如何更改python版本</li>
 </ul>
+
+<ol>
+  <li>
+    <p>访问 https://bootstrap.pypa.io/get-pip.py 如果出现对话框，请选择保存文件;
+如果get-pip.py的代码出现在浏览器里，复制下来保存在编辑器中命名为get-pip.py</p>
+
+    <p>如果找不到，就访问https://pip.pypa.io,单击左边面板中的,再单击中间窗口
+ 的链接get-pip.py</p>
+  </li>
+  <li>
+    <p>使用以下命令来安装：</p>
+    <blockquote>
+      <div class="highlighter-rouge"><pre class="codehilite"><code>$ sudo python get-pip.py
+</code></pre>      </div>
+    </blockquote>
+
+    <p>然后就OK了！输入 pip –version(或pip3 –version)来查看版本信息吧。</p>
+  </li>
+</ol>
+
+<h2 id="linuxpagame">Linux中安装Pagame</h2>
+
+<ul>
+  <li>
+    <p>Python2 安装方法</p>
+
+    <p>2.7使用包管理器来安装Pygame</p>
+  </li>
+</ul>
+
+<ol>
+  <li>下载pagame ：
+    <blockquote>
+      <div class="highlighter-rouge"><pre class="codehilite"><code>$ sudo apt-get install python-pagame 
+</code></pre>      </div>
+    </blockquote>
+  </li>
+  <li>查看安装情况 ：
+    <blockquote>
+      <div class="highlighter-rouge"><pre class="codehilite"><code>$ python
+&gt;&gt;&gt; import pygame
+&gt;&gt;&gt;
+</code></pre>      </div>
+    </blockquote>
+
+    <p>如果没有任何输出就说明Python导入了Pygame这样就也Ok了。</p>
+  </li>
+</ol>
+
+<ul>
+  <li>
+    <p>python3 安装方法</p>
+
+    <p>如果打开终端会话时使用的是命令python3.5,请将python3-dev替换为python3.5-dev):</p>
+
+    <blockquote>
+      <div class="highlighter-rouge"><pre class="codehilite"><code>$ sudo apt-get install python3-dev mercurial
+$ sudo apt-get install libsdl-image1.2-dev  libportmidi-dev
+</code></pre>      </div>
+    </blockquote>
+
+    <p>Pygame高级功能</p>
+    <blockquote>
+      <div class="highlighter-rouge"><pre class="codehilite"><code>$ sudo apt-get install libsdl-mixer1.2-dev libportmidi-dev
+$ apt-get install libswscale-dev libsmpeg-dev libavformat-dev libavcodec-dev
+$ spt-get install python-numpy
+</code></pre>      </div>
+    </blockquote>
+  </li>
+</ul>
+
+<ol>
+  <li>接下来安装Pygame(有必要将pip换成pip3):
+    <blockquote>
+      <div class="highlighter-rouge"><pre class="codehilite"><code>$ pip install --user hg+http://bitucket.org/pygame/pygame
+</code></pre>      </div>
+    </blockquote>
+
+    <p>告知你Pygame找到了哪些库后，输出将暂停一段时间。请按回车键，即便有一些库没有找到。
+ 你将看到一条信息，说明成功安装了Pygame</p>
+  </li>
+  <li>查看安装情况 ：
+    <blockquote>
+      <div class="highlighter-rouge"><pre class="codehilite"><code>$ python
+&gt;&gt;&gt; import pygame
+&gt;&gt;&gt;
+</code></pre>      </div>
+    </blockquote>
+  </li>
+</ol>
+
 
             </article>
         </div>
