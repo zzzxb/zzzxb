@@ -5,9 +5,251 @@
     <description>远方有多远,请你告诉我!</description>
     <link>http://www.idearfree.com/</link>
     <atom:link href="http://www.idearfree.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 07 Jul 2017 16:04:08 +0800</pubDate>
-    <lastBuildDate>Fri, 07 Jul 2017 16:04:08 +0800</lastBuildDate>
+    <pubDate>Sun, 16 Jul 2017 18:07:29 +0800</pubDate>
+    <lastBuildDate>Sun, 16 Jul 2017 18:07:29 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>VIM分屏!</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#vim&quot; id=&quot;markdown-toc-vim&quot;&gt;分屏启动Vim&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;关闭分屏&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;分屏&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;移动光标&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;移动分屏&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;屏幕尺寸&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;一直觉得vim分屏好酷，可惜我不会，今天在网上查了查，一实践还真不赖，拿出来分享了。&lt;br /&gt;
+&lt;br /&gt;
+:new 新建分屏&lt;br /&gt;
+:spilt 水平分屏&lt;br /&gt;
+:vsplit 垂直分屏&lt;br /&gt;
+:only 取消分屏&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1.Ctrl+W，然后马上来个n 水平分屏&lt;br /&gt;
+   Ctrl+w，再一个c，是关闭当前的窗口&lt;br /&gt;
+2.如何split horizontally?&lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ctrl + w, s 水平&lt;/p&gt;
+
+&lt;p&gt;split vertically&lt;/p&gt;
+
+&lt;p&gt;Ctrl + w, v 垂直&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;3.如何切换焦点？&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ctrl + w, w 后一个
+Ctrl + w, p 前一个&lt;/p&gt;
+
+&lt;p&gt;Ctrl + w, h 四个方向
+Ctrl + w, i
+Ctrl + w, k
+Ctrl + w, l&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;4.如何关闭其他窗口?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ctrl + w, o&lt;/p&gt;
+
+&lt;p&gt;更多快捷键，可直接查询
+:help ctrl-w&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;5.载入文件&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;:vs  文件路径/文件名      在新的垂直分屏中打开文件&lt;/p&gt;
+
+&lt;p&gt;:sv  文件路径/文件名      在新的水平分屏中打开文件&lt;/p&gt;
+
+&lt;p&gt;作为vim fans，soone早就把vim作为编程的首选编辑器来，什么庞大到ide，都不要，就一个简简单单的vim，看似简单，其实很不简单。通过适当到配 置，可以将他配置得完全不差于其他编程ide。vim具体怎么配置这里就不说了，本来想翻译下下面这篇牛X的vim配置，无奈一看确实是太长了，还是等有 空咱再好好的来翻译。现在先给贴贴出转载的地址，有兴趣的去看看，真不错。&lt;/p&gt;
+
+&lt;h2 id=&quot;vim&quot;&gt;分屏启动Vim&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;使用大写的O参数来垂直分屏。&lt;/p&gt;
+
+    &lt;p&gt;vim -On file1 file2 …&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;使用小写的o参数来水平分屏。&lt;/p&gt;
+
+    &lt;p&gt;vim -on file1 file2 …&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;注释: n是数字，表示分成几个屏。&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;关闭分屏&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;关闭当前窗口。&lt;/p&gt;
+
+    &lt;p&gt;Ctrl+W c&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;关闭当前窗口，如果只剩最后一个了，则退出Vim。&lt;/p&gt;
+
+    &lt;p&gt;Ctrl+W q&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;分屏&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;上下分割当前打开的文件。&lt;/p&gt;
+
+    &lt;p&gt;Ctrl+W s&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;上下分割，并打开一个新的文件。&lt;/p&gt;
+
+    &lt;p&gt;:sp filename&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;左右分割当前打开的文件。&lt;/p&gt;
+
+    &lt;p&gt;Ctrl+W v&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;左右分割，并打开一个新的文件。&lt;/p&gt;
+
+    &lt;p&gt;:vsp filename&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;移动光标&lt;/h2&gt;
+
+&lt;p&gt;Vi中的光标键是h, j, k, l，要在各个屏间切换，只需要先按一下Ctrl+W&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;把光标移到右边 的屏。&lt;/p&gt;
+
+    &lt;p&gt;Ctrl+W l&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;把光标移到左边 的屏中。&lt;/p&gt;
+
+    &lt;p&gt;Ctrl+W h&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;把光标移到上边 的屏中。&lt;/p&gt;
+
+    &lt;p&gt;Ctrl+W k&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;把光标移到下边 的屏中。&lt;/p&gt;
+
+    &lt;p&gt;Ctrl+W j&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;把光标移到下一个 的屏中。.&lt;/p&gt;
+
+    &lt;p&gt;Ctrl+W w&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;移动分屏&lt;/h2&gt;
+
+&lt;p&gt;这个功能还是使用了Vim的光标键，只不过都是大写。当然了，如果你的分屏很乱很复杂的话，这个功能可能会出现一些非常奇怪的症状。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;向右移动。&lt;/p&gt;
+
+    &lt;p&gt;Ctrl+W L&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;向左移动&lt;/p&gt;
+
+    &lt;p&gt;Ctrl+W H&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;向上移动&lt;/p&gt;
+
+    &lt;p&gt;Ctrl+W K&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;向下移动&lt;/p&gt;
+
+    &lt;p&gt;Ctrl+W J&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;屏幕尺寸&lt;/h2&gt;
+
+&lt;p&gt;下面是改变尺寸的一些操作，主要是高度，对于宽度你可以使用Ctrl+W &lt;或是&gt;，但这可能需要最新的版本才支持。&lt;/或是&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;让所有的屏都有一样的高度。&lt;/p&gt;
+
+    &lt;p&gt;Ctrl+W =&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;增加高度。&lt;/p&gt;
+
+    &lt;p&gt;Ctrl+W +&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;减少高度。&lt;/p&gt;
+
+    &lt;p&gt;Ctrl+W -&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 16 Jul 2017 17:13:01 +0800</pubDate>
+        <link>http://www.idearfree.com/linux/2017/07/16/Vim-%E5%88%86%E5%B1%8F%E7%AE%A1%E7%90%86.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/linux/2017/07/16/Vim-%E5%88%86%E5%B1%8F%E7%AE%A1%E7%90%86.html</guid>
+        
+        <category>Vim</category>
+        
+        
+        <category>Linux</category>
+        
+      </item>
+    
+      <item>
+        <title>Linux中切换python版本!</title>
+        <description>
+&lt;p&gt;shell里执行：&lt;/p&gt;
+
+&lt;p&gt;sudo update-alternatives –install /usr/bin/python python /usr/bin/python2 100
+sudo update-alternatives –install /usr/bin/python python /usr/bin/python3 150&lt;/p&gt;
+
+&lt;p&gt;此时你会发现 alternatives&lt;/p&gt;
+
+&lt;p&gt;如果要切换到Python2，执行：&lt;/p&gt;
+
+&lt;p&gt;sudo update-alternatives –config python&lt;/p&gt;
+
+&lt;p&gt;按照提示输入选择数字回车即可。&lt;/p&gt;
+
+&lt;p&gt;这样你甚至可以将自己喜欢的任意版本Python安装到任意位置，然后使用update-alternatives将其设置为系统默认python。
+python –version 查看python版本&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 10 Jul 2017 15:00:00 +0800</pubDate>
+        <link>http://www.idearfree.com/python/2017/07/10/Linux%E4%B8%AD%E5%88%87%E6%8D%A2python%E7%89%88%E6%9C%AC.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/python/2017/07/10/Linux%E4%B8%AD%E5%88%87%E6%8D%A2python%E7%89%88%E6%9C%AC.html</guid>
+        
+        <category>python</category>
+        
+        
+        <category>Python</category>
+        
+      </item>
     
       <item>
         <title>Python类的定义!</title>
@@ -397,47 +639,6 @@ $ . /hello&lt;/p&gt;
         <pubDate>Fri, 09 Jun 2017 21:13:01 +0800</pubDate>
         <link>http://www.idearfree.com/linux/2017/06/09/Vim-%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0.html</link>
         <guid isPermaLink="true">http://www.idearfree.com/linux/2017/06/09/Vim-%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0.html</guid>
-        
-        <category>Vim</category>
-        
-        
-        <category>Linux</category>
-        
-      </item>
-    
-      <item>
-        <title>Linux下禁用触摸板!</title>
-        <description>
-&lt;hr /&gt;
-
-&lt;p&gt;由于笔记本没有使用外接键盘，打字时使用笔记本上的自带键盘时经常会碰到触摸板所以呢，Get了一个关闭
-触摸板的命令。&lt;br /&gt;
-临时禁止触摸板：sudo modprobe -r psmouse &lt;br /&gt;
-开启触摸板：sudo modprobe -a psmouse &lt;br /&gt;
-永远禁用触摸板：sudo vi /etc/modprobe.d/blacklist.conf&lt;br /&gt;
-打开文件后输入旁边的操作：blacklist psmouse&lt;/p&gt;
-</description>
-        <pubDate>Tue, 30 May 2017 15:00:00 +0800</pubDate>
-        <link>http://www.idearfree.com/linux/2017/05/30/Linux%E4%B8%8B%E7%A6%81%E7%94%A8%E8%A7%A6%E6%91%B8%E6%9D%BF.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/linux/2017/05/30/Linux%E4%B8%8B%E7%A6%81%E7%94%A8%E8%A7%A6%E6%91%B8%E6%9D%BF.html</guid>
-        
-        <category>Linux</category>
-        
-        
-        <category>Linux</category>
-        
-      </item>
-    
-      <item>
-        <title>Vim键盘图!</title>
-        <description>
-&lt;p&gt;[copy]过来了一张Vim的键盘图,能方便直观的看到每个按键的用处,收藏起来备用.
-&lt;img src=&quot;/styles/images/vim.png&quot; alt=&quot;Vim&quot; /&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 29 May 2017 11:49:01 +0800</pubDate>
-        <link>http://www.idearfree.com/linux/2017/05/29/VIM-%E9%94%AE%E7%9B%98%E5%9B%BE.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/linux/2017/05/29/VIM-%E9%94%AE%E7%9B%98%E5%9B%BE.html</guid>
         
         <category>Vim</category>
         

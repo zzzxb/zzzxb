@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>爱与不爱,下辈子也不会再见了！ - 赵小白的博客</title>
+	<title>VIM分屏! - 赵小白的博客</title>
 
 	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
 	<link rel="icon" href="/styles/images/favicon.jpg">
@@ -13,10 +13,10 @@
 	<link rel="stylesheet" href="/styles/css/index.css">
 	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/styles/css/syntax.css">
-	<link rel="canonical" href="/life/2017/06/12/%E7%88%B1%E4%B8%8E%E4%B8%8D%E7%88%B1,%E4%B8%8B%E8%BE%88%E5%AD%90%E4%B9%9F%E4%B8%8D%E4%BC%9A%E5%86%8D%E8%A7%81%E4%BA%86.html">
+	<link rel="canonical" href="/linux/2017/07/16/Vim-%E5%88%86%E5%B1%8F%E7%AE%A1%E7%90%86.html">
 	<link rel="alternate" type="application/rss+xml" title="赵小白的博客" href="/feed.xml">
 	
-	<meta name="keywords" content="爱与不爱,下辈子也不会再见了！, 赵小白的博客, 远方有多远,请你告诉我!">
+	<meta name="keywords" content="VIM分屏!, 赵小白的博客, 远方有多远,请你告诉我!">
 	<meta name="description" content="远方有多远,请你告诉我!">
 
 	<script src="/styles/js/jquery.min.js"></script>
@@ -90,8 +90,8 @@
   <div class="container">
   	
   		<!--
-		    <h1>爱与不爱,下辈子也不会再见了！</h1>
-		    <p>Post on Jun 12, 2017 by <a href="/about">赵赵赵小白</a></p>
+		    <h1>VIM分屏!</h1>
+		    <p>Post on Jul 16, 2017 by <a href="/about">赵赵赵小白</a></p>
 		-->
 		    <h1>远方有多远,请你告诉我!</h1>
     
@@ -102,8 +102,8 @@
 <div class="banner">
   <div class="container">
   	
-    	<a href="/categories/#Life-ref">Life</a>	/
-    	<a href="/tag/#Life-ref">Life</a>
+    	<a href="/categories/#Linux-ref">Linux</a>	/
+    	<a href="/tag/#Vim-ref">Vim</a>
     
   </div>
 </div>
@@ -343,39 +343,211 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">爱与不爱,下辈子也不会再见了！</h1>
+              <h1 class="post-title">VIM分屏!</h1>
               <!--
-                <p class="post-meta">Jun 12, 2017</p>
+                <p class="post-meta">Jul 16, 2017</p>
               -->
-              <div class="meta">Posted on <span class="postdate">Jun 12, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
+              <div class="meta">Posted on <span class="postdate">Jul 16, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
               <br />
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#section" id="markdown-toc-section">###爱与不爱,下辈子也不会再见了!</a></li>
+  <li><a href="#vim" id="markdown-toc-vim">分屏启动Vim</a></li>
+  <li><a href="#section" id="markdown-toc-section">关闭分屏</a></li>
+  <li><a href="#section-1" id="markdown-toc-section-1">分屏</a></li>
+  <li><a href="#section-2" id="markdown-toc-section-2">移动光标</a></li>
+  <li><a href="#section-3" id="markdown-toc-section-3">移动分屏</a></li>
+  <li><a href="#section-4" id="markdown-toc-section-4">屏幕尺寸</a></li>
 </ul>
 
-<h2 id="section">###爱与不爱,下辈子也不会再见了!</h2>
+<p>一直觉得vim分屏好酷，可惜我不会，今天在网上查了查，一实践还真不赖，拿出来分享了。<br />
+<br />
+:new 新建分屏<br />
+:spilt 水平分屏<br />
+:vsplit 垂直分屏<br />
+:only 取消分屏<br /></p>
 
-<p>#####香港电台主持人梁继璋送给儿子的备忘录
-我儿:写这备忘录给你，基于三个原则：<br />
-(一）人生福祸无常，谁也不知可以活多久，有些事情还是早一点说好。<br />
-(二）我是你的父亲，我不跟你说，没有人会跟你说。<br />
-(三）这备忘录里记载的，都是我经过惨痛失败得回来的体验，可以为你的成长省回不少冤枉路。<br />
-以下便是你在人生中要好好记住的事：<br />
-（一）对你不好的人，你不要太介怀，在你一生中没有人有义务要对你好，除了我和你妈妈。至于那些对你好的人，你除了要珍惜、感恩外，也请多防备一点。因为，每个人做每件事，总有一个原因，他对你好未必真的是因为喜欢你，请你必须搞清楚，而不必太快将对方看作真朋友。<br />
-（二）没有人是不可代替，没有东西是必须拥有。看透了这一点，将来你身边的人不再要你，或许失去了世间上最爱的一切时，也应该明白：“这并不是甚么大不了的事”。<br />
-（三）生命是短暂的，今天还在浪费着生命，明日会发觉生命已远离你了。因此愈早珍惜生命，你享受生命的日子也愈多，与其盼望长寿，倒不如早点享受。<br />
-（四）世界上并没有最爱这回事，爱情只是一种霎时的感觉，而这感觉绝对会随时日、心境而改变。如果你的所谓最爱离开你，请耐心地等候一下，让时日慢慢冲洗，让心灵慢慢沉淀，你的苦就会慢慢淡化。不要过分憧憬爱情的美，不要过分夸大失恋的悲。<br />
-（五）虽然，很多有成就的人士都有受过很多教育，但并不等如不用功读书，就一定可以成功。你学到的知识，就是你拥有的武器。人可以白手兴家，但不可以手无寸铁，紧记！<br />
-（六）我不会要求你供养我下半辈子，同样地我也不会供养你的下半辈子，当你长大到可以独立的时候，我的责任已经完结。以后你要坐巴士还是Benz，吃鱼翅还是粉丝，都要自己负责。<br />
-（七）你可以要求自己守信，但不能要求别人守信，你可以要求自己对人好，但不能期待人家对你好。你怎样对人，并不代表人家就会怎样对你，如果看不透这一点，你只会徒添不必要的烦恼。<br />
-（八）我买了十多二十年六合彩，还是一穷二白，连三奖也没有中，这证明人要发达，还是要努力工作才可以，世界上并没有免费午餐。<br />
-（九）亲人只有一次的缘份，无论这辈子我和你会相处多久，也请好好珍惜共聚的时光，下辈子，无论爱与不爱，都不会再见<br /></p>
+<blockquote>
+  <p>1.Ctrl+W，然后马上来个n 水平分屏<br />
+   Ctrl+w，再一个c，是关闭当前的窗口<br />
+2.如何split horizontally?<br /></p>
+</blockquote>
 
-<p>今天我妈发给我让我看看,感触颇深,好好珍惜自己身边的亲人,出门在外除了父母还有谁会一直挂念我们，没事常回家看看，父母一直等着我们。</p>
+<p>Ctrl + w, s 水平</p>
 
-<p><img src="/styles/images/love.jpg" alt="Vim" /></p>
+<p>split vertically</p>
+
+<p>Ctrl + w, v 垂直</p>
+
+<blockquote>
+  <p>3.如何切换焦点？</p>
+</blockquote>
+
+<p>Ctrl + w, w 后一个
+Ctrl + w, p 前一个</p>
+
+<p>Ctrl + w, h 四个方向
+Ctrl + w, i
+Ctrl + w, k
+Ctrl + w, l</p>
+
+<blockquote>
+  <p>4.如何关闭其他窗口?</p>
+</blockquote>
+
+<p>Ctrl + w, o</p>
+
+<p>更多快捷键，可直接查询
+:help ctrl-w</p>
+
+<blockquote>
+  <p>5.载入文件</p>
+</blockquote>
+
+<p>:vs  文件路径/文件名      在新的垂直分屏中打开文件</p>
+
+<p>:sv  文件路径/文件名      在新的水平分屏中打开文件</p>
+
+<p>作为vim fans，soone早就把vim作为编程的首选编辑器来，什么庞大到ide，都不要，就一个简简单单的vim，看似简单，其实很不简单。通过适当到配 置，可以将他配置得完全不差于其他编程ide。vim具体怎么配置这里就不说了，本来想翻译下下面这篇牛X的vim配置，无奈一看确实是太长了，还是等有 空咱再好好的来翻译。现在先给贴贴出转载的地址，有兴趣的去看看，真不错。</p>
+
+<h2 id="vim">分屏启动Vim</h2>
+
+<ul>
+  <li>
+    <p>使用大写的O参数来垂直分屏。</p>
+
+    <p>vim -On file1 file2 …</p>
+  </li>
+  <li>
+    <p>使用小写的o参数来水平分屏。</p>
+
+    <p>vim -on file1 file2 …</p>
+  </li>
+</ul>
+
+<p>注释: n是数字，表示分成几个屏。</p>
+
+<h2 id="section">关闭分屏</h2>
+
+<ul>
+  <li>
+    <p>关闭当前窗口。</p>
+
+    <p>Ctrl+W c</p>
+  </li>
+  <li>
+    <p>关闭当前窗口，如果只剩最后一个了，则退出Vim。</p>
+
+    <p>Ctrl+W q</p>
+  </li>
+</ul>
+
+<h2 id="section-1">分屏</h2>
+
+<ul>
+  <li>
+    <p>上下分割当前打开的文件。</p>
+
+    <p>Ctrl+W s</p>
+  </li>
+  <li>
+    <p>上下分割，并打开一个新的文件。</p>
+
+    <p>:sp filename</p>
+  </li>
+  <li>
+    <p>左右分割当前打开的文件。</p>
+
+    <p>Ctrl+W v</p>
+  </li>
+  <li>
+    <p>左右分割，并打开一个新的文件。</p>
+
+    <p>:vsp filename</p>
+  </li>
+</ul>
+
+<h2 id="section-2">移动光标</h2>
+
+<p>Vi中的光标键是h, j, k, l，要在各个屏间切换，只需要先按一下Ctrl+W</p>
+
+<ul>
+  <li>
+    <p>把光标移到右边 的屏。</p>
+
+    <p>Ctrl+W l</p>
+  </li>
+  <li>
+    <p>把光标移到左边 的屏中。</p>
+
+    <p>Ctrl+W h</p>
+  </li>
+  <li>
+    <p>把光标移到上边 的屏中。</p>
+
+    <p>Ctrl+W k</p>
+  </li>
+  <li>
+    <p>把光标移到下边 的屏中。</p>
+
+    <p>Ctrl+W j</p>
+  </li>
+  <li>
+    <p>把光标移到下一个 的屏中。.</p>
+
+    <p>Ctrl+W w</p>
+  </li>
+</ul>
+
+<h2 id="section-3">移动分屏</h2>
+
+<p>这个功能还是使用了Vim的光标键，只不过都是大写。当然了，如果你的分屏很乱很复杂的话，这个功能可能会出现一些非常奇怪的症状。</p>
+
+<ul>
+  <li>
+    <p>向右移动。</p>
+
+    <p>Ctrl+W L</p>
+  </li>
+  <li>
+    <p>向左移动</p>
+
+    <p>Ctrl+W H</p>
+  </li>
+  <li>
+    <p>向上移动</p>
+
+    <p>Ctrl+W K</p>
+  </li>
+  <li>
+    <p>向下移动</p>
+
+    <p>Ctrl+W J</p>
+  </li>
+</ul>
+
+<h2 id="section-4">屏幕尺寸</h2>
+
+<p>下面是改变尺寸的一些操作，主要是高度，对于宽度你可以使用Ctrl+W <或是>，但这可能需要最新的版本才支持。</或是></p>
+
+<ul>
+  <li>
+    <p>让所有的屏都有一样的高度。</p>
+
+    <p>Ctrl+W =</p>
+  </li>
+  <li>
+    <p>增加高度。</p>
+
+    <p>Ctrl+W +</p>
+  </li>
+  <li>
+    <p>减少高度。</p>
+
+    <p>Ctrl+W -</p>
+  </li>
+</ul>
+
 
             </article>
         </div>
