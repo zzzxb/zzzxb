@@ -14,8 +14,8 @@ tag: python
 
 shell里执行：
 
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 100
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 150
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 100<br>
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 150<br>
 
 此时你会发现 alternatives
 

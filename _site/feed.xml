@@ -5,9 +5,39 @@
     <description>远方有多远,请你告诉我!</description>
     <link>http://www.idearfree.com/</link>
     <atom:link href="http://www.idearfree.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 16 Jul 2017 22:15:10 +0800</pubDate>
-    <lastBuildDate>Sun, 16 Jul 2017 22:15:10 +0800</lastBuildDate>
+    <pubDate>Thu, 20 Jul 2017 22:14:26 +0800</pubDate>
+    <lastBuildDate>Thu, 20 Jul 2017 22:14:26 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Error:buftype</title>
+        <description>
+&lt;p&gt;E382:Vannontwite,’buftype’ option is set
+解决方法如下:
+可用下面的命名查看buftype的设置，当buftype=cofile时，不能保存文件，只有当buftype=null时，才可以保存&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;:verbose set buftype
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;修改buftype的方法： vim切换至ex模式，输入&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;:setlocal buftype=
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;如果想改回原设置，可以用下面命令：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;:setlocal buftype=nofile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 20 Jul 2017 21:47:00 +0800</pubDate>
+        <link>http://www.idearfree.com/2017/07/20/Error-buftype.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/2017/07/20/Error-buftype.html</guid>
+        
+        <category>Vim</category>
+        
+        
+      </item>
     
       <item>
         <title>安装pip及Pygame!</title>
@@ -42,7 +72,8 @@
 &lt;/code&gt;&lt;/pre&gt;      &lt;/div&gt;
     &lt;/blockquote&gt;
 
-    &lt;p&gt;然后就OK了！输入 pip –version(或pip3 –version)来查看版本信息吧。&lt;/p&gt;
+    &lt;p&gt;如果提示错误说没有—H 把上面命令改为sudo —H python get-pip.py
+ 然后就OK了！输入 pip –version(或pip3 –version)来查看版本信息吧。&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -105,11 +136,13 @@ $ sudo apt-get install python-numpy
     &lt;/blockquote&gt;
 
     &lt;p&gt;告知你Pygame找到了哪些库后，输出将暂停一段时间。请按回车键，即便有一些库没有找到。
- 你将看到一条信息，说明成功安装了Pygame&lt;/p&gt;
+ 你将看到一条信息，说明成功安装了Pygame
+ 如果输入python –vesion 不是系统默认的2.7可能不能用上面的命令-可参考
+ &lt;a href=&quot;http://www.cnblogs.com/gongxijun/p/5823595.html&quot;&gt;安装Python时遇到如下问题,解决方案&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;查看安装情况 ：
     &lt;blockquote&gt;
-      &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;$ python
+      &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;$ python3
 &amp;gt;&amp;gt;&amp;gt; import pygame
 &amp;gt;&amp;gt;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;      &lt;/div&gt;
@@ -117,30 +150,27 @@ $ sudo apt-get install python-numpy
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;hr /&gt;
-
 &lt;h2 id=&quot;pippygame&quot;&gt;关于pip安装pygame出错的问题&lt;/h2&gt;
 
 &lt;p&gt;2017-7-16-21:54添加&lt;/p&gt;
 
 &lt;hr /&gt;
+
 &lt;p&gt;用pip安装时出现了以下错误,我去抓狂啊…..百度上的教程让人抓狂啊，看不懂。。&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;zpp@xb:~$ pip install –user hg+http://bitbucket.org/pygame/pygame&lt;br /&gt;
-Collecting hg+http://bitbucket.org/pygame/pygame&lt;br /&gt;
-  Cloning hg http://bitbucket.org/pygame/pygame to /tmp/pip-3g6ldpay-build&lt;br /&gt;
-Traceback (most recent call last):&lt;br /&gt;
-  File “/usr/bin/hg”, line 39, in &amp;lt;module&amp;gt;&lt;br /&gt;
-    import mercurial.util&lt;br /&gt;
-ImportError: No module named ‘mercurial’&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;zpp@xb:~$ pip install –user hg+http://bitbucket.org/pygame/pygame
+Collecting hg+http://bitbucket.org/pygame/pygame
+  Cloning hg http://bitbucket.org/pygame/pygame to /tmp/pip-3g6ldpay-build
+Traceback (most recent call last):
+  File “/usr/bin/hg”, line 39, in &lt;module&gt;
+    import mercurial.util
+ImportError: No module named ‘mercurial’&lt;/module&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
-&lt;p&gt;不过好在pygame模块再github上挂着–高兴啊!!!好在我用过github&lt;br /&gt;
-进入正题开始解决问题
-pip install –user hg+http://bitucket.org/pygame/pygame&lt;br /&gt;
-他是通过克隆pygame仓库来安装的根据这个方法&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;不过好在pygame模块再github上挂着–高兴啊!!!好在我用过github
+进入正题开始解决问题 pip install –user hg+http://bitucket.org/pygame/pygame
+他是通过克隆pygame仓库来安装的根据这个方法&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -153,22 +183,17 @@ pip install –user hg+http://bitucket.org/pygame/pygame&lt;br /&gt;
   &lt;li&gt;
     &lt;p&gt;好，安装之后开始克隆pygame仓库&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt; git clone https://github.com/pygame/pygame
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;git clone https://github.com/pygame/pygame
 &lt;/code&gt;&lt;/pre&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;克隆完成后开始把它移动到python3+的目录中&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt; sudo mv pygame /usr/lib/python3.5
+    &lt;p&gt;克隆完成后开始进入pygame安装&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;sudo python3 setup.py
 &lt;/code&gt;&lt;/pre&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;我用的是python3.5 你们可以看看你们用的多少把它改改&lt;br /&gt;
-只要把模块移动到python3+的文件中就能用了。&lt;br /&gt;
-如果有什么问题可以在右上角邮件私信我，欢迎一起探讨.&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
+&lt;p&gt;如果有什么问题可以在右上角邮件私信我，欢迎一起探讨.&lt;/p&gt;
 
 &lt;h2 id=&quot;dpkg&quot;&gt;关于出现的dpkg的狗血错误&lt;/h2&gt;
 &lt;ul&gt;
@@ -246,10 +271,10 @@ pip install –user hg+http://bitucket.org/pygame/pygame&lt;br /&gt;
         <link>http://www.idearfree.com/python/2017/07/16/%E5%AE%89%E8%A3%85pip.html</link>
         <guid isPermaLink="true">http://www.idearfree.com/python/2017/07/16/%E5%AE%89%E8%A3%85pip.html</guid>
         
-        <category>Python</category>
+        <category>python</category>
         
         
-        <category>Python</category>
+        <category>python</category>
         
       </item>
     
@@ -469,8 +494,8 @@ Ctrl + w, l&lt;/p&gt;
         <description>
 &lt;p&gt;shell里执行：&lt;/p&gt;
 
-&lt;p&gt;sudo update-alternatives –install /usr/bin/python python /usr/bin/python2 100
-sudo update-alternatives –install /usr/bin/python python /usr/bin/python3 150&lt;/p&gt;
+&lt;p&gt;sudo update-alternatives –install /usr/bin/python python /usr/bin/python2 100&lt;br /&gt;
+sudo update-alternatives –install /usr/bin/python python /usr/bin/python3 150&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;此时你会发现 alternatives&lt;/p&gt;
 
@@ -827,28 +852,6 @@ $ . /hello&lt;/p&gt;
         <pubDate>Mon, 12 Jun 2017 21:52:01 +0800</pubDate>
         <link>http://www.idearfree.com/life/2017/06/12/%E7%88%B1%E4%B8%8E%E4%B8%8D%E7%88%B1,%E4%B8%8B%E8%BE%88%E5%AD%90%E4%B9%9F%E4%B8%8D%E4%BC%9A%E5%86%8D%E8%A7%81%E4%BA%86.html</link>
         <guid isPermaLink="true">http://www.idearfree.com/life/2017/06/12/%E7%88%B1%E4%B8%8E%E4%B8%8D%E7%88%B1,%E4%B8%8B%E8%BE%88%E5%AD%90%E4%B9%9F%E4%B8%8D%E4%BC%9A%E5%86%8D%E8%A7%81%E4%BA%86.html</guid>
-        
-        <category>Life</category>
-        
-        
-        <category>Life</category>
-        
-      </item>
-    
-      <item>
-        <title>MMP！</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;你妹的证书!&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;你妹的证书!&lt;/h2&gt;
-
-&lt;p&gt;MMP找不到计算机等级考试入口，大爷的我不报了,考一张证的时间还不如去学点其它又用的,我的实力不局限在证书上,我要的是实力不是证书,考证考证考你MMP(拒绝考证不是我拒绝学习的理由,合理考证,不被证书束缚.)&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;right&quot;&gt;2017-6-10--&amp;gt;赵小白-(大一于宿舍)&lt;/p&gt;
-</description>
-        <pubDate>Sat, 10 Jun 2017 11:15:01 +0800</pubDate>
-        <link>http://www.idearfree.com/life/2017/06/10/MMP.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/life/2017/06/10/MMP.html</guid>
         
         <category>Life</category>
         

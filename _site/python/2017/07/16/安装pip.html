@@ -102,8 +102,8 @@
 <div class="banner">
   <div class="container">
   	
-    	<a href="/categories/#Python-ref">Python</a>	/
-    	<a href="/tag/#Python-ref">Python</a>
+    	<a href="/categories/#python-ref">python</a>	/
+    	<a href="/tag/#python-ref">python</a>
     
   </div>
 </div>
@@ -128,6 +128,19 @@
         <li><a href="#year_2017">2017</a>
           <ul class="nav">
             <li><a href="#month_2017_July">July</a></li>
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
       
 
       
@@ -395,7 +408,8 @@
 </code></pre>      </div>
     </blockquote>
 
-    <p>然后就OK了！输入 pip –version(或pip3 –version)来查看版本信息吧。</p>
+    <p>如果提示错误说没有—H 把上面命令改为sudo —H python get-pip.py
+ 然后就OK了！输入 pip –version(或pip3 –version)来查看版本信息吧。</p>
   </li>
 </ol>
 
@@ -458,11 +472,13 @@ $ sudo apt-get install python-numpy
     </blockquote>
 
     <p>告知你Pygame找到了哪些库后，输出将暂停一段时间。请按回车键，即便有一些库没有找到。
- 你将看到一条信息，说明成功安装了Pygame</p>
+ 你将看到一条信息，说明成功安装了Pygame
+ 如果输入python –vesion 不是系统默认的2.7可能不能用上面的命令-可参考
+ <a href="http://www.cnblogs.com/gongxijun/p/5823595.html">安装Python时遇到如下问题,解决方案</a></p>
   </li>
   <li>查看安装情况 ：
     <blockquote>
-      <div class="highlighter-rouge"><pre class="codehilite"><code>$ python
+      <div class="highlighter-rouge"><pre class="codehilite"><code>$ python3
 &gt;&gt;&gt; import pygame
 &gt;&gt;&gt;
 </code></pre>      </div>
@@ -470,30 +486,27 @@ $ sudo apt-get install python-numpy
   </li>
 </ol>
 
-<hr />
-
 <h2 id="pippygame">关于pip安装pygame出错的问题</h2>
 
 <p>2017-7-16-21:54添加</p>
 
 <hr />
+
 <p>用pip安装时出现了以下错误,我去抓狂啊…..百度上的教程让人抓狂啊，看不懂。。</p>
 
 <hr />
 
-<p>zpp@xb:~$ pip install –user hg+http://bitbucket.org/pygame/pygame<br />
-Collecting hg+http://bitbucket.org/pygame/pygame<br />
-  Cloning hg http://bitbucket.org/pygame/pygame to /tmp/pip-3g6ldpay-build<br />
-Traceback (most recent call last):<br />
-  File “/usr/bin/hg”, line 39, in &lt;module&gt;<br />
-    import mercurial.util<br />
-ImportError: No module named ‘mercurial’<br /></p>
+<p>zpp@xb:~$ pip install –user hg+http://bitbucket.org/pygame/pygame
+Collecting hg+http://bitbucket.org/pygame/pygame
+  Cloning hg http://bitbucket.org/pygame/pygame to /tmp/pip-3g6ldpay-build
+Traceback (most recent call last):
+  File “/usr/bin/hg”, line 39, in <module>
+    import mercurial.util
+ImportError: No module named ‘mercurial’</module></p>
 
-<hr />
-<p>不过好在pygame模块再github上挂着–高兴啊!!!好在我用过github<br />
-进入正题开始解决问题
-pip install –user hg+http://bitucket.org/pygame/pygame<br />
-他是通过克隆pygame仓库来安装的根据这个方法<br /></p>
+<p>不过好在pygame模块再github上挂着–高兴啊!!!好在我用过github
+进入正题开始解决问题 pip install –user hg+http://bitucket.org/pygame/pygame
+他是通过克隆pygame仓库来安装的根据这个方法</p>
 
 <ol>
   <li>
@@ -506,22 +519,17 @@ pip install –user hg+http://bitucket.org/pygame/pygame<br />
   <li>
     <p>好，安装之后开始克隆pygame仓库</p>
 
-    <div class="highlighter-rouge"><pre class="codehilite"><code> git clone https://github.com/pygame/pygame
+    <div class="highlighter-rouge"><pre class="codehilite"><code>git clone https://github.com/pygame/pygame
 </code></pre>    </div>
-  </li>
-  <li>
-    <p>克隆完成后开始把它移动到python3+的目录中</p>
 
-    <div class="highlighter-rouge"><pre class="codehilite"><code> sudo mv pygame /usr/lib/python3.5
+    <p>克隆完成后开始进入pygame安装</p>
+
+    <div class="highlighter-rouge"><pre class="codehilite"><code>sudo python3 setup.py
 </code></pre>    </div>
   </li>
 </ol>
 
-<p>我用的是python3.5 你们可以看看你们用的多少把它改改<br />
-只要把模块移动到python3+的文件中就能用了。<br />
-如果有什么问题可以在右上角邮件私信我，欢迎一起探讨.<br /></p>
-
-<hr />
+<p>如果有什么问题可以在右上角邮件私信我，欢迎一起探讨.</p>
 
 <h2 id="dpkg">关于出现的dpkg的狗血错误</h2>
 <ul>
