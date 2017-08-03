@@ -2,7 +2,7 @@
 layout: post
 title:  "Linux中切换python版本!"
 date:   2017-7-10 15:00:00 +0800
-categories: Python
+categories: python
 tag: python
 ---
 
