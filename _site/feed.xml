@@ -5,9 +5,319 @@
     <description>远方有多远,请你告诉我!</description>
     <link>http://www.idearfree.com/</link>
     <atom:link href="http://www.idearfree.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 20 Jul 2017 22:14:26 +0800</pubDate>
-    <lastBuildDate>Thu, 20 Jul 2017 22:14:26 +0800</lastBuildDate>
+    <pubDate>Sat, 05 Aug 2017 22:39:49 +0800</pubDate>
+    <lastBuildDate>Sat, 05 Aug 2017 22:39:49 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>按键说明!</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#vim&quot; id=&quot;markdown-toc-vim&quot;&gt;Vim按键说明&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;移动光标的方法&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;删除.复制与粘贴&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;一般模式切换到编辑模式的可用按钮说明&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;一般模式切换到命令模式的可用的按钮说明&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#vim-1&quot; id=&quot;markdown-toc-vim-1&quot;&gt;关于vim的配置&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;vim&quot;&gt;Vim按键说明&lt;/h1&gt;
+&lt;p&gt;摘抄自&lt;鸟哥的Linux私房菜&gt;&lt;/鸟哥的Linux私房菜&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;移动光标的方法&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;h 向左&lt;/li&gt;
+  &lt;li&gt;l 向右&lt;/li&gt;
+  &lt;li&gt;j 向下&lt;/li&gt;
+  &lt;li&gt;K 向上&lt;/li&gt;
+  &lt;li&gt;[Control]+[f] 屏幕向下移动一页相当于[Page Down]&lt;/li&gt;
+  &lt;li&gt;[Control]+[b] 屏幕向上移动一页相当于[Page Up]&lt;/li&gt;
+  &lt;li&gt;[control]+[d] 屏幕向下移动半页(仅限于有文本的地方)&lt;/li&gt;
+  &lt;li&gt;[control]+[u] 屏幕向上移动半页(仅限于有文本的地方)&lt;/li&gt;
+  &lt;li&gt;+ 光标移动倒非空格的下一行&lt;/li&gt;
+  &lt;li&gt;- 光标移动倒非空格的上一行&lt;/li&gt;
+  &lt;li&gt;n&lt;space&gt; 光标向后移动n个字符的距离&lt;/space&gt;&lt;/li&gt;
+  &lt;li&gt;0 or [HOME] 移动到本行开始处&lt;/li&gt;
+  &lt;li&gt;$ or [END] 移动到本行结尾处&lt;/li&gt;
+  &lt;li&gt;H 光标移动到这个屏幕的第一行第一个字符处&lt;/li&gt;
+  &lt;li&gt;M 光标移动到这个屏幕的中间行第一个字符处&lt;/li&gt;
+  &lt;li&gt;L 光标移动到这个屏幕的最后一行第一个字符处&lt;/li&gt;
+  &lt;li&gt;G 移动到这个文件的最后一行&lt;/li&gt;
+  &lt;li&gt;gg 移动到这个文件的第一行&lt;/li&gt;
+  &lt;li&gt;nG 移动到这个文件的第n行&lt;/li&gt;
+  &lt;li&gt;ngg 同上&lt;/li&gt;
+  &lt;li&gt;/Hello 向下查找文件中有Hello的字符&lt;/li&gt;
+  &lt;li&gt;?Hello 向上查找文件中有Hello的字符&lt;/li&gt;
+  &lt;li&gt;n 向下继续查找&lt;/li&gt;
+  &lt;li&gt;N 向上继续查找&lt;/li&gt;
+  &lt;li&gt;:nohl or :noh 取消查找高亮 nohlsearch&lt;/li&gt;
+  &lt;li&gt;:n1/n2s/word1/word2/g  文件的n1行到n2行查找word1并替换为word2&lt;/li&gt;
+  &lt;li&gt;:1,$s/word1/word2/g 从第一行倒最后一行查找word1并替换为word2&lt;/li&gt;
+  &lt;li&gt;:1,$s/word1/word2/gc 同上,并且会提示用户确认替换&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;删除.复制与粘贴&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;x,X 向前或向后删除一个字符与x == [Del],X == [Backspace] 效果相同&lt;/li&gt;
+  &lt;li&gt;nx 向后删除n个字符&lt;/li&gt;
+  &lt;li&gt;dd 删除光标所在行,可以通过n,gg,G等选择删除多少行&lt;/li&gt;
+  &lt;li&gt;d$ or d0 删除当先行光标所在位置的后面($)或前面(0)的所有字符&lt;/li&gt;
+  &lt;li&gt;yy 复制光标所在行&lt;/li&gt;
+  &lt;li&gt;ygg or yG 从当前行复制到开始行(gg)或末尾行(G)&lt;/li&gt;
+  &lt;li&gt;y$ or y0 复制光标所在位置的后面($)或前面(0)&lt;/li&gt;
+  &lt;li&gt;p, P p粘帖到光标下一行,P粘帖在光标上一行&lt;/li&gt;
+  &lt;li&gt;J 使光标所在行与下一行合并&lt;/li&gt;
+  &lt;li&gt;c 重复删除多个数据, 例如向下删除10行,[10cj]&lt;/li&gt;
+  &lt;li&gt;u 复原上一个操作&lt;/li&gt;
+  &lt;li&gt;[control]+r 重做上一个操作&lt;/li&gt;
+  &lt;li&gt;. 重复上一个操作&lt;/li&gt;
+  &lt;li&gt;fn 在当前行查找字符n&lt;/li&gt;
+  &lt;li&gt;; 重复上一个查找&lt;/li&gt;
+  &lt;li&gt;w 移动到下一个单词处, b 移动到上一个字符处&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;一般模式切换到编辑模式的可用按钮说明&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;i,I 进入插入模式[insert mode];i从光标所在处插入,I从本行开始处插入&lt;/li&gt;
+  &lt;li&gt;a,A	同上;a从光标所在处末尾插入,A从光标所在行末尾插入&lt;/li&gt;
+  &lt;li&gt;o,O 同上;o在光标所在行的下一行插入,O在光标所在行的上一行开始插入&lt;/li&gt;
+  &lt;li&gt;r,R 进入替换模式[Replace mode];r替换光标所在处下一个字符(一次)R(多次)[ESC]停止&lt;/li&gt;
+  &lt;li&gt;v,V,[control]+v 子可视,行可视,块可视&lt;/li&gt;
+  &lt;li&gt;[Esc] 退出编辑模式,回到一般模式(通常不进行插入或进行操作时使用)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;一般模式切换到命令模式的可用的按钮说明&lt;/h2&gt;
+
+&lt;p&gt;加[]为可选操作, ! 具有强制的意思&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;:w [name] 保存, 以name为文件名保存(当前位置的另存为)&lt;/li&gt;
+  &lt;li&gt;:q 退出&lt;/li&gt;
+  &lt;li&gt;:q! 强制退出&lt;/li&gt;
+  &lt;li&gt;:wq 保存并退出&lt;/li&gt;
+  &lt;li&gt;:ZZ 若文件没有更改则退出,如果更改则保存退出&lt;/li&gt;
+  &lt;li&gt;:r[name] 在编辑数据时,读入另一个文件的数据,将其内容追加到光标所在行的后面&lt;/li&gt;
+  &lt;li&gt;:n1,n2 w[name] 将n1到n2的内容保存为name这个文件&lt;/li&gt;
+  &lt;li&gt;:! command 暂时离开&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;vim-1&quot;&gt;关于vim的配置&lt;/h2&gt;
+
+&lt;p&gt;在之前我也贴出了我的vim配置,如需使用可以通过对我的配置进行修改使用,或自行从百度或
+Google上搜索配置&lt;/p&gt;
+</description>
+        <pubDate>Sat, 05 Aug 2017 20:48:00 +0800</pubDate>
+        <link>http://www.idearfree.com/linux/2017/08/05/Vim-%E6%8C%89%E9%94%AE%E8%AF%B4%E6%98%8E.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/linux/2017/08/05/Vim-%E6%8C%89%E9%94%AE%E8%AF%B4%E6%98%8E.html</guid>
+        
+        <category>Vim</category>
+        
+        
+        <category>Linux</category>
+        
+      </item>
+    
+      <item>
+        <title>创建快捷启动方式</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#ubuntu-&quot; id=&quot;markdown-toc-ubuntu-&quot;&gt;Ubuntu 创建快捷启动方式(启动器)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ubuntu-&quot;&gt;Ubuntu 创建快捷启动方式(启动器)&lt;/h2&gt;
+
+&lt;p&gt;*应用于免安装软件
+注:可能不是有些版本不适用吧,但大部分应该可以的。&lt;/p&gt;
+
+&lt;p&gt;1)创建快捷方式桌面文件&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;	sudo vim /usr/share/applications/FileName.desktop
+	*注意:FileName随便写,方便起见改为软件名
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;2)在上面文件中添加(看下面内容都能顾名思义)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;	[Desktop Entry]
+	Encoding=UTF-8
+	Name=FileName(可改)
+	Comment=FileName(可改)
+	Exec=path(必须为你需要添加快捷方式的软件路径)
+	Icon=ico(这里加入你快捷方式的图标路径)
+	Terminal=false(打开软件时不显示终端,true为显示)
+	StartupNotify=true
+	Type=Application(可改)
+	Categories=Application;(这里决定了启动器在菜单里的位置)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Wed, 02 Aug 2017 11:31:00 +0800</pubDate>
+        <link>http://www.idearfree.com/linux/2017/08/02/%E5%88%9B%E5%BB%BA%E5%BF%AB%E6%8D%B7%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/linux/2017/08/02/%E5%88%9B%E5%BB%BA%E5%BF%AB%E6%8D%B7%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F.html</guid>
+        
+        <category>Linux</category>
+        
+        
+        <category>Linux</category>
+        
+      </item>
+    
+      <item>
+        <title>小白的vimrc配置!</title>
+        <description>
+&lt;p&gt;”============================================&lt;br /&gt;
+“= Description:适合自己使用的vimrc配置      =&lt;br /&gt;
+“= Last Change:2017/7/22                    =&lt;br /&gt;
+“= Version: 1.80                            =&lt;br /&gt;
+“=                           Creator:赵小白 =&lt;br /&gt;
+“============================================&lt;br /&gt;
+&lt;br /&gt;
+set nocompatible “关闭vi兼容模式&lt;br /&gt;
+syntax on “自动语法高亮&lt;br /&gt;
+set shortmess=atI   “ 启动的时候不显示那个援助乌干达儿童的提示  &lt;br /&gt;
+winpos 5 5          “ 设定窗口位置  &lt;br /&gt;
+set lines=40 columns=120   “ 设定窗口大小&lt;br /&gt;
+set go=             “ 不要图形按钮  &lt;br /&gt;
+set number relativenumber “设置行号&lt;br /&gt;
+colorscheme rcg_gui “使用配色&lt;br /&gt;
+set cursorline “突出显示行&lt;br /&gt;
+set cursorcolumn&lt;br /&gt;
+highlight CursorLine   cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE&lt;br /&gt;
+highlight CursorColumn cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE&lt;br /&gt;
+&lt;br /&gt;
+set showcmd    “ 输入的命令显示出来，看的清楚些&lt;br /&gt;
+set confirm “在处理未保存或制度文件的时候，弹出确认&lt;br /&gt;
+set ruler “打开状态栏标尺&lt;br /&gt;
+set smartindent “为C提供的自动缩进&lt;br /&gt;
+set tabstop=4 “设定tab长度为4&lt;br /&gt;
+set autochdir “自动切换当前目录为当前文件所在的目录&lt;br /&gt;
+set ignorecase “搜索忽略大小写&lt;br /&gt;
+set hlsearch “搜索时高亮显示被找到的文本&lt;br /&gt;
+set incsearch “搜索逐字符高亮&lt;br /&gt;
+set gdefault “行内替换&lt;br /&gt;
+“编码设置&lt;br /&gt;
+set enc=utf-8&lt;br /&gt;
+set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936&lt;br /&gt;
+“语言设置&lt;br /&gt;
+set langmenu=zh_CN.UTF-8&lt;br /&gt;
+set helplang=cn&lt;br /&gt;
+set showmatch “ 高亮显示匹配的括号&lt;br /&gt;
+set matchtime=1 “ 匹配括号高亮的时间（单位是十分之一秒）&lt;br /&gt;
+set magic “设置魔术&lt;br /&gt;
+set smartindent “开启新行时使用智能缩进&lt;br /&gt;
+set foldenable “开始折叠&lt;br /&gt;
+set foldmethod=syntax “设置语法折叠&lt;br /&gt;
+set foldcolumn=0 “设置折叠区域宽度&lt;br /&gt;
+setlocal foldlevel=1 “设置折叠层数&lt;br /&gt;
+set foldclose=all “设置为自动折叠&lt;br /&gt;
+set fillchars=vert:\ ,stl:\ ,stlnc:\ “ 在被分割的窗口间显示空白，便于阅读&lt;br /&gt;
+filetype on “侦测文件类型&lt;br /&gt;
+filetype plugin on “ 载入文件类型插件&lt;br /&gt;
+filetype indent on “ 为特定文件类型载入相关缩进文件&lt;br /&gt;
+set viminfo+=!  “ 保存全局变量&lt;br /&gt;
+set iskeyword+=_,$,@,%,#,- “ 带有如下符号的单词不要被换行分割&lt;br /&gt;
+set linespace=0 “ 字符间插入的像素行数目&lt;br /&gt;
+“set backspace=0 “ 使回格键（backspace）正常处理indent, eol, start等&lt;br /&gt;
+“set whichwrap+=&amp;lt;,&amp;gt;,h,l “ 允许backspace和光标键跨越行边界&lt;br /&gt;
+&lt;br /&gt;
+“ &lt;F5&gt; 运行python程序  &lt;br /&gt;
+map &lt;F5&gt; :w&lt;cr&gt;:!python3 %&lt;CR&gt;  &lt;br /&gt;
+  &lt;br /&gt;
+&quot;使用NTRETREE&lt;br /&gt;
+map &lt;C-n&gt; :NERDTreeToggle&lt;CR&gt; &lt;br /&gt;
+autocmd vimenter * NERDTree&lt;br /&gt;
+autocmd StdinReadPre * let s:std_in=1&lt;br /&gt;
+autocmd VimEnter * if argc() == 0 &amp;amp;&amp;amp; !exists(&quot;s:std_in&quot;) | NERDTree | endif                &lt;br /&gt; 
+autocmd bufenter * if (winnr(&quot;$&quot;) == 1 &amp;amp;&amp;amp; exists(&quot;b:NERDTreeType&quot;) &amp;amp;&amp;amp; b:NERDTreeType == &quot;pri &lt;br /&gt;   mary&quot;) | q | endif&lt;br /&gt;
+let g:NERDTreeDirArrows = 1                                    &lt;br /&gt;                             
+let g:NERDTreeDirArrowExpandable = &#39;▸&#39;&lt;br /&gt;
+let g:NERDTreeDirArrowCollapsible = &#39;▾&#39;&lt;br /&gt;
+&lt;br /&gt;
+&quot; YouCompleteMe&lt;br /&gt;
+set runtimepath+=~/.vim/bundle/YouCompleteMe&lt;br /&gt;
+let g:ycm_collect_identifiers_from_tags_files = 1           &quot; 开启 YCM 基于标签引擎&lt;br /&gt;
+let g:ycm_collect_identifiers_from_comments_and_strings = 1 &quot; 注释与字符串中的内容也用于补全&lt;br /&gt;
+let g:syntastic_ignore_files=[&quot;.*\.py$&quot;]&lt;br /&gt;
+let g:ycm_seed_identifiers_with_syntax = 1                  &quot; 语法关键字补全&lt;br /&gt;
+let g:ycm_complete_in_comments = 1&lt;br /&gt;
+let g:ycm_confirm_extra_conf = 0&lt;br /&gt;
+let g:ycm_key_list_select_completion = [&#39;&lt;c-n&gt;&#39;, &#39;&lt;Down&gt;&#39;]  &quot; 映射按键, 没有这个会拦截掉tab, 导致其他插件的tab不能用.&lt;br /&gt;
+let g:ycm_key_list_previous_completion = [&#39;&lt;c-p&gt;&#39;, &#39;&lt;Up&gt;&#39;]&lt;br /&gt;
+let g:ycm_complete_in_comments = 1                          &quot; 在注释输入中也能补全&lt;br /&gt;
+let g:ycm_complete_in_strings = 1                           &quot; 在字符串输入中也能补全&lt;br /&gt;
+let g:ycm_collect_identifiers_from_comments_and_strings = 1 &quot; 注释和字符串中的文字也会被收入补全&lt;br /&gt;
+let g:ycm_global_ycm_extra_conf=&#39;~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py&#39;&lt;br /&gt;
+let g:ycm_show_diagnostics_ui = 0                           &quot; 禁用语法检查&lt;br /&gt;
+inoremap &lt;expr&gt; &lt;CR&gt; pumvisible() ? &quot;\&lt;C-y&gt;&quot; : &quot;\&lt;CR&gt;&quot; |            &quot; 回车即选中当前项&lt;br /&gt;
+nnoremap &lt;c-j&gt; :YcmCompleter GoToDefinitionElseDeclaration&lt;CR&gt;|     &quot; 跳转到定义处&lt;br /&gt;
+let g:ycm_min_num_of_chars_for_completion=2                 &quot; 从第2个键入字符就开始罗列匹配项 &lt;br /&gt;&lt;/CR&gt;&lt;/c-j&gt;&lt;/CR&gt;&lt;/C-y&gt;&lt;/CR&gt;&lt;/expr&gt;&lt;/Up&gt;&lt;/c-p&gt;&lt;/Down&gt;&lt;/c-n&gt;&lt;/CR&gt;&lt;/C-n&gt;&lt;/CR&gt;&lt;/cr&gt;&lt;/F5&gt;&lt;/F5&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+function RunThisScript() &lt;br /&gt;
+    let file_name = expand(“%:p”)&lt;br /&gt;
+    let file_ext = expand(“%:e”)&lt;br /&gt;
+    let file_cmd = ““&lt;br /&gt;
+&lt;br /&gt;
+    “python 直接调用&lt;br /&gt;
+    if file_ext == “py”&lt;br /&gt;
+        let file_cmd = ‘/usr/bin/python3’ &lt;br /&gt;
+        let file_args = ‘ ‘ . file_name&lt;br /&gt;
+    “c 需要提取第一行的编译参数&lt;br /&gt;
+    “如，当需要引入第三方库(以mysql为例)时，则在第一行添加: //-lmysqlclient -L/usr/local/mysql/include
+    “文件中则可直接　#include &amp;lt;mysql/mysql.h&amp;gt;&lt;br /&gt;
+    elseif file_ext == “c” &lt;br /&gt;
+        let file_first_line = getline(1)&lt;br /&gt;
+        let file_arg = ““&lt;br /&gt;
+        if strpart(file_first_line, 0, 2) == ‘//’&lt;br /&gt;
+            let file_arg = strpart(file_first_line, 2) “提取参数&lt;br /&gt;
+        endif&lt;br /&gt;
+        let file_output_file = strpart(file_name, 0, strridx(file_name, ‘.c’)) &lt;br /&gt;
+        let file_args = ‘ -o ‘. file_output_file .’ ‘.  file_name . ‘ ‘. file_arg .’ &amp;amp;&amp;amp; ‘.&lt;br /&gt; file_output_file “将参数附加到编译命令之后&lt;br /&gt;
+        let file_cmd = ‘/usr/bin/cc’ &lt;br /&gt;
+    “php 直接调用&lt;br /&gt;
+    elseif file_ext == “php”&lt;br /&gt;
+        let file_cmd = “/usr/local/php/bin/php” “php执行路径&lt;br /&gt;
+        let file_args = ‘ -f ‘. file_name&lt;br /&gt;
+    “perl 直接调用&lt;br /&gt;
+    elseif file_ext == “perl” || file_ext == “pl”&lt;br /&gt;
+        let file_cmd = “/usr/bin/perl”&lt;br /&gt;
+        let file_args = “ “. file_name&lt;br /&gt;
+    “erlang 默认调用 main 函数, 可以确保 escript 和 noshell/shell 执行时一致&lt;br /&gt;
+    elseif file_ext == “erl”&lt;br /&gt;
+        let file_output_file = strpart(expand(“%”), 0, stridx(expand(“%”), “.erl”))&lt;br /&gt;
+        let file_cmd = “/usr/bin/erlc” &lt;br /&gt;
+        let file_args = file_output_file .”.”. file_ext .” ; /usr/bin/erl -noshell -s “.&lt;br /&gt; file_output_file . “ main  -s init stop”&lt;br /&gt;
+    “java 先调用 javac，再调用java&lt;br /&gt;
+    elseif file_ext == “java”&lt;br /&gt;
+        let file_output_file = strpart(expand(“%”), 0, stridx(expand(“%”), “.java”))&lt;br /&gt;
+        let file_cmd = ‘javac’&lt;br /&gt;
+        let file_args = file_name .” &amp;amp;&amp;amp; java “. file_output_file&lt;br /&gt;
+    else&lt;br /&gt;
+        echo “错误: 没有任何编译器匹配此文件类型, 请确认您的文件扩展名!”&lt;br /&gt;
+    endif&lt;br /&gt;
+    if file_cmd != ““&lt;br /&gt;
+        if ! executable(file_cmd)&lt;br /&gt;
+            echo file_cmd&lt;br /&gt;
+            echo “The executable file to compile “. file_ext . “ type files.”&lt;br /&gt;
+        else&lt;br /&gt;
+            let cmd = “! “. file_cmd . ‘ ‘ . file_args&lt;br /&gt;
+            “echo “执行命令: “. cmd&lt;br /&gt;
+            exec cmd &lt;br /&gt;
+        endif&lt;br /&gt;
+    endif&lt;br /&gt;
+endfunction &lt;br /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 22 Jul 2017 22:33:01 +0800</pubDate>
+        <link>http://www.idearfree.com/linux/2017/07/22/%E5%B0%8F%E7%99%BD%E7%9A%84vimrc%E9%85%8D%E7%BD%AE.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/linux/2017/07/22/%E5%B0%8F%E7%99%BD%E7%9A%84vimrc%E9%85%8D%E7%BD%AE.html</guid>
+        
+        <category>Vim</category>
+        
+        
+        <category>Linux</category>
+        
+      </item>
     
       <item>
         <title>Error:buftype</title>
@@ -516,7 +826,7 @@ python –version 查看python版本&lt;/p&gt;
         <category>python</category>
         
         
-        <category>Python</category>
+        <category>python</category>
         
       </item>
     
@@ -564,7 +874,7 @@ TypeError: object() takes no parameters&lt;br /&gt;
         <category>python</category>
         
         
-        <category>Python</category>
+        <category>python</category>
         
       </item>
     
@@ -745,118 +1055,6 @@ $ . /hello&lt;/p&gt;
         
         
         <category>Linux</category>
-        
-      </item>
-    
-      <item>
-        <title>Ubuntu下安装MySQL!</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#mysql&quot; id=&quot;markdown-toc-mysql&quot;&gt;安装Mysql&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#workbench&quot; id=&quot;markdown-toc-workbench&quot;&gt;WorkBench&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;mysql&quot;&gt;安装Mysql&lt;/h2&gt;
-
-&lt;p&gt;今天安装MySQL只会下载WorkBench不会下载Mysql数据库,所以记录一下安装过程方便下次忘记了使用.&lt;/p&gt;
-
-&lt;p&gt;CTRL+ALT+T打开终端,输入 sudo apt-get update 不然那可能会出现无法下载的错误&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;然后输入 sudo apt-get install mysql-server mysql-client 下载mysql服务器和客户端&lt;/li&gt;
-  &lt;li&gt;安装时都会问你希望继续执行吗，输入Y就行.
-&lt;img src=&quot;/styles/images/2017-06-22 10-48-31屏幕截图.png&quot; alt=&quot;2017-06-22 10-48-31屏幕截图&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;安装过程中会出现让设置MySQL的root密码的框框,输入你的密码确认即可.
-&lt;img src=&quot;/styles/images/2017-06-22 10-47-08屏幕截图.png&quot; alt=&quot;2017-06-22 10-47-08屏幕截图&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;安装完成之后终端输入 mysql -uroot -p你的密码 看是否能进入MySQL
-&lt;img src=&quot;/styles/images/2017-06-22 10-49-31屏幕截图.png&quot; alt=&quot;2017-06-22 10-49-31屏幕截图&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;workbench&quot;&gt;WorkBench&lt;/h2&gt;
-&lt;p&gt;安装mysql workbench&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;sudo dpkg -i mysql-workbench-community-6.3.5-1ubu1504-amd64.deb 如果安装不成功:&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;apt-get-f install&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;然后重新输入命令&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;sudo dpkg -i mysql-workbench-community-6.3.5-1ubu1504-amd64.deb&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;直接打开：
-&lt;img src=&quot;/styles/images/2017-06-22 10-51-01屏幕截图.png&quot; alt=&quot;2017-06-22 10-51-01屏幕截图&quot; /&gt;
-&lt;img src=&quot;/styles/images/2017-06-22 10-51-17屏幕截图.png&quot; alt=&quot;2017-06-22 10-51-17屏幕截图&quot; /&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 22 Jun 2017 10:54:00 +0800</pubDate>
-        <link>http://www.idearfree.com/linux/2017/06/22/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Mysql.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/linux/2017/06/22/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Mysql.html</guid>
-        
-        <category>Linux</category>
-        
-        
-        <category>Linux</category>
-        
-      </item>
-    
-      <item>
-        <title>英语考试好简单啊！</title>
-        <description>
-&lt;p&gt;今天英语考试啊！！！发下卷子的那一刻我懵了，这TM的这么简单，全是送分的啊，为啥我都不会！！！&lt;/p&gt;
-</description>
-        <pubDate>Wed, 21 Jun 2017 11:56:01 +0800</pubDate>
-        <link>http://www.idearfree.com/life/2017/06/21/%E8%8B%B1%E8%AF%AD%E5%A5%BD%E7%AE%80%E5%8D%95.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/life/2017/06/21/%E8%8B%B1%E8%AF%AD%E5%A5%BD%E7%AE%80%E5%8D%95.html</guid>
-        
-        <category>Life</category>
-        
-        
-        <category>Life</category>
-        
-      </item>
-    
-      <item>
-        <title>爱与不爱,下辈子也不会再见了！</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;###爱与不爱,下辈子也不会再见了!&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;###爱与不爱,下辈子也不会再见了!&lt;/h2&gt;
-
-&lt;p&gt;#####香港电台主持人梁继璋送给儿子的备忘录
-我儿:写这备忘录给你，基于三个原则：&lt;br /&gt;
-(一）人生福祸无常，谁也不知可以活多久，有些事情还是早一点说好。&lt;br /&gt;
-(二）我是你的父亲，我不跟你说，没有人会跟你说。&lt;br /&gt;
-(三）这备忘录里记载的，都是我经过惨痛失败得回来的体验，可以为你的成长省回不少冤枉路。&lt;br /&gt;
-以下便是你在人生中要好好记住的事：&lt;br /&gt;
-（一）对你不好的人，你不要太介怀，在你一生中没有人有义务要对你好，除了我和你妈妈。至于那些对你好的人，你除了要珍惜、感恩外，也请多防备一点。因为，每个人做每件事，总有一个原因，他对你好未必真的是因为喜欢你，请你必须搞清楚，而不必太快将对方看作真朋友。&lt;br /&gt;
-（二）没有人是不可代替，没有东西是必须拥有。看透了这一点，将来你身边的人不再要你，或许失去了世间上最爱的一切时，也应该明白：“这并不是甚么大不了的事”。&lt;br /&gt;
-（三）生命是短暂的，今天还在浪费着生命，明日会发觉生命已远离你了。因此愈早珍惜生命，你享受生命的日子也愈多，与其盼望长寿，倒不如早点享受。&lt;br /&gt;
-（四）世界上并没有最爱这回事，爱情只是一种霎时的感觉，而这感觉绝对会随时日、心境而改变。如果你的所谓最爱离开你，请耐心地等候一下，让时日慢慢冲洗，让心灵慢慢沉淀，你的苦就会慢慢淡化。不要过分憧憬爱情的美，不要过分夸大失恋的悲。&lt;br /&gt;
-（五）虽然，很多有成就的人士都有受过很多教育，但并不等如不用功读书，就一定可以成功。你学到的知识，就是你拥有的武器。人可以白手兴家，但不可以手无寸铁，紧记！&lt;br /&gt;
-（六）我不会要求你供养我下半辈子，同样地我也不会供养你的下半辈子，当你长大到可以独立的时候，我的责任已经完结。以后你要坐巴士还是Benz，吃鱼翅还是粉丝，都要自己负责。&lt;br /&gt;
-（七）你可以要求自己守信，但不能要求别人守信，你可以要求自己对人好，但不能期待人家对你好。你怎样对人，并不代表人家就会怎样对你，如果看不透这一点，你只会徒添不必要的烦恼。&lt;br /&gt;
-（八）我买了十多二十年六合彩，还是一穷二白，连三奖也没有中，这证明人要发达，还是要努力工作才可以，世界上并没有免费午餐。&lt;br /&gt;
-（九）亲人只有一次的缘份，无论这辈子我和你会相处多久，也请好好珍惜共聚的时光，下辈子，无论爱与不爱，都不会再见&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;今天我妈发给我让我看看,感触颇深,好好珍惜自己身边的亲人,出门在外除了父母还有谁会一直挂念我们，没事常回家看看，父母一直等着我们。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/styles/images/love.jpg&quot; alt=&quot;Vim&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 12 Jun 2017 21:52:01 +0800</pubDate>
-        <link>http://www.idearfree.com/life/2017/06/12/%E7%88%B1%E4%B8%8E%E4%B8%8D%E7%88%B1,%E4%B8%8B%E8%BE%88%E5%AD%90%E4%B9%9F%E4%B8%8D%E4%BC%9A%E5%86%8D%E8%A7%81%E4%BA%86.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/life/2017/06/12/%E7%88%B1%E4%B8%8E%E4%B8%8D%E7%88%B1,%E4%B8%8B%E8%BE%88%E5%AD%90%E4%B9%9F%E4%B8%8D%E4%BC%9A%E5%86%8D%E8%A7%81%E4%BA%86.html</guid>
-        
-        <category>Life</category>
-        
-        
-        <category>Life</category>
         
       </item>
     
