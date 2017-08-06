@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>GTK安装 - 赵小白的博客</title>
+	<title>汇编语言知识基础! - 赵小白的博客</title>
 
 	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
 	<link rel="icon" href="/styles/images/favicon.jpg">
@@ -13,10 +13,10 @@
 	<link rel="stylesheet" href="/styles/css/index.css">
 	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/styles/css/syntax.css">
-	<link rel="canonical" href="/linux/2017/06/22/GTK%E5%AE%89%E8%A3%85.html">
+	<link rel="canonical" href="/assembly/language/2017/08/06/%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80.html">
 	<link rel="alternate" type="application/rss+xml" title="赵小白的博客" href="/feed.xml">
 	
-	<meta name="keywords" content="GTK安装, 赵小白的博客, 远方有多远,请你告诉我!">
+	<meta name="keywords" content="汇编语言知识基础!, 赵小白的博客, 远方有多远,请你告诉我!">
 	<meta name="description" content="远方有多远,请你告诉我!">
 
 	<script src="/styles/js/jquery.min.js"></script>
@@ -90,8 +90,8 @@
   <div class="container">
   	
   		<!--
-		    <h1>GTK安装</h1>
-		    <p>Post on Jun 22, 2017 by <a href="/about">赵赵赵小白</a></p>
+		    <h1>汇编语言知识基础!</h1>
+		    <p>Post on Aug 06, 2017 by <a href="/about">赵赵赵小白</a></p>
 		-->
 		    <h1>远方有多远,请你告诉我!</h1>
     
@@ -102,8 +102,8 @@
 <div class="banner">
   <div class="container">
   	
-    	<a href="/categories/#Linux-ref">Linux</a>	/
-    	<a href="/tag/#Linux-ref">Linux</a>
+    	<a href="/categories/#AssemblyLanguage-ref">AssemblyLanguage</a>	/
+    	<a href="/tag/#Assembly Language-ref">Assembly Language</a>
     
   </div>
 </div>
@@ -475,106 +475,109 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">GTK安装</h1>
+              <h1 class="post-title">汇编语言知识基础!</h1>
               <!--
-                <p class="post-meta">Jun 22, 2017</p>
+                <p class="post-meta">Aug 6, 2017</p>
               -->
-              <div class="meta">Posted on <span class="postdate">Jun 22, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
+              <div class="meta">Posted on <span class="postdate">Aug 06, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
               <br />
             </header>
             <article class="post-content">
-              <ul id="markdown-toc">
-  <li><a href="#gtk" id="markdown-toc-gtk">GTK的安装</a></li>
+              
+<ol>
+  <li>机器语言是机器指令的集合(通过把二进制数转为高低电平来运行)</li>
+  <li>CPU(Central Processing Unit)中央处理单元</li>
+  <li>汇编语言由三类指令组成
+    <ol>
+      <li>汇编指令:机器码的助记符</li>
+      <li>伪指令:由编译器执行,计算机不执行</li>
+      <li>其它符号: +, -, *, /,由编译器执行</li>
+    </ol>
+  </li>
+  <li>8 bit = 1 Byte 即:8位 = 1 字节
+    <ol>
+      <li>1024Byte = 1KB, 1024KB = 1MB, 1024MB = 1GB, 1024GB = 1TB</li>
+      <li>存储器被分为多个存储单元,每个单元被分配一个编号(从零开始)</li>
+      <li>微型机的存储单元,一个存储单元可存放1Byte(字节) = 8bit(位)</li>
+    </ol>
+  </li>
+  <li>CPU对数据进行读写(必须和芯片进行下面3类信息交互)
+    <ol>
+      <li>存储单元的地址(地址信息)</li>
+      <li>器件的选择,读或写的命令(控制信息)</li>
+      <li>读或写的数据(数据信息)</li>
+    </ol>
+  </li>
+  <li>CPU和其它芯片通过导线来传输信息(我们通常叫做总线)
+    <ol>
+      <li>总线从逻辑上分为3类:
+        <ol>
+          <li>地址总线</li>
+          <li>控制总线</li>
+          <li>数据总线</li>
+        </ol>
+      </li>
+      <li>一根总线只能传送两种信息0/1(总线的根数我们叫做宽度)</li>
+      <li>地址总线的宽度(N)决定了CPU的寻址能力(2^N)</li>
+      <li>数据总线的宽度(N)决定了CPU与外界的数据传输速度
+        <ol>
+          <li>1根总线的传输能力为 1bit(1位) 8根为1字节</li>
+        </ol>
+      </li>
+      <li>控制总线决定CPU对外部器件的控制不同器件的能力</li>
+    </ol>
+  </li>
+</ol>
+
+<ul>
+  <li>小结
+    <ol>
+      <li>汇编指令是机器指令的助记符,同机器指令一一对应.</li>
+      <li>每一种CPU都有自己的汇编指令集.</li>
+      <li>CPU可以直接使用的信息在存储器中存放.</li>
+      <li>在存储器中指令和数据没有任何区别,都是二进制信息.</li>
+      <li>存储单元从零开始顺序存储8个bit, 即8位二进制数.</li>
+      <li>每一个CPU芯片都有许多管脚,这些管脚和总线相连.也可以说,
+这些管脚引出总线.一个CPU可以引出3中总线的宽度标志了这个CPU的不同方面的性能.
+        <ol>
+          <li>地址总线决定CUP寻址能力</li>
+          <li>数据总线决定CPU与其它器件进行数据禅送是的一次数据禅送量;</li>
+          <li>控制总线决定CUP对系统中其他器件的控制能力</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>下面的需了解更多可自行Google
+    <ol>
+      <li>内存地址空间</li>
+      <li>比如CPU的地址总线宽度为10,那么寻址能力就为1024</li>
+      <li>这1024个可寻到的内存单元就构成了这个CPU的内存地址空间</li>
+      <li>超出寻址能力的内存就无法使用了</li>
+      <li>主板, CPU通过主板和总线来控制一系列扩展器件</li>
+      <li>接口卡:计算机系统中所有可用程序控制其工作的设备,必须收到CPU的控制.</li>
+      <li>各类存储芯片</li>
+      <li>随机存储器(RAM):用于存放供CPU使用的绝大部分程序和数据</li>
+      <li>BOIS(Basic Input/Output System)基本 输入/输出 系统.
+        <ol>
+          <li>BOIS是由主板和各类接口卡厂商提供的元件系统</li>
+          <li>可以通过它利用该硬件设备进行最基本的输入输出</li>
+        </ol>
+      </li>
+      <li>接口卡上的RAM
+        <ol>
+          <li>某些接口卡需要对大批量输入输出数据进行暂时存储,
+在其上装有RAM,最典型的就是显卡(显卡越大对外显示的内容就越多越快).</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
 </ul>
 
-<h2 id="gtk">GTK的安装</h2>
-<p><a href="https://zhidao.baidu.com/question/323664703.html">GTK安装1</a><br />
-<a href="http://blog.csdn.net/ouyangzhan/article/details/5734832">GTK安装2</a><br /></p>
+<p>PC机中各类存储器的逻辑连接
+<img src="/styles/images/PC.jpg" alt="PC机中各类存储器的逻辑连接" />
+将各类存储其看作一个逻辑存储器
+<img src="/styles/images/PC1.jpg" alt="将各类存储其看作一个逻辑存储器" /></p>
 
-<p>sudo apt-get install vim #使用vim来编写代码，当然您可以使用任何自己喜欢的编辑器</p>
-
-<p>sudo apt-get install build-essential #这将安装gcc/g++/gdb/make 等基本编程工具</p>
-
-<p>sudo apt-get install gnome-core-devel #这将安装 libgtk2.0-dev libglib2.0-dev 等开发相关的库文件</p>
-
-<p>sudo apt-get install pkg-config #用于在编译GTK程序时自动找出头文件及库文件位置</p>
-
-<p>sudo apt-get install devhelp #这将安装 devhelp GTK文档查看程序</p>
-
-<p>sudo apt-get install libglib2.0-doc libgtk2.0-doc #这将安装 gtk/glib 的API参考手册及其它帮助文档</p>
-
-<p>sudo apt-get instal glade libglade2-dev #这将安装基于GTK的界面GTK是开发Gnome窗口的c/c++语言图形库。在Ubuntu的机器上折腾了一下，复制了网上教程的代码在本机上编译。代码的文件名：t1.c。按照教程，用以下命令编译：<br /></p>
-
-<p>gcc t1.c ‘pkg-config –cflags –libs gtk+-2.0`<br /></p>
-
-<p>编译结果：找不到gtk/gtk.h。<br /></p>
-
-<p>因为我的Ubuntu是Gnome系统，所以我以为gtk+2.0的开发程序（头文件和库文件）应该已经安装在计算机上了。其实不然，如果在Ubuntu 上开发gtk+2.0的程序，需要安装相应的头文件和库。在控制台窗口输入sudo apt-get install libgtk2.0*, gtk+2.0所需的所有文件统通下载安装完毕。再次应用编译命令：gcc t1.c ‘pkg-config –cflags –libs gtk+-2.0，编译通过，运行。<br /></p>
-
-<p>pkg-config是一个用来管理包的程序，在控制台输入 pkg-config –cflags –libs gtk+-2.0 的运行结果：<br /></p>
-
-<p>-DPNG_NO_MMX_CODE -I/usr/include/gtk-2.0 -I/usr/lib/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/freetype2 -I/usr/include/libpng12 -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangocairo-1.0 -lfontconfig -lXext -lXrender -lXinerama -lXi -lXrandr -lXcursor -lXcomposite -lXdamage -lpango-1.0 -lcairo -lX11 -lXfixes -lgobject-2.0 -lgmodule-2.0 -ldl -lglib-2.0</p>
-
-<p>可以看出，输出的文本包括了gcc编译gtk+2.0所需要的所有选项（头文件目录和库文件）。<br /></p>
-
-<p>这里有一点需要注意， gcc t1.c <code class="highlighter-rouge">pkg-config --cflags --libs gtk+-2.0</code>, pkg-config –cflags –libs gtk+-2.0两侧的引号并不是真正的引号，而是键盘数字件那一行，最左边的那个字符。如果错用了单引号，gcc无法使用 pkg-config –cflags –libs gtk+-2.0产生的文本作为编译选项。构造程序。<br />
-$ gcc gtkhello.c -o gtktest <code class="highlighter-rouge">pkg-config --cflags --libs gtk+-2.0</code> <br />
-$ ./gtktest <br />
-gcc gtk1.c <code class="highlighter-rouge">pkg-config --cflags --libs gtk+-2.0</code> <br /></p>
-
-<hr />
-
-<p>首先获得超级用户权限</p>
-
-<p>apt-get install vim         #使用vim来编写代码，当然您可以使用任何自己喜欢的编辑器
-apt-get install build-essential         #这将安装gcc/g++/gdb/make 等基本编程工具
-apt-get install gnome-core-devel          #这将安装 libgtk2.0-dev libglib2.0-dev 等开发相关的库文件
-apt-get install pkg-config                #用于在编译GTK程序时自动找出头文件及库文件位置
-apt-get install devhelp                    #这将安装 devhelp GTK文档查看程序
-apt-get install libglib2.0-doc libgtk2.0-doc             #这将安装 gtk/glib 的API参考手册及其它帮助文档
-apt-get instal glade libglade2-dev                      #这将安装基于GTK的界面构造程序</p>
-
-<p>都是安装好后测试一下程序hello.c<br /></p>
-
-<p>#include   &lt;gtk/gtk.h&gt; <br />
-我编译时老是说找不到头文件，后来在/usr/include里找到gtk-2.0/gtk/gtk.h，原来是路径错误，最后将头文件路径修改为&lt;gtk-2.0/gtk/gtk.h&gt;，终于好了！</p>
-
-<p>void hello(GtkWidget <em>widget,gpointer data)<br />
-{<br />
-      g_print(“Hello 大家好\n”);<br />
-}<br />
-gint delete_event(GtkWidget *widget,GdkEvent *event,gpointer data)<br />
-{<br />
-      g_print (“delete event occurred\n”);<br />
-     return(TRUE);<br />
-}<br />
-void destroy(GtkWidget *widget,gpointer data)<br />
-{<br />
-      gtk_main_quit();<br />
-}
-int main( int argc, char *argv[] )<br />
-{<br />
-      GtkWidget *window;<br />
-      GtkWidget *button;<br />
-      gtk_init (&amp;argc, &amp;argv);<br />
-      window=gtk_window_new (GTK_WINDOW_TOPLEVEL);<br />	
-      gtk_signal_connect (GTK_OBJECT(window),”delete_event”,GTK_SIGNAL_FUNC(delete_event),NULL);<br />
-      gtk_signal_connect (GTK_OBJECT (window), “destroy”,GTK_SIGNAL_FUNC (destroy), NULL);<br />	
-      gtk_container_set_border_width (GTK_CONTAINER (window), 10);<br />	
-      button = gtk_button_new_with_label (“Hello 大家好”);<br />
-      gtk_signal_connect (GTK_OBJECT (button), “clicked”,GTK_SIGNAL_FUNC (hello), NULL);<br />
-      gtk_signal_connect_object (GTK_OBJECT (button), “clicked”,GTK_SIGNAL_FUNC(gtk_widget_destroy),GTK_OBJECT (window));<br />
-      gtk_container_add (GTK_CONTAINER (window), button);<br />
-      gtk_widget_show (button);<br />
-      gtk_widget_show (window); /</em>显示一个窗口<em>/<br />
-      gtk_main(); /</em>进入主循环*/<br />
-      return(0);<br />
-}<br /></p>
-
-<p>最后编译运行：<br /></p>
-
-<p>$ gcc hello.c -o hello <code class="highlighter-rouge">pkg-config --cflags --libs gtk+-2.0</code> <br />
-$ . /hello</p>
 
             </article>
         </div>

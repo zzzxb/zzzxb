@@ -5,9 +5,120 @@
     <description>远方有多远,请你告诉我!</description>
     <link>http://www.idearfree.com/</link>
     <atom:link href="http://www.idearfree.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Aug 2017 21:22:27 +0800</pubDate>
-    <lastBuildDate>Sun, 06 Aug 2017 21:22:27 +0800</lastBuildDate>
+    <pubDate>Sun, 06 Aug 2017 22:51:30 +0800</pubDate>
+    <lastBuildDate>Sun, 06 Aug 2017 22:51:30 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>汇编语言知识基础!</title>
+        <description>
+&lt;ol&gt;
+  &lt;li&gt;机器语言是机器指令的集合(通过把二进制数转为高低电平来运行)&lt;/li&gt;
+  &lt;li&gt;CPU(Central Processing Unit)中央处理单元&lt;/li&gt;
+  &lt;li&gt;汇编语言由三类指令组成
+    &lt;ol&gt;
+      &lt;li&gt;汇编指令:机器码的助记符&lt;/li&gt;
+      &lt;li&gt;伪指令:由编译器执行,计算机不执行&lt;/li&gt;
+      &lt;li&gt;其它符号: +, -, *, /,由编译器执行&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;8 bit = 1 Byte 即:8位 = 1 字节
+    &lt;ol&gt;
+      &lt;li&gt;1024Byte = 1KB, 1024KB = 1MB, 1024MB = 1GB, 1024GB = 1TB&lt;/li&gt;
+      &lt;li&gt;存储器被分为多个存储单元,每个单元被分配一个编号(从零开始)&lt;/li&gt;
+      &lt;li&gt;微型机的存储单元,一个存储单元可存放1Byte(字节) = 8bit(位)&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;CPU对数据进行读写(必须和芯片进行下面3类信息交互)
+    &lt;ol&gt;
+      &lt;li&gt;存储单元的地址(地址信息)&lt;/li&gt;
+      &lt;li&gt;器件的选择,读或写的命令(控制信息)&lt;/li&gt;
+      &lt;li&gt;读或写的数据(数据信息)&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;CPU和其它芯片通过导线来传输信息(我们通常叫做总线)
+    &lt;ol&gt;
+      &lt;li&gt;总线从逻辑上分为3类:
+        &lt;ol&gt;
+          &lt;li&gt;地址总线&lt;/li&gt;
+          &lt;li&gt;控制总线&lt;/li&gt;
+          &lt;li&gt;数据总线&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;一根总线只能传送两种信息0/1(总线的根数我们叫做宽度)&lt;/li&gt;
+      &lt;li&gt;地址总线的宽度(N)决定了CPU的寻址能力(2^N)&lt;/li&gt;
+      &lt;li&gt;数据总线的宽度(N)决定了CPU与外界的数据传输速度
+        &lt;ol&gt;
+          &lt;li&gt;1根总线的传输能力为 1bit(1位) 8根为1字节&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;控制总线决定CPU对外部器件的控制不同器件的能力&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;小结
+    &lt;ol&gt;
+      &lt;li&gt;汇编指令是机器指令的助记符,同机器指令一一对应.&lt;/li&gt;
+      &lt;li&gt;每一种CPU都有自己的汇编指令集.&lt;/li&gt;
+      &lt;li&gt;CPU可以直接使用的信息在存储器中存放.&lt;/li&gt;
+      &lt;li&gt;在存储器中指令和数据没有任何区别,都是二进制信息.&lt;/li&gt;
+      &lt;li&gt;存储单元从零开始顺序存储8个bit, 即8位二进制数.&lt;/li&gt;
+      &lt;li&gt;每一个CPU芯片都有许多管脚,这些管脚和总线相连.也可以说,
+这些管脚引出总线.一个CPU可以引出3中总线的宽度标志了这个CPU的不同方面的性能.
+        &lt;ol&gt;
+          &lt;li&gt;地址总线决定CUP寻址能力&lt;/li&gt;
+          &lt;li&gt;数据总线决定CPU与其它器件进行数据禅送是的一次数据禅送量;&lt;/li&gt;
+          &lt;li&gt;控制总线决定CUP对系统中其他器件的控制能力&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;下面的需了解更多可自行Google
+    &lt;ol&gt;
+      &lt;li&gt;内存地址空间&lt;/li&gt;
+      &lt;li&gt;比如CPU的地址总线宽度为10,那么寻址能力就为1024&lt;/li&gt;
+      &lt;li&gt;这1024个可寻到的内存单元就构成了这个CPU的内存地址空间&lt;/li&gt;
+      &lt;li&gt;超出寻址能力的内存就无法使用了&lt;/li&gt;
+      &lt;li&gt;主板, CPU通过主板和总线来控制一系列扩展器件&lt;/li&gt;
+      &lt;li&gt;接口卡:计算机系统中所有可用程序控制其工作的设备,必须收到CPU的控制.&lt;/li&gt;
+      &lt;li&gt;各类存储芯片&lt;/li&gt;
+      &lt;li&gt;随机存储器(RAM):用于存放供CPU使用的绝大部分程序和数据&lt;/li&gt;
+      &lt;li&gt;BOIS(Basic Input/Output System)基本 输入/输出 系统.
+        &lt;ol&gt;
+          &lt;li&gt;BOIS是由主板和各类接口卡厂商提供的元件系统&lt;/li&gt;
+          &lt;li&gt;可以通过它利用该硬件设备进行最基本的输入输出&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;接口卡上的RAM
+        &lt;ol&gt;
+          &lt;li&gt;某些接口卡需要对大批量输入输出数据进行暂时存储,
+在其上装有RAM,最典型的就是显卡(显卡越大对外显示的内容就越多越快).&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;PC机中各类存储器的逻辑连接
+&lt;img src=&quot;/styles/images/PC.jpg&quot; alt=&quot;PC机中各类存储器的逻辑连接&quot; /&gt;
+将各类存储其看作一个逻辑存储器
+&lt;img src=&quot;/styles/images/PC1.jpg&quot; alt=&quot;将各类存储其看作一个逻辑存储器&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 06 Aug 2017 21:03:01 +0800</pubDate>
+        <link>http://www.idearfree.com/assembly/language/2017/08/06/%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/assembly/language/2017/08/06/%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80.html</guid>
+        
+        <category>Assembly Language</category>
+        
+        
+        <category>Assembly</category>
+        
+        <category>Language</category>
+        
+      </item>
     
       <item>
         <title>python基础总结(一)</title>
@@ -1033,37 +1144,6 @@ Ctrl + w, l&lt;/p&gt;
         
         
         <category>Linux</category>
-        
-      </item>
-    
-      <item>
-        <title>Linux中切换python版本!</title>
-        <description>
-&lt;p&gt;shell里执行：&lt;/p&gt;
-
-&lt;p&gt;sudo update-alternatives –install /usr/bin/python python /usr/bin/python2 100&lt;br /&gt;
-sudo update-alternatives –install /usr/bin/python python /usr/bin/python3 150&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;此时你会发现 alternatives&lt;/p&gt;
-
-&lt;p&gt;如果要切换到Python2，执行：&lt;/p&gt;
-
-&lt;p&gt;sudo update-alternatives –config python&lt;/p&gt;
-
-&lt;p&gt;按照提示输入选择数字回车即可。&lt;/p&gt;
-
-&lt;p&gt;这样你甚至可以将自己喜欢的任意版本Python安装到任意位置，然后使用update-alternatives将其设置为系统默认python。
-python –version 查看python版本&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 10 Jul 2017 15:00:00 +0800</pubDate>
-        <link>http://www.idearfree.com/python/2017/07/10/Linux%E4%B8%AD%E5%88%87%E6%8D%A2python%E7%89%88%E6%9C%AC.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/python/2017/07/10/Linux%E4%B8%AD%E5%88%87%E6%8D%A2python%E7%89%88%E6%9C%AC.html</guid>
-        
-        <category>python</category>
-        
-        
-        <category>python</category>
         
       </item>
     
