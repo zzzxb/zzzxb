@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>创建快捷启动方式 - 赵小白的博客</title>
+	<title>搭建python环境! - 赵小白的博客</title>
 
 	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
 	<link rel="icon" href="/styles/images/favicon.jpg">
@@ -13,10 +13,10 @@
 	<link rel="stylesheet" href="/styles/css/index.css">
 	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/styles/css/syntax.css">
-	<link rel="canonical" href="/linux/2017/08/02/%E5%88%9B%E5%BB%BA%E5%BF%AB%E6%8D%B7%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F.html">
+	<link rel="canonical" href="/python/2017/07/05/Python%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.html">
 	<link rel="alternate" type="application/rss+xml" title="赵小白的博客" href="/feed.xml">
 	
-	<meta name="keywords" content="创建快捷启动方式, 赵小白的博客, 远方有多远,请你告诉我!">
+	<meta name="keywords" content="搭建python环境!, 赵小白的博客, 远方有多远,请你告诉我!">
 	<meta name="description" content="远方有多远,请你告诉我!">
 
 	<script src="/styles/js/jquery.min.js"></script>
@@ -90,8 +90,8 @@
   <div class="container">
   	
   		<!--
-		    <h1>创建快捷启动方式</h1>
-		    <p>Post on Aug 02, 2017 by <a href="/about">赵赵赵小白</a></p>
+		    <h1>搭建python环境!</h1>
+		    <p>Post on Jul 05, 2017 by <a href="/about">赵赵赵小白</a></p>
 		-->
 		    <h1>远方有多远,请你告诉我!</h1>
     
@@ -102,8 +102,8 @@
 <div class="banner">
   <div class="container">
   	
-    	<a href="/categories/#Linux-ref">Linux</a>	/
-    	<a href="/tag/#Linux-ref">Linux</a>
+    	<a href="/categories/#python-ref">python</a>	/
+    	<a href="/tag/#python-ref">python</a>
     
   </div>
 </div>
@@ -462,43 +462,48 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">创建快捷启动方式</h1>
+              <h1 class="post-title">搭建python环境!</h1>
               <!--
-                <p class="post-meta">Aug 2, 2017</p>
+                <p class="post-meta">Jul 5, 2017</p>
               -->
-              <div class="meta">Posted on <span class="postdate">Aug 02, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
+              <div class="meta">Posted on <span class="postdate">Jul 05, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
               <br />
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#ubuntu-" id="markdown-toc-ubuntu-">Ubuntu 创建快捷启动方式(启动器)</a></li>
+  <li><a href="#linux-" id="markdown-toc-linux-">Linux 环境下搭建</a></li>
+  <li><a href="#os-x--windows" id="markdown-toc-os-x--windows">OS X 和 Windows</a></li>
 </ul>
 
-<h2 id="ubuntu-">Ubuntu 创建快捷启动方式(启动器)</h2>
+<h3 id="linux-">Linux 环境下搭建</h3>
+<ol>
+  <li>Linux 中可用 在终端输入python or python3 来查看自己是否安装python了
+<code class="highlighter-rouge">sudo apt-get install python3</code> 一般Linux都有的,建议从3学起</li>
+  <li>Geany是一款简单的文本编辑器:易于安装;让你能够直接运行几乎所有的程序
+<code class="highlighter-rouge">sudo apt-get install geany</code></li>
+  <li>如果系统存在多个python版本就需要配置Geany<br />
+在选项卡中找到Build —&gt; Set Build Commands<br />
+在Python commands 下 将编译命令进行修改:<br />
+<code class="highlighter-rouge">python3 -m py_compile "%f"</code> <br />
+在Execut commands 下 改为<br />
+<code class="highlighter-rouge">python3 "%f"</code>
+就此python环境就搭建成功了!!!</li>
+</ol>
 
-<p>*应用于免安装软件
-注:可能不是有些版本不适用吧,但大部分应该可以的。</p>
-
-<p>1)创建快捷方式桌面文件</p>
-
-<div class="highlighter-rouge"><pre class="codehilite"><code>	sudo vim /usr/share/applications/FileName.desktop
-	*注意:FileName随便写,方便起见改为软件名
-</code></pre></div>
-
-<p>2)在上面文件中添加(看下面内容都能顾名思义)</p>
-
-<div class="highlighter-rouge"><pre class="codehilite"><code>	[Desktop Entry]
-	Encoding=UTF-8
-	Name=FileName(可改)
-	Comment=FileName(可改)
-	Exec=path(必须为你需要添加快捷方式的软件路径)
-	Icon=ico(这里加入你快捷方式的图标路径)
-	Terminal=false(打开软件时不显示终端,true为显示)
-	StartupNotify=true
-	Type=Application(可改)
-	Categories=Application;(这里决定了启动器在菜单里的位置)
-</code></pre></div>
-
+<h3 id="os-x--windows">OS X 和 Windows</h3>
+<ol>
+  <li>OS x 和 Windows 可以分别在终端和CMD 中输入python3看是否有安装</li>
+  <li>OS X 通过Homebrew安装,打开终端输入:<code class="highlighter-rouge">scode-select --install</code>
+    <ul>
+      <li>注意:Homevrew依赖于Apple包Xcode</li>
+      <li>安装Homebrew:</li>
+      <li><code class="highlighter-rouge">ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></li>
+      <li>确认正确安装Homebrew:<code class="highlighter-rouge">brew doctor</code></li>
+      <li>安装python3:<code class="highlighter-rouge">brew install python3</code></li>
+    </ul>
+  </li>
+  <li>Windows 我就不说了,大家使用习惯了相对安装也是颇为顺手吧.</li>
+</ol>
 
             </article>
         </div>

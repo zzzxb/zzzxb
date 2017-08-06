@@ -5,9 +5,204 @@
     <description>远方有多远,请你告诉我!</description>
     <link>http://www.idearfree.com/</link>
     <atom:link href="http://www.idearfree.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Aug 2017 18:00:45 +0800</pubDate>
-    <lastBuildDate>Sun, 06 Aug 2017 18:00:45 +0800</lastBuildDate>
+    <pubDate>Sun, 06 Aug 2017 21:22:27 +0800</pubDate>
+    <lastBuildDate>Sun, 06 Aug 2017 21:22:27 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>python基础总结(一)</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;1.变量和简单的数据类型&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;2.列表&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;3.操作列表&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;1.变量和简单的数据类型&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;变量
+    &lt;ol&gt;
+      &lt;li&gt;在程序中可以随时修改变量的值,而python始终记录最新值&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;变量和命名的使用
+    &lt;ol&gt;
+      &lt;li&gt;变量名只能包含字母,数字和下划线(不能以数字开头)&lt;/li&gt;
+      &lt;li&gt;不要将python的关键字和函数名作为变量名&lt;/li&gt;
+      &lt;li&gt;书写具有描述性的变量名&lt;/li&gt;
+      &lt;li&gt;慎用 I 和 O&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;字符串
+    &lt;ol&gt;
+      &lt;li&gt;用引号引起来的都为字符串&lt;/li&gt;
+      &lt;li&gt;obj.title()将单词首字母大写&lt;/li&gt;
+      &lt;li&gt;通过 ‘+’ 来使两个字符串合并&lt;/li&gt;
+      &lt;li&gt;obj.upper(),lower()将字符串分别转为大,小写&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;删除空白
+    &lt;ol&gt;
+      &lt;li&gt;obj.strip(), lstrip(), rstrip()删除两端,左边(left),右边(right)空白&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;python2 中的print语句
+ 1.print “Hello my friend!” 不用添加括号也行
+6.运算符号
+ 1.python2 中 3/2.0 与 python3中 3/2 相同,结果为1.5
+ 2.python中支持乘方 3**2 即 3的2次方
+7.使用函数str()避免错误类型
+ 1.可通过str(obj),来将非字符串类型转为字符串类型
+8.注释
+    &lt;ol&gt;
+      &lt;li&gt;’#’pyton注释用井号来标识
+9.Python之禅
+ 1.import this(代码书写原则)&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;2.列表&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;列表介绍
+    &lt;ol&gt;
+      &lt;li&gt;python中用’[]’来表示列表(即为动态列表)&lt;/li&gt;
+      &lt;li&gt;通过 list[index] 来访问元素(-1为倒数第一个元素)&lt;/li&gt;
+      &lt;li&gt;列表中的元素都是字符串&lt;/li&gt;
+      &lt;li&gt;list.append(varlue)在列表末尾添加值&lt;/li&gt;
+      &lt;li&gt;list.insert(0,varlue)在指定位置添加值&lt;/li&gt;
+      &lt;li&gt;del list[index] 删除索引位置的值&lt;/li&gt;
+      &lt;li&gt;value = list.pop(index)弹出末尾或任意位置元素&lt;/li&gt;
+      &lt;li&gt;list.remove(value)根据值来删除列表中该元素(只能删除一个)&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;组织列表
+    &lt;ol&gt;
+      &lt;li&gt;list.sort()对列表进行永久排序&lt;/li&gt;
+      &lt;li&gt;‘reverse=True’ sort的参数(倒序)&lt;/li&gt;
+      &lt;li&gt;list.sorted() 对列表进行临时排序&lt;/li&gt;
+      &lt;li&gt;len(list) 确认列表长度&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;3.操作列表&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;遍历列表,切片
+    &lt;ol&gt;
+      &lt;li&gt;for value in list:(通过for循环索引列表值)&lt;/li&gt;
+      &lt;li&gt;python中注意缩进&lt;/li&gt;
+      &lt;li&gt;for value in range(1,5)生成一系列数字&lt;/li&gt;
+      &lt;li&gt;range(5),从0-4(自行理解),range(1,10,2)开始,结束,步距(自行理解)&lt;/li&gt;
+      &lt;li&gt;numbers = list(range(1,6))(生成数字列表)&lt;/li&gt;
+      &lt;li&gt;list(),生成列表&lt;/li&gt;
+      &lt;li&gt;squares = [value**2, for value in range(1, 6)]列表解析&lt;/li&gt;
+      &lt;li&gt;[:] 为切片,for value in list[0:3],循环输出列表中下标0-2的元素&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;复制列表
+    &lt;ol&gt;
+      &lt;li&gt;list1 = list2&lt;a href=&quot;使用切片会复制列表&quot;&gt;:&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;list1 = list2 (会创建list1第副本,即list2与1的内存地址相同)&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;元组
+    &lt;ol&gt;
+      &lt;li&gt;元组用’()’(即为静态列表,只能在定义时添加值,不能进行添加删除操作)&lt;/li&gt;
+      &lt;li&gt;遍历元组,根列表遍历时相同&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;python小知识
+    &lt;ol&gt;
+      &lt;li&gt;PEP(Python Enhancement Proposal)代码格式设置指南PEP8元老啊&lt;/li&gt;
+      &lt;li&gt;缩进,每级缩进为4个空格&lt;/li&gt;
+      &lt;li&gt;行长,每行建议不超过80个字符,注释不超过72个字符&lt;/li&gt;
+      &lt;li&gt;更多了解请访问&lt;a href=&quot;https://python.org/dev/peps/pep-0008/&quot;&gt;PEP8格式指南&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sun, 06 Aug 2017 18:13:01 +0800</pubDate>
+        <link>http://www.idearfree.com/python/2017/08/06/%E5%AF%B9python%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/python/2017/08/06/%E5%AF%B9python%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93.html</guid>
+        
+        <category>python</category>
+        
+        
+        <category>python</category>
+        
+      </item>
+    
+      <item>
+        <title>vim YouCompleteMe自动补全的安装配置与使用</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;1 下载&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;2 安装&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;3 配置&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;1 下载&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git clone --recursive git://github.com/Valloric/YouCompleteMe&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;如果执行该命令没报错, 就ok了. 但是中途有可能会断掉, 可以 cd 到 YouCompleteMe, 然后反复用如下命令再次进行下载:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git submodule update --init --recursive&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;我是网络不好弄了好久才下载完.&lt;/p&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;2 安装&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd ~/.vim/bundle/YouCompleteMe&lt;/code&gt;到这个目录下&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;./install.py --clang-completer&lt;/code&gt;安装&lt;br /&gt;
+到达100%的时候就安装成功了&lt;br /&gt;
+[ 95%] Building CXX object ycm/CMakeFiles/ycm_core.dir/Candidate.cpp.o&lt;br /&gt;
+[ 96%] Building CXX object ycm/CMakeFiles/ycm_core.dir/IdentifierUtils.cpp.o&lt;br /&gt;
+[ 97%] Building CXX object ycm/CMakeFiles/ycm_core.dir/ycm_core.cpp.o&lt;br /&gt;
+[ 97%] Building CXX object ycm/CMakeFiles/ycm_core.dir/IdentifierCompleter.cpp.o&lt;br /&gt;
+[ 98%] Building CXX object ycm/CMakeFiles/ycm_core.dir/LetterNodeListMap.cpp.o&lt;br /&gt;
+[100%] Building CXX object ycm/CMakeFiles/ycm_core.dir/CustomAssert.cpp.o&lt;br /&gt;
+[100%] Linking CXX shared library /home/wuyt/mutils/debian_lenny_cfg/vim_cfg/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so&lt;br /&gt;
+[100%] Built target ycm_core&lt;/p&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;3 配置&lt;/h3&gt;
+
+&lt;p&gt;.vimrc中加入:&lt;/p&gt;
+
+&lt;p&gt;” YouCompleteMe&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;set runtimepath+=~/.vim/bundle/YouCompleteMe&lt;/code&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_collect_identifiers_from_tags_files = 1&lt;/code&gt;           “ 开启 YCM 基于标签引擎&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_collect_identifiers_from_comments_and_strings = 1&lt;/code&gt; “ 注释与字符串中的内容也用于补全&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:syntastic_ignore_files=[&quot;.*\.py$&quot;]&lt;/code&gt;&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_seed_identifiers_with_syntax = 1&lt;/code&gt;                  “ 语法关键字补全&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_complete_in_comments = 1&lt;/code&gt;&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_confirm_extra_conf = 0&lt;/code&gt;&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_key_list_select_completion = [&#39;&amp;lt;c-n&amp;gt;&#39;, &#39;&amp;lt;Down&amp;gt;&#39;]&lt;/code&gt;  “ 映射按键, 没有这个会拦截掉tab, 导致其他插件的tab不能用.&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_key_list_previous_completion = [&#39;&amp;lt;c-p&amp;gt;&#39;, &#39;&amp;lt;Up&amp;gt;&#39;]&lt;/code&gt;&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_complete_in_comments = 1 &lt;/code&gt;                         “ 在注释输入中也能补全&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_complete_in_strings = 1&lt;/code&gt;                           “ 在字符串输入中也能补全&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_collect_identifiers_from_comments_and_strings = 1&lt;/code&gt; “ 注释和字符串中的文字也会被收入补全&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_global_ycm_extra_conf=&#39;~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py&#39;&lt;/code&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_show_diagnostics_ui = 0&lt;/code&gt;                           “ 禁用语法检查&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;inoremap &amp;lt;expr&amp;gt; &amp;lt;CR&amp;gt; pumvisible() ? &quot;\&amp;lt;C-y&amp;gt;&quot; : &quot;\&amp;lt;CR&amp;gt;&quot; |&lt;/code&gt;            “ 回车即选中当前项&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;nnoremap &amp;lt;c-j&amp;gt; :YcmCompleter GoToDefinitionElseDeclaration&amp;lt;CR&amp;gt;|&lt;/code&gt;     “ 跳转到定义处&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;let g:ycm_min_num_of_chars_for_completion=2&lt;/code&gt;                 “ 从第2个键入字符就开始罗列匹配项&lt;/p&gt;
+
+&lt;p&gt;其中 ~/.vim/bundle/YouCompleteMe 为下载 YouCompleteMeu 的路径.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 06 Aug 2017 11:31:00 +0800</pubDate>
+        <link>http://www.idearfree.com/linux/2017/08/06/YouCompleteMe%E5%AE%89%E8%A3%85.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/linux/2017/08/06/YouCompleteMe%E5%AE%89%E8%A3%85.html</guid>
+        
+        <category>Linux</category>
+        
+        
+        <category>Linux</category>
+        
+      </item>
     
       <item>
         <title>如何安装五笔</title>
@@ -869,128 +1064,6 @@ python –version 查看python版本&lt;/p&gt;
         
         
         <category>python</category>
-        
-      </item>
-    
-      <item>
-        <title>Python类的定义!</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;关于定义默认方法时报错&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;关于定义默认方法时报错&lt;/h2&gt;
-
-&lt;p&gt;3 class Dog():&lt;br /&gt;
-  2     “&quot;”一次模拟小狗的简单尝试””“&lt;br /&gt;
-  1 &lt;br /&gt;
-  0     def &lt;strong&gt;init&lt;/strong&gt;(self, name, age):&lt;br /&gt;
-  1         “&quot;”初始化属性name和age””“&lt;br /&gt;
-  2         self.name = name;&lt;br /&gt;
-  3         self.age = age;&lt;br /&gt;
-  4 &lt;br /&gt;
-  5     def sit(self):&lt;br /&gt;
-  6         “&quot;”模拟小狗被命令时蹲下””“&lt;br /&gt;
-  7         print(self.name.title()+” is now sitting.”);&lt;br /&gt;
-  8 &lt;br /&gt;
-  9     def roll_over(self):&lt;br /&gt;
- 10         “&quot;”模拟小狗被命令时打滚””“&lt;br /&gt;
- 11         print(self.name.title()+” rolled over!”);&lt;br /&gt;
- 12 &lt;br /&gt;
- 13 my_dog = Dog(‘willie’, 6);&lt;br /&gt;
- 14 &lt;br /&gt;
- 15 print(“My dog’s name is” + my_dog.name.title() + “.”);&lt;br /&gt;
- 16 print(“My dog is “ + str(my_dog.age) + “ years old.”);&lt;br /&gt;
-&lt;br /&gt;
-之前定义函数_init_两边使用的是一条下滑线就出现错误了&lt;br /&gt;
-Traceback (most recent call last):&lt;br /&gt;
-  File “dog.py”, line 17, in &lt;module&gt; &lt;br /&gt;
-    my_dog = Dog(&#39;willie&#39;, 6);&lt;br /&gt;
-TypeError: object() takes no parameters&lt;br /&gt;
-改正后为__init__各在两边多加一条下划线就行了。&lt;br /&gt;&lt;/module&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 05 Jul 2017 15:00:00 +0800</pubDate>
-        <link>http://www.idearfree.com/python/2017/07/05/Python%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/python/2017/07/05/Python%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89.html</guid>
-        
-        <category>python</category>
-        
-        
-        <category>python</category>
-        
-      </item>
-    
-      <item>
-        <title>得到了物质，却过不上自己想要的生活！</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;得到了物质，却过不上自己想要的生活！&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;我只是渴望得到幸福感&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;很多人喜欢三毛，却又活不出三毛一样的样子&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;得到了物质，却过不上自己想要的生活！&lt;/h2&gt;
-&lt;p&gt;真羡慕那些把自己活成想要的样子的人。	
-我努力想把自己活成自己想要的样子，可却活着活着变成了自己最讨厌的样子。	
-从小被质疑，从来不被看好，连同学的家长都说我是个‘坏’孩子，不要跟我玩，父母跟我说不要在乎别人的眼光，
-可是这一切不是完全是我造成的，我做的错事在你们大人开玩笑式的聊天中已经被散播了，人人都不一样，但我
-对这件事有了阴影，更可笑的事是我跟我爸说，我爸说小时候不懂事留下的阴影，现在长大了还有阴影？
-我敢这么跟你们说，是我渴望从最亲近的人口中获取办法，而不是讲给你们听故事，跟你们谈论事情时我只是渴望
-得到解决的办法，而不是一句句我文化水平不高我也没法教好你，或者是责任推脱，我没有责怪你们把我教成这个样子
-我真的是想从你们口中得到一点有用的办法，可为什…又逼我封闭自己呢?你们是我的父母，有心事只能对你们讲，
-当看到你们高高在上的态度，威严和推脱时我自己都感到绝望了。正如我活成了你们想看到却又不想看到的样子，
-妈，我小时候调皮，你怕我变成我爸年轻时候的样子，我变了变得不调皮了又听你们话了，可是你们有不喜欢我这个样子
-我成了实验品，活成了你们想要我活成的样子的半殘品，却让我忽然变得绝望，因为我改但却又活不出我想要的样子了。
-现在我却又不知道我该成为什么样的人。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;我只是渴望得到幸福感&lt;/h2&gt;
-
-&lt;p&gt;妈，你还知道那个场景吗？把做好的饭往桌子上一放，生气的说：”给你吃的这么好，穿的这么好你还有什么不知足的”
-然后有拿我跟比我们穷的家庭比，难道你也想让我活成别人的样子？你真以为有了钱，吃饱穿暖就什么都有了？
-从小就拿别人跟我比，但我却处处不及别人，你们对我报很大期望，却又不报任何希望。&lt;/p&gt;
-
-&lt;p&gt;我讨厌跟别人比来比去，似乎除了跟别人比较我活不出个人样似的，我只想在任何人都看不起我的时候我爸妈能站出
-跟我说，孩子做最好的自己，爸妈支持你(我不喜欢里外不一的人)，而现在的我只想让自己的缺点全部暴露出来，让
-更多人不喜欢，这样我才好受一些，因为我不自信，就算我做的很好但我心里还会觉得其实我很差他们只是在安慰我，
-你们这么做，就连我自己都不看好我自己了，就像我博客上的free，我喜欢自由，我不想你们给我带上沉重的枷锁后
-再让我自由，还记得我的原名吧，”赵飞鹏“现在变成“赵鹏”了，如你们所愿枷锁太重我不能飞了，即使现在给我自由又如何，
-不能飞，那就只能带上枷锁走了，累了的话就歇一会，看上去真的好自由。&lt;/p&gt;
-
-&lt;p&gt;我一直渴望能真正跟你们好好的坐在一起谈谈，把你的架子丢掉，我们平心静气的坐一起谈谈。我爸总是说我也想跟你
-谈谈，跟你像朋友一样做一起好好谈谈。爸，你还真以为坐一起吃个饭喝杯酒就成朋友了？
-你的威严让我们除了谈跟钱有关系的话题外再无它可谈。你有没有想过当我出去赚钱的时候是否还会跟你谈什么话题？
-似乎我一张口说话的时候，对你们说的最多的就是。爸，给我点钱。妈，给我点钱。钱真重要啊。就算我们天天在一起
-我也感到我们之间如此陌生。&lt;/p&gt;
-
-&lt;p&gt;你们对成功的定义是我以后有能力赚多少钱吧，而不是我开心不开心吧。
-你们这么做只是想来弥补你们曾经的不足而已，下雨了，躲雨棚都那么拥挤了你们为什么还要挤进去呢？在外面呼吸
-不是更舒畅么，你们怕，怕所有人都看向你们笑话你们，笑话你们傻不知道躲雨，你们忍受不了别人的奇异眼光，所以
-你们也挤了进去，即使一群是挤在一起，吸着那一口让人快要窒息的微薄的空气。下雨真好，听听雨的声音，感受雨滴
-落在身上的凉爽。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;很多人喜欢三毛，却又活不出三毛一样的样子&lt;/h2&gt;
-
-&lt;p&gt;瞧了，我的那本《撒哈啦的故事》也是在高三时候读的，是我让我姐给我买的，(说来也巧，当初你们不喜欢我看课外
-书，还好书店的书便宜15块钱左右一本，4年时间在高中也买了500块钱了的吧),我姐倒是不反对我看课外书，因为
-他知道我在看什么书，而不是跟你们一样的课外书。
-当时因为看见三买的那句”如果有来生要做一棵树“那句话，我还以为三毛就是动画片里面演的《三毛流浪记》里的那个
-三毛了。
-当时只是感觉到三毛这句话戳中了我的要害，活得洒脱活的自由又安逸这才是自己想要活成的样子，这样真好。
-在撒哈拉中的三毛，即使生活再苦，但只要她跟何西在一起却是最快乐的，虽然有点像爱情故事，但书中无不透漏出三
-毛对自由的热爱，能做自己喜欢做的事，又有人义无反顾的支持你，陪你一起。&lt;/p&gt;
-
-&lt;p&gt;如果可以，我还是希望在进入那拥挤的地铁时，爸妈转身对我说“用你喜欢的方式去到达你想去的目的地吧”就算不能到达
-最起码，你所走过的途中处处是风景，只要你能用自己的方式去获得快乐就好。而不是跟大家一样，挤进那拥挤的地铁，
-整个路途中，眼中只有人。&lt;/p&gt;
-&lt;p align=&quot;right&quot;&gt;2017-7-3--&amp;gt;赵小白&lt;/p&gt;
-</description>
-        <pubDate>Mon, 03 Jul 2017 14:52:01 +0800</pubDate>
-        <link>http://www.idearfree.com/life/2017/07/03/%E5%BE%97%E5%88%B0%E4%BA%86%E7%89%A9%E8%B4%A8-%E5%8D%B4%E8%BF%87%E4%B8%8D%E4%B8%8A%E8%87%AA%E5%B7%B1%E6%83%B3%E8%A6%81%E7%9A%84%E7%94%9F%E6%B4%BB.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/life/2017/07/03/%E5%BE%97%E5%88%B0%E4%BA%86%E7%89%A9%E8%B4%A8-%E5%8D%B4%E8%BF%87%E4%B8%8D%E4%B8%8A%E8%87%AA%E5%B7%B1%E6%83%B3%E8%A6%81%E7%9A%84%E7%94%9F%E6%B4%BB.html</guid>
-        
-        <category>Life</category>
-        
-        
-        <category>Life</category>
         
       </item>
     

@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>创建快捷启动方式 - 赵小白的博客</title>
+	<title>python基础总结(一) - 赵小白的博客</title>
 
 	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
 	<link rel="icon" href="/styles/images/favicon.jpg">
@@ -13,10 +13,10 @@
 	<link rel="stylesheet" href="/styles/css/index.css">
 	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/styles/css/syntax.css">
-	<link rel="canonical" href="/linux/2017/08/02/%E5%88%9B%E5%BB%BA%E5%BF%AB%E6%8D%B7%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F.html">
+	<link rel="canonical" href="/python/2017/08/06/%E5%AF%B9python%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93.html">
 	<link rel="alternate" type="application/rss+xml" title="赵小白的博客" href="/feed.xml">
 	
-	<meta name="keywords" content="创建快捷启动方式, 赵小白的博客, 远方有多远,请你告诉我!">
+	<meta name="keywords" content="python基础总结(一), 赵小白的博客, 远方有多远,请你告诉我!">
 	<meta name="description" content="远方有多远,请你告诉我!">
 
 	<script src="/styles/js/jquery.min.js"></script>
@@ -90,8 +90,8 @@
   <div class="container">
   	
   		<!--
-		    <h1>创建快捷启动方式</h1>
-		    <p>Post on Aug 02, 2017 by <a href="/about">赵赵赵小白</a></p>
+		    <h1>python基础总结(一)</h1>
+		    <p>Post on Aug 06, 2017 by <a href="/about">赵赵赵小白</a></p>
 		-->
 		    <h1>远方有多远,请你告诉我!</h1>
     
@@ -102,8 +102,8 @@
 <div class="banner">
   <div class="container">
   	
-    	<a href="/categories/#Linux-ref">Linux</a>	/
-    	<a href="/tag/#Linux-ref">Linux</a>
+    	<a href="/categories/#python-ref">python</a>	/
+    	<a href="/tag/#python-ref">python</a>
     
   </div>
 </div>
@@ -462,42 +462,126 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">创建快捷启动方式</h1>
+              <h1 class="post-title">python基础总结(一)</h1>
               <!--
-                <p class="post-meta">Aug 2, 2017</p>
+                <p class="post-meta">Aug 6, 2017</p>
               -->
-              <div class="meta">Posted on <span class="postdate">Aug 02, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
+              <div class="meta">Posted on <span class="postdate">Aug 06, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
               <br />
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#ubuntu-" id="markdown-toc-ubuntu-">Ubuntu 创建快捷启动方式(启动器)</a></li>
+  <li><a href="#section" id="markdown-toc-section">1.变量和简单的数据类型</a></li>
+  <li><a href="#section-1" id="markdown-toc-section-1">2.列表</a></li>
+  <li><a href="#section-2" id="markdown-toc-section-2">3.操作列表</a></li>
 </ul>
 
-<h2 id="ubuntu-">Ubuntu 创建快捷启动方式(启动器)</h2>
+<h3 id="section">1.变量和简单的数据类型</h3>
+<ol>
+  <li>变量
+    <ol>
+      <li>在程序中可以随时修改变量的值,而python始终记录最新值</li>
+    </ol>
+  </li>
+  <li>变量和命名的使用
+    <ol>
+      <li>变量名只能包含字母,数字和下划线(不能以数字开头)</li>
+      <li>不要将python的关键字和函数名作为变量名</li>
+      <li>书写具有描述性的变量名</li>
+      <li>慎用 I 和 O</li>
+    </ol>
+  </li>
+  <li>字符串
+    <ol>
+      <li>用引号引起来的都为字符串</li>
+      <li>obj.title()将单词首字母大写</li>
+      <li>通过 ‘+’ 来使两个字符串合并</li>
+      <li>obj.upper(),lower()将字符串分别转为大,小写</li>
+    </ol>
+  </li>
+  <li>删除空白
+    <ol>
+      <li>obj.strip(), lstrip(), rstrip()删除两端,左边(left),右边(right)空白</li>
+    </ol>
+  </li>
+  <li>python2 中的print语句
+ 1.print “Hello my friend!” 不用添加括号也行
+6.运算符号
+ 1.python2 中 3/2.0 与 python3中 3/2 相同,结果为1.5
+ 2.python中支持乘方 3**2 即 3的2次方
+7.使用函数str()避免错误类型
+ 1.可通过str(obj),来将非字符串类型转为字符串类型
+8.注释
+    <ol>
+      <li>’#’pyton注释用井号来标识
+9.Python之禅
+ 1.import this(代码书写原则)</li>
+    </ol>
+  </li>
+</ol>
 
-<p>*应用于免安装软件
-注:可能不是有些版本不适用吧,但大部分应该可以的。</p>
+<h3 id="section-1">2.列表</h3>
+<ol>
+  <li>列表介绍
+    <ol>
+      <li>python中用’[]’来表示列表(即为动态列表)</li>
+      <li>通过 list[index] 来访问元素(-1为倒数第一个元素)</li>
+      <li>列表中的元素都是字符串</li>
+      <li>list.append(varlue)在列表末尾添加值</li>
+      <li>list.insert(0,varlue)在指定位置添加值</li>
+      <li>del list[index] 删除索引位置的值</li>
+      <li>value = list.pop(index)弹出末尾或任意位置元素</li>
+      <li>list.remove(value)根据值来删除列表中该元素(只能删除一个)</li>
+    </ol>
+  </li>
+  <li>组织列表
+    <ol>
+      <li>list.sort()对列表进行永久排序</li>
+      <li>‘reverse=True’ sort的参数(倒序)</li>
+      <li>list.sorted() 对列表进行临时排序</li>
+      <li>len(list) 确认列表长度</li>
+    </ol>
+  </li>
+</ol>
 
-<p>1)创建快捷方式桌面文件</p>
+<h3 id="section-2">3.操作列表</h3>
+<ol>
+  <li>遍历列表,切片
+    <ol>
+      <li>for value in list:(通过for循环索引列表值)</li>
+      <li>python中注意缩进</li>
+      <li>for value in range(1,5)生成一系列数字</li>
+      <li>range(5),从0-4(自行理解),range(1,10,2)开始,结束,步距(自行理解)</li>
+      <li>numbers = list(range(1,6))(生成数字列表)</li>
+      <li>list(),生成列表</li>
+      <li>squares = [value**2, for value in range(1, 6)]列表解析</li>
+      <li>[:] 为切片,for value in list[0:3],循环输出列表中下标0-2的元素</li>
+    </ol>
+  </li>
+  <li>复制列表
+    <ol>
+      <li>list1 = list2<a href="使用切片会复制列表">:</a></li>
+      <li>list1 = list2 (会创建list1第副本,即list2与1的内存地址相同)</li>
+    </ol>
+  </li>
+  <li>元组
+    <ol>
+      <li>元组用’()’(即为静态列表,只能在定义时添加值,不能进行添加删除操作)</li>
+      <li>遍历元组,根列表遍历时相同</li>
+    </ol>
+  </li>
+</ol>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>	sudo vim /usr/share/applications/FileName.desktop
-	*注意:FileName随便写,方便起见改为软件名
-</code></pre></div>
-
-<p>2)在上面文件中添加(看下面内容都能顾名思义)</p>
-
-<div class="highlighter-rouge"><pre class="codehilite"><code>	[Desktop Entry]
-	Encoding=UTF-8
-	Name=FileName(可改)
-	Comment=FileName(可改)
-	Exec=path(必须为你需要添加快捷方式的软件路径)
-	Icon=ico(这里加入你快捷方式的图标路径)
-	Terminal=false(打开软件时不显示终端,true为显示)
-	StartupNotify=true
-	Type=Application(可改)
-	Categories=Application;(这里决定了启动器在菜单里的位置)
-</code></pre></div>
+<ul>
+  <li>python小知识
+    <ol>
+      <li>PEP(Python Enhancement Proposal)代码格式设置指南PEP8元老啊</li>
+      <li>缩进,每级缩进为4个空格</li>
+      <li>行长,每行建议不超过80个字符,注释不超过72个字符</li>
+      <li>更多了解请访问<a href="https://python.org/dev/peps/pep-0008/">PEP8格式指南</a></li>
+    </ol>
+  </li>
+</ul>
 
 
             </article>

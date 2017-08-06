@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>创建快捷启动方式 - 赵小白的博客</title>
+	<title>vim YouCompleteMe自动补全的安装配置与使用 - 赵小白的博客</title>
 
 	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
 	<link rel="icon" href="/styles/images/favicon.jpg">
@@ -13,10 +13,10 @@
 	<link rel="stylesheet" href="/styles/css/index.css">
 	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/styles/css/syntax.css">
-	<link rel="canonical" href="/linux/2017/08/02/%E5%88%9B%E5%BB%BA%E5%BF%AB%E6%8D%B7%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F.html">
+	<link rel="canonical" href="/linux/2017/08/06/YouCompleteMe%E5%AE%89%E8%A3%85.html">
 	<link rel="alternate" type="application/rss+xml" title="赵小白的博客" href="/feed.xml">
 	
-	<meta name="keywords" content="创建快捷启动方式, 赵小白的博客, 远方有多远,请你告诉我!">
+	<meta name="keywords" content="vim YouCompleteMe自动补全的安装配置与使用, 赵小白的博客, 远方有多远,请你告诉我!">
 	<meta name="description" content="远方有多远,请你告诉我!">
 
 	<script src="/styles/js/jquery.min.js"></script>
@@ -90,8 +90,8 @@
   <div class="container">
   	
   		<!--
-		    <h1>创建快捷启动方式</h1>
-		    <p>Post on Aug 02, 2017 by <a href="/about">赵赵赵小白</a></p>
+		    <h1>vim YouCompleteMe自动补全的安装配置与使用</h1>
+		    <p>Post on Aug 06, 2017 by <a href="/about">赵赵赵小白</a></p>
 		-->
 		    <h1>远方有多远,请你告诉我!</h1>
     
@@ -462,43 +462,68 @@
       <div class="panel docs-content">
         <div class="wrapper">
             <header class="post-header">
-              <h1 class="post-title">创建快捷启动方式</h1>
+              <h1 class="post-title">vim YouCompleteMe自动补全的安装配置与使用</h1>
               <!--
-                <p class="post-meta">Aug 2, 2017</p>
+                <p class="post-meta">Aug 6, 2017</p>
               -->
-              <div class="meta">Posted on <span class="postdate">Aug 02, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
+              <div class="meta">Posted on <span class="postdate">Aug 06, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
               <br />
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#ubuntu-" id="markdown-toc-ubuntu-">Ubuntu 创建快捷启动方式(启动器)</a></li>
+  <li><a href="#section" id="markdown-toc-section">1 下载</a></li>
+  <li><a href="#section-1" id="markdown-toc-section-1">2 安装</a></li>
+  <li><a href="#section-2" id="markdown-toc-section-2">3 配置</a></li>
 </ul>
 
-<h2 id="ubuntu-">Ubuntu 创建快捷启动方式(启动器)</h2>
+<h3 id="section">1 下载</h3>
 
-<p>*应用于免安装软件
-注:可能不是有些版本不适用吧,但大部分应该可以的。</p>
+<p><code class="highlighter-rouge">git clone --recursive git://github.com/Valloric/YouCompleteMe</code></p>
 
-<p>1)创建快捷方式桌面文件</p>
+<p>如果执行该命令没报错, 就ok了. 但是中途有可能会断掉, 可以 cd 到 YouCompleteMe, 然后反复用如下命令再次进行下载:</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>	sudo vim /usr/share/applications/FileName.desktop
-	*注意:FileName随便写,方便起见改为软件名
-</code></pre></div>
+<p><code class="highlighter-rouge">git submodule update --init --recursive</code></p>
 
-<p>2)在上面文件中添加(看下面内容都能顾名思义)</p>
+<p>我是网络不好弄了好久才下载完.</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>	[Desktop Entry]
-	Encoding=UTF-8
-	Name=FileName(可改)
-	Comment=FileName(可改)
-	Exec=path(必须为你需要添加快捷方式的软件路径)
-	Icon=ico(这里加入你快捷方式的图标路径)
-	Terminal=false(打开软件时不显示终端,true为显示)
-	StartupNotify=true
-	Type=Application(可改)
-	Categories=Application;(这里决定了启动器在菜单里的位置)
-</code></pre></div>
+<h3 id="section-1">2 安装</h3>
 
+<p><code class="highlighter-rouge">cd ~/.vim/bundle/YouCompleteMe</code>到这个目录下<br />
+<code class="highlighter-rouge">./install.py --clang-completer</code>安装<br />
+到达100%的时候就安装成功了<br />
+[ 95%] Building CXX object ycm/CMakeFiles/ycm_core.dir/Candidate.cpp.o<br />
+[ 96%] Building CXX object ycm/CMakeFiles/ycm_core.dir/IdentifierUtils.cpp.o<br />
+[ 97%] Building CXX object ycm/CMakeFiles/ycm_core.dir/ycm_core.cpp.o<br />
+[ 97%] Building CXX object ycm/CMakeFiles/ycm_core.dir/IdentifierCompleter.cpp.o<br />
+[ 98%] Building CXX object ycm/CMakeFiles/ycm_core.dir/LetterNodeListMap.cpp.o<br />
+[100%] Building CXX object ycm/CMakeFiles/ycm_core.dir/CustomAssert.cpp.o<br />
+[100%] Linking CXX shared library /home/wuyt/mutils/debian_lenny_cfg/vim_cfg/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so<br />
+[100%] Built target ycm_core</p>
+
+<h3 id="section-2">3 配置</h3>
+
+<p>.vimrc中加入:</p>
+
+<p>” YouCompleteMe<br />
+<code class="highlighter-rouge">set runtimepath+=~/.vim/bundle/YouCompleteMe</code>
+<code class="highlighter-rouge">let g:ycm_collect_identifiers_from_tags_files = 1</code>           “ 开启 YCM 基于标签引擎<br />
+<code class="highlighter-rouge">let g:ycm_collect_identifiers_from_comments_and_strings = 1</code> “ 注释与字符串中的内容也用于补全<br />
+<code class="highlighter-rouge">let g:syntastic_ignore_files=[".*\.py$"]</code><br />
+<code class="highlighter-rouge">let g:ycm_seed_identifiers_with_syntax = 1</code>                  “ 语法关键字补全<br />
+<code class="highlighter-rouge">let g:ycm_complete_in_comments = 1</code><br />
+<code class="highlighter-rouge">let g:ycm_confirm_extra_conf = 0</code><br />
+<code class="highlighter-rouge">let g:ycm_key_list_select_completion = ['&lt;c-n&gt;', '&lt;Down&gt;']</code>  “ 映射按键, 没有这个会拦截掉tab, 导致其他插件的tab不能用.<br />
+<code class="highlighter-rouge">let g:ycm_key_list_previous_completion = ['&lt;c-p&gt;', '&lt;Up&gt;']</code><br />
+<code class="highlighter-rouge">let g:ycm_complete_in_comments = 1 </code>                         “ 在注释输入中也能补全<br />
+<code class="highlighter-rouge">let g:ycm_complete_in_strings = 1</code>                           “ 在字符串输入中也能补全<br />
+<code class="highlighter-rouge">let g:ycm_collect_identifiers_from_comments_and_strings = 1</code> “ 注释和字符串中的文字也会被收入补全<br />
+<code class="highlighter-rouge">let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'</code>
+<code class="highlighter-rouge">let g:ycm_show_diagnostics_ui = 0</code>                           “ 禁用语法检查<br />
+<code class="highlighter-rouge">inoremap &lt;expr&gt; &lt;CR&gt; pumvisible() ? "\&lt;C-y&gt;" : "\&lt;CR&gt;" |</code>            “ 回车即选中当前项<br />
+<code class="highlighter-rouge">nnoremap &lt;c-j&gt; :YcmCompleter GoToDefinitionElseDeclaration&lt;CR&gt;|</code>     “ 跳转到定义处<br />
+<code class="highlighter-rouge">"let g:ycm_min_num_of_chars_for_completion=2</code>                 “ 从第2个键入字符就开始罗列匹配项</p>
+
+<p>其中 ~/.vim/bundle/YouCompleteMe 为下载 YouCompleteMeu 的路径.</p>
 
             </article>
         </div>
