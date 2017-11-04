@@ -5,9 +5,76 @@
     <description>远方有多远,请你告诉我!</description>
     <link>http://www.idearfree.com/</link>
     <atom:link href="http://www.idearfree.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 18 Oct 2017 21:04:54 +0800</pubDate>
-    <lastBuildDate>Wed, 18 Oct 2017 21:04:54 +0800</lastBuildDate>
+    <pubDate>Sat, 04 Nov 2017 20:04:30 +0800</pubDate>
+    <lastBuildDate>Sat, 04 Nov 2017 20:04:30 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>GitHub博客上传</title>
+        <description>
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;由于总是忘记怎么把电脑里的文件上传到博客仓库写的.把它记下来防止忘记;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;jekyll server&lt;/code&gt;查看本地博客效果&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git status&lt;/code&gt;擦看本地自己修改了多少文件&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git add .&lt;/code&gt;添加远程不存才的git文件&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git commit -m &quot;maste&quot;&lt;/code&gt;提交修改&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git pull&lt;/code&gt;从另一个存储库或本地分支获取并集成(整合)&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git push&lt;/code&gt;跟进到远程服务器上&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git rm&lt;/code&gt;移除文件&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 04 Nov 2017 19:30:01 +0800</pubDate>
+        <link>http://www.idearfree.com/helloblog/2017/11/04/GitHub%E5%8D%9A%E5%AE%A2%E4%B8%8A%E4%BC%A0.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/helloblog/2017/11/04/GitHub%E5%8D%9A%E5%AE%A2%E4%B8%8A%E4%BC%A0.html</guid>
+        
+        <category>HelloBlog</category>
+        
+        
+        <category>HelloBlog</category>
+        
+      </item>
+    
+      <item>
+        <title>Ubuntu图形界面卡死</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#ubuntu&quot; id=&quot;markdown-toc-ubuntu&quot;&gt;Ubuntu图形界面卡死&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ubuntu&quot;&gt;Ubuntu图形界面卡死&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Control + shift + 1,2,3,4,5,6进入字符界面&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;ps用于查看系统进程&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;kill用于向进程发送强行终止信号&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;查看tty7图形界面进程id&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code&gt;ps -t tty7&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;用Kill来杀死进程&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code&gt;kill pid&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Sat, 04 Nov 2017 19:18:00 +0800</pubDate>
+        <link>http://www.idearfree.com/linux/2017/11/04/%E7%B3%BB%E7%BB%9F%E5%8D%A1%E6%AD%BB.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/linux/2017/11/04/%E7%B3%BB%E7%BB%9F%E5%8D%A1%E6%AD%BB.html</guid>
+        
+        <category>Linux</category>
+        
+        
+        <category>Linux</category>
+        
+      </item>
     
       <item>
         <title>JDBC连接数据库</title>
@@ -612,116 +679,6 @@ conn.close() ;&lt;br /&gt;
         
         
         <category>python</category>
-        
-      </item>
-    
-      <item>
-        <title>vim YouCompleteMe自动补全的安装配置与使用</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;1 下载&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;2 安装&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;3 配置&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section&quot;&gt;1 下载&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git clone --recursive git://github.com/Valloric/YouCompleteMe&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;如果执行该命令没报错, 就ok了. 但是中途有可能会断掉, 可以 cd 到 YouCompleteMe, 然后反复用如下命令再次进行下载:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git submodule update --init --recursive&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;我是网络不好弄了好久才下载完.&lt;/p&gt;
-
-&lt;h3 id=&quot;section-1&quot;&gt;2 安装&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd ~/.vim/bundle/YouCompleteMe&lt;/code&gt;到这个目录下&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;./install.py --clang-completer&lt;/code&gt;安装&lt;br /&gt;
-到达100%的时候就安装成功了&lt;br /&gt;
-[ 95%] Building CXX object ycm/CMakeFiles/ycm_core.dir/Candidate.cpp.o&lt;br /&gt;
-[ 96%] Building CXX object ycm/CMakeFiles/ycm_core.dir/IdentifierUtils.cpp.o&lt;br /&gt;
-[ 97%] Building CXX object ycm/CMakeFiles/ycm_core.dir/ycm_core.cpp.o&lt;br /&gt;
-[ 97%] Building CXX object ycm/CMakeFiles/ycm_core.dir/IdentifierCompleter.cpp.o&lt;br /&gt;
-[ 98%] Building CXX object ycm/CMakeFiles/ycm_core.dir/LetterNodeListMap.cpp.o&lt;br /&gt;
-[100%] Building CXX object ycm/CMakeFiles/ycm_core.dir/CustomAssert.cpp.o&lt;br /&gt;
-[100%] Linking CXX shared library /home/wuyt/mutils/debian_lenny_cfg/vim_cfg/.vim/bundle/YouCompleteMe/third_party/ycmd/ycm_core.so&lt;br /&gt;
-[100%] Built target ycm_core&lt;/p&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;3 配置&lt;/h3&gt;
-
-&lt;p&gt;.vimrc中加入:&lt;/p&gt;
-
-&lt;p&gt;” YouCompleteMe&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;set runtimepath+=~/.vim/bundle/YouCompleteMe&lt;/code&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_collect_identifiers_from_tags_files = 1&lt;/code&gt;           “ 开启 YCM 基于标签引擎&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_collect_identifiers_from_comments_and_strings = 1&lt;/code&gt; “ 注释与字符串中的内容也用于补全&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:syntastic_ignore_files=[&quot;.*\.py$&quot;]&lt;/code&gt;&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_seed_identifiers_with_syntax = 1&lt;/code&gt;                  “ 语法关键字补全&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_complete_in_comments = 1&lt;/code&gt;&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_confirm_extra_conf = 0&lt;/code&gt;&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_key_list_select_completion = [&#39;&amp;lt;c-n&amp;gt;&#39;, &#39;&amp;lt;Down&amp;gt;&#39;]&lt;/code&gt;  “ 映射按键, 没有这个会拦截掉tab, 导致其他插件的tab不能用.&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_key_list_previous_completion = [&#39;&amp;lt;c-p&amp;gt;&#39;, &#39;&amp;lt;Up&amp;gt;&#39;]&lt;/code&gt;&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_complete_in_comments = 1 &lt;/code&gt;                         “ 在注释输入中也能补全&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_complete_in_strings = 1&lt;/code&gt;                           “ 在字符串输入中也能补全&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_collect_identifiers_from_comments_and_strings = 1&lt;/code&gt; “ 注释和字符串中的文字也会被收入补全&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_global_ycm_extra_conf=&#39;~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py&#39;&lt;/code&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;let g:ycm_show_diagnostics_ui = 0&lt;/code&gt;                           “ 禁用语法检查&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;inoremap &amp;lt;expr&amp;gt; &amp;lt;CR&amp;gt; pumvisible() ? &quot;\&amp;lt;C-y&amp;gt;&quot; : &quot;\&amp;lt;CR&amp;gt;&quot; |&lt;/code&gt;            “ 回车即选中当前项&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;nnoremap &amp;lt;c-j&amp;gt; :YcmCompleter GoToDefinitionElseDeclaration&amp;lt;CR&amp;gt;|&lt;/code&gt;     “ 跳转到定义处&lt;br /&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;let g:ycm_min_num_of_chars_for_completion=2&lt;/code&gt;                 “ 从第2个键入字符就开始罗列匹配项&lt;/p&gt;
-
-&lt;p&gt;其中 ~/.vim/bundle/YouCompleteMe 为下载 YouCompleteMeu 的路径.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 06 Aug 2017 11:31:00 +0800</pubDate>
-        <link>http://www.idearfree.com/linux/2017/08/06/YouCompleteMe%E5%AE%89%E8%A3%85.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/linux/2017/08/06/YouCompleteMe%E5%AE%89%E8%A3%85.html</guid>
-        
-        <category>Linux</category>
-        
-        
-        <category>Linux</category>
-        
-      </item>
-    
-      <item>
-        <title>如何安装五笔</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;安装五笔&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;安装五笔&lt;/h2&gt;
-
-&lt;p&gt;从右边查看自己使用的是什么输入法&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/styles/images/shurufa.png&quot; alt=&quot;查看&quot; /&gt;
-需要点这个图标开查看.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;对于 ibus
-安装 ibus-table-wubi
-重新启动计算机
-如果不出现，在 ibus 设置中手动添加五笔即可&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;对于 fcitx
-安装 fcitx-table-wubi 或 fcitx-table-wbpy
-重新启动计算机
-如果不出现，在 fcitx 设置中手动添加五笔即可
-如果 locale 为英文，在 fcitx-config-* 手动添加输入法时需要取消勾选 “Only Show Current Language”&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/styles/images/set.png&quot; alt=&quot;set&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 06 Aug 2017 11:31:00 +0800</pubDate>
-        <link>http://www.idearfree.com/linux/2017/08/06/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E4%BA%94%E7%AC%94.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/linux/2017/08/06/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E4%BA%94%E7%AC%94.html</guid>
-        
-        <category>Linux</category>
-        
-        
-        <category>Linux</category>
         
       </item>
     
