@@ -5,9 +5,79 @@
     <description>远方有多远,请你告诉我!</description>
     <link>http://www.idearfree.com/</link>
     <atom:link href="http://www.idearfree.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 04 Nov 2017 20:16:03 +0800</pubDate>
-    <lastBuildDate>Sat, 04 Nov 2017 20:16:03 +0800</lastBuildDate>
+    <pubDate>Sun, 05 Nov 2017 14:43:48 +0800</pubDate>
+    <lastBuildDate>Sun, 05 Nov 2017 14:43:48 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>MySQL的sql文件导出/入!</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;一.导出数据&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;二.导入数据库&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;一.导出数据&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;导出数据和表结构&lt;br /&gt;
+&lt;code&gt;mysqldump -uUserName -p DBName &amp;gt; DBName.sql&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;只导出表结构&lt;br /&gt;
+&lt;code&gt;mysqldump -uUeerName -p -d DBName	&amp;gt; DBName.sql&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;二.导入数据库&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;首先建立空数据库&lt;/p&gt;
+
+    &lt;p&gt;&lt;code&gt;mysql&amp;gt;create database DBname&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;一.方法一&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;导入数据库
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;选择数据库&lt;/p&gt;
+
+        &lt;p&gt;&lt;code&gt;mysql&amp;gt;use DBname;&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;设置数据库编码&lt;/p&gt;
+
+        &lt;p&gt;&lt;code&gt;mysel&amp;gt;set names utf8;&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;导入数据库(注意sql文件路径)&lt;/p&gt;
+
+        &lt;p&gt;&lt;code&gt;mysql&amp;gt;source /home/abc/abc.sql;&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;二.方法二&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;mysql -uUserName -p DBName &amp;lt; DBName.sql&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;例:#  mysql -uUserName -p abc &amp;lt;abc.sql&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;color:red;&quot;&gt;*建议使用第二种方法导入&lt;/div&gt;
+</description>
+        <pubDate>Sun, 05 Nov 2017 14:08:01 +0800</pubDate>
+        <link>http://www.idearfree.com/mysql/2017/11/05/MySQL%E7%9A%84%E5%AF%BC%E5%87%BA.html</link>
+        <guid isPermaLink="true">http://www.idearfree.com/mysql/2017/11/05/MySQL%E7%9A%84%E5%AF%BC%E5%87%BA.html</guid>
+        
+        <category>MySQL</category>
+        
+        
+        <category>MySQL</category>
+        
+      </item>
     
       <item>
         <title>MySQL的启动与终止!</title>
@@ -473,117 +543,6 @@ conn.close() ;&lt;br /&gt;
         
         
         <category>Linux</category>
-        
-      </item>
-    
-      <item>
-        <title>汇编语言知识基础!</title>
-        <description>
-&lt;ol&gt;
-  &lt;li&gt;机器语言是机器指令的集合(通过把二进制数转为高低电平来运行)&lt;/li&gt;
-  &lt;li&gt;CPU(Central Processing Unit)中央处理单元&lt;/li&gt;
-  &lt;li&gt;汇编语言由三类指令组成
-    &lt;ol&gt;
-      &lt;li&gt;汇编指令:机器码的助记符&lt;/li&gt;
-      &lt;li&gt;伪指令:由编译器执行,计算机不执行&lt;/li&gt;
-      &lt;li&gt;其它符号: +, -, *, /,由编译器执行&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;8 bit = 1 Byte 即:8位 = 1 字节
-    &lt;ol&gt;
-      &lt;li&gt;1024Byte = 1KB, 1024KB = 1MB, 1024MB = 1GB, 1024GB = 1TB&lt;/li&gt;
-      &lt;li&gt;存储器被分为多个存储单元,每个单元被分配一个编号(从零开始)&lt;/li&gt;
-      &lt;li&gt;微型机的存储单元,一个存储单元可存放1Byte(字节) = 8bit(位)&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;CPU对数据进行读写(必须和芯片进行下面3类信息交互)
-    &lt;ol&gt;
-      &lt;li&gt;存储单元的地址(地址信息)&lt;/li&gt;
-      &lt;li&gt;器件的选择,读或写的命令(控制信息)&lt;/li&gt;
-      &lt;li&gt;读或写的数据(数据信息)&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;CPU和其它芯片通过导线来传输信息(我们通常叫做总线)
-    &lt;ol&gt;
-      &lt;li&gt;总线从逻辑上分为3类:
-        &lt;ol&gt;
-          &lt;li&gt;地址总线&lt;/li&gt;
-          &lt;li&gt;控制总线&lt;/li&gt;
-          &lt;li&gt;数据总线&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;一根总线只能传送两种信息0/1(总线的根数我们叫做宽度)&lt;/li&gt;
-      &lt;li&gt;地址总线的宽度(N)决定了CPU的寻址能力(2^N)&lt;/li&gt;
-      &lt;li&gt;数据总线的宽度(N)决定了CPU与外界的数据传输速度
-        &lt;ol&gt;
-          &lt;li&gt;1根总线的传输能力为 1bit(1位) 8根为1字节&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;控制总线决定CPU对外部器件的控制不同器件的能力&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;小结
-    &lt;ol&gt;
-      &lt;li&gt;汇编指令是机器指令的助记符,同机器指令一一对应.&lt;/li&gt;
-      &lt;li&gt;每一种CPU都有自己的汇编指令集.&lt;/li&gt;
-      &lt;li&gt;CPU可以直接使用的信息在存储器中存放.&lt;/li&gt;
-      &lt;li&gt;在存储器中指令和数据没有任何区别,都是二进制信息.&lt;/li&gt;
-      &lt;li&gt;存储单元从零开始顺序存储8个bit, 即8位二进制数.&lt;/li&gt;
-      &lt;li&gt;每一个CPU芯片都有许多管脚,这些管脚和总线相连.也可以说,
-这些管脚引出总线.一个CPU可以引出3中总线的宽度标志了这个CPU的不同方面的性能.
-        &lt;ol&gt;
-          &lt;li&gt;地址总线决定CUP寻址能力&lt;/li&gt;
-          &lt;li&gt;数据总线决定CPU与其它器件进行数据禅送是的一次数据禅送量;&lt;/li&gt;
-          &lt;li&gt;控制总线决定CUP对系统中其他器件的控制能力&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;下面的需了解更多可自行Google
-    &lt;ol&gt;
-      &lt;li&gt;内存地址空间&lt;/li&gt;
-      &lt;li&gt;比如CPU的地址总线宽度为10,那么寻址能力就为1024&lt;/li&gt;
-      &lt;li&gt;这1024个可寻到的内存单元就构成了这个CPU的内存地址空间&lt;/li&gt;
-      &lt;li&gt;超出寻址能力的内存就无法使用了&lt;/li&gt;
-      &lt;li&gt;主板, CPU通过主板和总线来控制一系列扩展器件&lt;/li&gt;
-      &lt;li&gt;接口卡:计算机系统中所有可用程序控制其工作的设备,必须收到CPU的控制.&lt;/li&gt;
-      &lt;li&gt;各类存储芯片&lt;/li&gt;
-      &lt;li&gt;随机存储器(RAM):用于存放供CPU使用的绝大部分程序和数据&lt;/li&gt;
-      &lt;li&gt;BOIS(Basic Input/Output System)基本 输入/输出 系统.
-        &lt;ol&gt;
-          &lt;li&gt;BOIS是由主板和各类接口卡厂商提供的元件系统&lt;/li&gt;
-          &lt;li&gt;可以通过它利用该硬件设备进行最基本的输入输出&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;接口卡上的RAM
-        &lt;ol&gt;
-          &lt;li&gt;某些接口卡需要对大批量输入输出数据进行暂时存储,
-在其上装有RAM,最典型的就是显卡(显卡越大对外显示的内容就越多越快).&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;PC机中各类存储器的逻辑连接
-&lt;img src=&quot;/styles/images/PC.jpg&quot; alt=&quot;PC机中各类存储器的逻辑连接&quot; /&gt;
-将各类存储其看作一个逻辑存储器
-&lt;img src=&quot;/styles/images/PC1.jpg&quot; alt=&quot;将各类存储其看作一个逻辑存储器&quot; /&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 06 Aug 2017 21:03:01 +0800</pubDate>
-        <link>http://www.idearfree.com/assembly/language/2017/08/06/%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80.html</link>
-        <guid isPermaLink="true">http://www.idearfree.com/assembly/language/2017/08/06/%E6%B1%87%E7%BC%96%E5%9F%BA%E7%A1%80.html</guid>
-        
-        <category>Assembly Language</category>
-        
-        
-        <category>Assembly</category>
-        
-        <category>Language</category>
         
       </item>
     
