@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "About Git!"
 date:   2017-5-27 22:03:01 +0800
@@ -61,6 +61,7 @@ git config --global push.default simple
 + 	$ git commit  -m "what I want told to someone" //提交修改
 + 	$ git push  //更新到远程服务器上
 + 	$ git rm //移除文件
++ 	$ git checkout --文件名[.] //从仓库更新本地代码
 
 附录二：如何修改你的网页？
 
