@@ -39,6 +39,6 @@ tag: python
 <code>pip list</code><br>
 
 #### [常见问题] ####
-1. AttributeError:'module' object has no attribute 'wraps'
+1. AttributeError:'module' object has no attribute 'wraps'<br>
 	pip版本安装错误,更新最新版本pip
 
