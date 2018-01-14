@@ -125,9 +125,106 @@
       
 
       
-        <li><a href="#year_2017">2017</a>
+        <li><a href="#year_2018">2018</a>
           <ul class="nav">
-            <li><a href="#month_2017_November">November</a></li>
+            <li><a href="#month_2018_January">January</a></li>
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+        
+            </ul>
+          </li>
+          <li><a href="#year_2017">2017</a>
+            <ul class="nav">
+              <li><a href="#month_2017_December">December</a></li>
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_November">November</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
       
 
       
@@ -412,72 +509,7 @@
       
             
           
-        
-      
-    
-      
-      
-      
-      
-
-      
-
-      
-            
-          
-        
-      
-    
-      
-      
-      
-      
-
-      
-
-      
-            
-          
               <li><a href="#month_2017_June">June</a></li>
-          
-        
-      
-    
-      
-      
-      
-      
-
-      
-
-      
-            
-          
-        
-      
-    
-      
-      
-      
-      
-
-      
-
-      
-            
-          
-        
-      
-    
-      
-      
-      
-      
-
-      
-
-      
-            
           
         
       
@@ -583,19 +615,6 @@
       
 
       
-            
-          
-        
-      
-    
-      
-      
-      
-      
-
-      
-
-      
             </ul>
           </li>
       
@@ -613,21 +632,21 @@
               <!--
                 <p class="post-meta">Jul 16, 2017</p>
               -->
-              <div class="meta">Posted on <span class="postdate">Jul 16, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
+              <div class="meta">Posted on <span class="postdate">Jul 16, 2017</span> By <a target="_blank" href="http://localhost:4000">赵赵赵小白</a></div>
               <br />
             </header>
             <article class="post-content">
               <ul id="markdown-toc">
-  <li><a href="#linuxpip" id="markdown-toc-linuxpip">Linux中安装pip</a></li>
-  <li><a href="#linuxpagame" id="markdown-toc-linuxpagame">Linux中安装Pagame</a></li>
-  <li><a href="#pippygame" id="markdown-toc-pippygame">关于pip安装pygame出错的问题</a></li>
-  <li><a href="#dpkg" id="markdown-toc-dpkg">关于出现的dpkg的狗血错误</a></li>
+  <li><a href="#linux中安装pip" id="markdown-toc-linux中安装pip">Linux中安装pip</a></li>
+  <li><a href="#linux中安装pagame" id="markdown-toc-linux中安装pagame">Linux中安装Pagame</a></li>
+  <li><a href="#关于pip安装pygame出错的问题" id="markdown-toc-关于pip安装pygame出错的问题">关于pip安装pygame出错的问题</a></li>
+  <li><a href="#关于出现的dpkg的狗血错误" id="markdown-toc-关于出现的dpkg的狗血错误">关于出现的dpkg的狗血错误</a></li>
 </ul>
 
 <p>今天在Ubuntu 17.04上安装pip的时候，给我来了一大串狗血错误，md系统都直接弹出崩溃—_—|||
 下面来分享一下我在书上get的安装方法(Python 从入门到实践)</p>
 
-<h2 id="linuxpip">Linux中安装pip</h2>
+<h2 id="linux中安装pip">Linux中安装pip</h2>
 
 <ul>
   <li>如果安装的版本太多请看上一篇Linux中如何更改python版本</li>
@@ -644,8 +663,8 @@
   <li>
     <p>使用以下命令来安装：</p>
     <blockquote>
-      <div class="highlighter-rouge"><pre class="codehilite"><code>$ sudo python get-pip.py
-</code></pre>      </div>
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo python get-pip.py
+</code></pre></div>      </div>
     </blockquote>
 
     <p>如果提示错误说没有—H 把上面命令改为sudo —H python get-pip.py
@@ -653,7 +672,7 @@
   </li>
 </ol>
 
-<h2 id="linuxpagame">Linux中安装Pagame</h2>
+<h2 id="linux中安装pagame">Linux中安装Pagame</h2>
 
 <ul>
   <li>
@@ -666,16 +685,16 @@
 <ol>
   <li>下载pagame ：
     <blockquote>
-      <div class="highlighter-rouge"><pre class="codehilite"><code>$ sudo apt-get install python-pagame 
-</code></pre>      </div>
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install python-pagame 
+</code></pre></div>      </div>
     </blockquote>
   </li>
   <li>查看安装情况 ：
     <blockquote>
-      <div class="highlighter-rouge"><pre class="codehilite"><code>$ python
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python
 &gt;&gt;&gt; import pygame
 &gt;&gt;&gt;
-</code></pre>      </div>
+</code></pre></div>      </div>
     </blockquote>
 
     <p>如果没有任何输出就说明Python导入了Pygame这样就也Ok了。</p>
@@ -689,17 +708,17 @@
     <p>如果打开终端会话时使用的是命令python3.5,请将python3-dev替换为python3.5-dev):</p>
 
     <blockquote>
-      <div class="highlighter-rouge"><pre class="codehilite"><code>$ sudo apt-get install python3-dev mercurial
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install python3-dev mercurial
 $ sudo apt-get install libsdl-image1.2-dev  libportmidi-dev
-</code></pre>      </div>
+</code></pre></div>      </div>
     </blockquote>
 
     <p>Pygame高级功能</p>
     <blockquote>
-      <div class="highlighter-rouge"><pre class="codehilite"><code>$ sudo apt-get install libsdl-mixer1.2-dev libportmidi-dev
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install libsdl-mixer1.2-dev libportmidi-dev
 $ sudo apt-get install libswscale-dev libsmpeg-dev libavformat-dev libavcodec-dev
 $ sudo apt-get install python-numpy
-</code></pre>      </div>
+</code></pre></div>      </div>
     </blockquote>
   </li>
 </ul>
@@ -707,8 +726,8 @@ $ sudo apt-get install python-numpy
 <ol>
   <li>接下来安装Pygame(有必要将pip换成pip3):
     <blockquote>
-      <div class="highlighter-rouge"><pre class="codehilite"><code>$ pip install --user hg+http://bitucket.org/pygame/pygame
-</code></pre>      </div>
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pip install --user hg+http://bitucket.org/pygame/pygame
+</code></pre></div>      </div>
     </blockquote>
 
     <p>告知你Pygame找到了哪些库后，输出将暂停一段时间。请按回车键，即便有一些库没有找到。
@@ -718,15 +737,15 @@ $ sudo apt-get install python-numpy
   </li>
   <li>查看安装情况 ：
     <blockquote>
-      <div class="highlighter-rouge"><pre class="codehilite"><code>$ python3
+      <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python3
 &gt;&gt;&gt; import pygame
 &gt;&gt;&gt;
-</code></pre>      </div>
+</code></pre></div>      </div>
     </blockquote>
   </li>
 </ol>
 
-<h2 id="pippygame">关于pip安装pygame出错的问题</h2>
+<h2 id="关于pip安装pygame出错的问题">关于pip安装pygame出错的问题</h2>
 
 <p>2017-7-16-21:54添加</p>
 
@@ -752,26 +771,26 @@ ImportError: No module named ‘mercurial’</module></p>
   <li>
     <p>我们放弃pip改用git</p>
 
-    <div class="highlighter-rouge"><pre class="codehilite"><code> 没有git的可以用以下命令在终端安装
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 没有git的可以用以下命令在终端安装
  sudo apt-get install git
-</code></pre>    </div>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>好，安装之后开始克隆pygame仓库</p>
 
-    <div class="highlighter-rouge"><pre class="codehilite"><code>git clone https://github.com/pygame/pygame
-</code></pre>    </div>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/pygame/pygame
+</code></pre></div>    </div>
 
     <p>克隆完成后开始进入pygame安装</p>
 
-    <div class="highlighter-rouge"><pre class="codehilite"><code>sudo python3 setup.py
-</code></pre>    </div>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo python3 setup.py
+</code></pre></div>    </div>
   </li>
 </ol>
 
 <p>如果有什么问题可以在右上角邮件私信我，欢迎一起探讨.</p>
 
-<h2 id="dpkg">关于出现的dpkg的狗血错误</h2>
+<h2 id="关于出现的dpkg的狗血错误">关于出现的dpkg的狗血错误</h2>
 <ul>
   <li>以下内容转自<a href="http://blog.csdn.net/u010426270/article/details/52028620">郑斌的博客</a></li>
 </ul>
@@ -802,43 +821,43 @@ ImportError: No module named ‘mercurial’</module></p>
 
 <p>[plain] view plain copy</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>sudo mv /var/lib/dpkg/info /var/lib/dpkg/info_old  
-</code></pre></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mv /var/lib/dpkg/info /var/lib/dpkg/info_old  
+</code></pre></div></div>
 
 <p>2再新建一个新的info文件夹</p>
 
 <p>[plain] view plain copy</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>sudo mkdir /var/lib/dpkg/info  
-</code></pre></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mkdir /var/lib/dpkg/info  
+</code></pre></div></div>
 
 <p>3.更新
 [plain] view plain copy</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>sudo apt-get update  
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update  
 &lt;pre name="code" class="plain"&gt;sudo apt-get -f install  
-</code></pre></div>
+</code></pre></div></div>
 
 <p>4.执行完上一步操作后会在新的info文件夹下生成一些文件，现将这些文件全部移到info_old文件夹下</p>
 
 <p>[html] view plain copy</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>sudo mv /var/lib/dpkg/info/* /var/lib/dpkg/info_old   
-</code></pre></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mv /var/lib/dpkg/info/* /var/lib/dpkg/info_old   
+</code></pre></div></div>
 
 <p>5.把自己新建的info文件夹删掉</p>
 
 <p>[plain] view plain copy</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>sudo rm -rf /var/lib/dpkg/info  
-</code></pre></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo rm -rf /var/lib/dpkg/info  
+</code></pre></div></div>
 
 <p>6.把以前的info文件夹重新改回名字</p>
 
 <p>[plain] view plain copy</p>
 
-<div class="highlighter-rouge"><pre class="codehilite"><code>sudo mv /var/lib/dpkg/info_old /var/lib/dpkg/info   
-</code></pre></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mv /var/lib/dpkg/info_old /var/lib/dpkg/info   
+</code></pre></div></div>
 
 <p>问题解决。</p>
 
@@ -860,7 +879,7 @@ ImportError: No module named ‘mercurial’</module></p>
     
     <footer class="footer" role="contentinfo">
 	<div class="container">
-		<p class="copyright">Copyright &copy; 2017-2017 <a href=""><code>赵赵赵小白</code></a>.</p>
+		<p class="copyright">Copyright &copy; 2017-2018 <a href=""><code>赵赵赵小白</code></a>.</p>
 		<p>Powered by <a href="http://jekyllrb.com">Jekyll</a>, themed from <a href="http://lesscss.cn/">Less</a>, refactored by <a href="http://www.hifreud.com/">Freud Kang</a></p>
 	</div>
 </footer>

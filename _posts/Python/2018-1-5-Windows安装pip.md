@@ -1,6 +1,6 @@
----
+ï»¿---
 layout: post
-title:  "Windows°²×°pip!"
+title:  "Windowså®‰è£…pip!"
 date:   2018-1-5 16:06:01 +0800
 categories: python
 tag: python
@@ -9,36 +9,36 @@ tag: python
 * content
 {:toc}
 
- pipºÍeasy_install.pyÊÇÒ»¿îpython°üµÄ¹ÜÀí¹¤¾ß,easy_install.pyÔÚpython2.7ÖĞÊÇÄ¬ÈÏ°²×°µÄ¡£<br>
+ pipå’Œeasy_install.pyæ˜¯ä¸€æ¬¾pythonåŒ…çš„ç®¡ç†å·¥å…·,easy_install.pyåœ¨python2.7ä¸­æ˜¯é»˜è®¤å®‰è£…çš„ã€‚<br>
 
 #### [Download] ####
-ÏÂÔØpipµÄ°²×°°ü ÏÂÔØµØÖ·:https://pypi.python.org/pypi/pip#downloads<br>
-×¢ÒâÑ¡Ôñtar.Ñ¹Ëõ°ü
+* ä¸‹è½½pipçš„å®‰è£…åŒ… ä¸‹è½½åœ°å€:<a href="https://pypi.python.org/pypi/pip#downloads">https://pypi.python.org/pypi/pip#downloads</a><br>
+* æ³¨æ„é€‰æ‹©tar.å‹ç¼©åŒ…
 
-#### [½âÑ¹°²×°] ####
-ÏÂÔØºó½âÑ¹,½øÈëÄ¿Â¼cmdÖĞÊäÈë<code>python setup.py install</code><br>
+#### [è§£å‹å®‰è£…] ####
+* ä¸‹è½½åè§£å‹,è¿›å…¥ç›®å½•cmdä¸­è¾“å…¥<code>python setup.py install</code><br>
 
-#### [Ìí¼Ó»·¾³±äÁ¿] ####
-ÔÚÏµÍ³»·¾³±äÁ¿ÖĞÌí¼ÓpythonµÄ¸ùÄ¿Â¼ºÍpython/Scripts
+#### [æ·»åŠ ç¯å¢ƒå˜é‡] ####
+* åœ¨ç³»ç»Ÿç¯å¢ƒå˜é‡ä¸­æ·»åŠ pythonçš„æ ¹ç›®å½•å’Œpython/Scripts
 
-#### [pip³£ÓÃÃüÁî] ####
-* °²×°°ü<br>
+#### [pipå¸¸ç”¨å‘½ä»¤] ####
+* å®‰è£…åŒ…<br>
 
-<code>pip install xxx</code></br>
+<code>pip install xxx</code><br>
 
-* Éı¼¶°ü,¿ÉÊ¹ÓÃ-U»òÕß--upgrade<br>
+* å‡çº§åŒ…,å¯ä½¿ç”¨-Uæˆ–è€…--upgrade<br>
 
 <code>pip install -U xxx</code><br>
 
-* Ğ¶ÔØ°ü
+* å¸è½½åŒ…
 
 <code>pip uninstall xxx</code><br> 
 
-* ÁĞ³öÒÑ°²×°µÄ°ü
+* åˆ—å‡ºå·²å®‰è£…çš„åŒ…
 
 <code>pip list</code><br>
 
-#### [³£¼ûÎÊÌâ] ####
+#### [å¸¸è§é—®é¢˜] ####
 1. AttributeError:'module' object has no attribute 'wraps'<br>
-	pip°æ±¾°²×°´íÎó,¸üĞÂ×îĞÂ°æ±¾pip
+	pipç‰ˆæœ¬å®‰è£…é”™è¯¯,æ›´æ–°æœ€æ–°ç‰ˆæœ¬pip
 
