@@ -7,6 +7,10 @@ permalink: /reference/
 * content
 {:toc}
 
+博客
+=====================
+[东海](www.shendonghai.com) [老孟](www.mengfansong.com)
+
 常用API文档
 =====================
 [常用API文档](http://tool.oschina.net/apidocs)
