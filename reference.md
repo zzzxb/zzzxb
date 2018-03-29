@@ -9,11 +9,14 @@ permalink: /reference/
 
 博客
 =====================
-[东海](www.shendonghai.com) [老孟](www.mengfansong.com)
+
+[东海](http://www.shendonghai.com)
+[老孟](http://www.mengfansong.com)
 
 常用API文档
 =====================
 [常用API文档](http://tool.oschina.net/apidocs)
+[markdown文档](https://www.appinn.com/markdown/basic.html)
 
 Linux下技巧
 =====================

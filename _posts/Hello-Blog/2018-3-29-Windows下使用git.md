@@ -11,9 +11,9 @@ tag: HelloBlog
 
 一.配置Git
 --------------------
-*在本地创建ssh key<br>
-<code>$ ssh-keygen -t rsa -C "your_email@youremail.com"</code>
-*设置username和email
+*	在本地创建ssh key<br>
+<code>$ ssh-keygen -t rsa -C "your_email@youremail.com"</code><br>
+*	设置username和email<br>
 <code>$ git config --global user.name "your name"</code><br>
 <code>$ git config --global user.email "your_email@youremail.com"</code>
 
