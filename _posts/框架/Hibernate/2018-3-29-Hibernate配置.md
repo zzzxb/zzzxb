@@ -49,6 +49,7 @@ API直接操作JavaBean就可以实现数据的增删改查了。Hibernate就是
 2. 将下载的hibernate3.jar和lib/required目录下的jar包及Oracle数据库驱动
 jar包复制到建好的工程web-inf下的lib目录中。或者通过BuildPath--》configureBuildPath选项导入。
 3. 创建Hibernate配置文件hibernate.cfg.xml
+>
 	```html
 		<?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE hibernate-configuration PUBLIC
@@ -69,8 +70,9 @@ jar包复制到建好的工程web-inf下的lib目录中。或者通过BuildPath-
     </session-factory>
 </hibernate-configuration>
 	```	
-
+>
 4. 创建持久化类(实体类)和映射文件
+>
 	```html
 	<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC
