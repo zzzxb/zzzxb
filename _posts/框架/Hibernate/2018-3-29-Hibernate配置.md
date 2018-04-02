@@ -49,11 +49,12 @@ API直接操作JavaBean就可以实现数据的增删改查了。Hibernate就是
 2. 将下载的hibernate3.jar和lib/required目录下的jar包及Oracle数据库驱动
 jar包复制到建好的工程web-inf下的lib目录中。或者通过BuildPath--》configureBuildPath选项导入。
 3. 创建Hibernate配置文件hibernate.cfg.xml
+
 >	<?xml version='1.0' encoding='utf-8'?>
-><!DOCTYPE hibernate-configuration PUBLIC
+> <!DOCTYPE hibernate-configuration PUBLIC
 >        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 >        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
-><hibernate-configuration>
+> <hibernate-configuration>
 >    <session-factory>
 >        <!-- Database connection settings -->
 >        <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
@@ -66,18 +67,19 @@ jar包复制到建好的工程web-inf下的lib目录中。或者通过BuildPath-
 >        <property name="show_sql">false</property>
 >        <mapping resource="entity/Zzzxb.hbm.xml"/>
 >    </session-factory>
-></hibernate-configuration>
+> </hibernate-configuration>
 
 4. 创建持久化类(实体类)和映射文件
+
 >	<?xml version="1.0" encoding="UTF-8"?>
-><!DOCTYPE hibernate-mapping PUBLIC
+> <!DOCTYPE hibernate-mapping PUBLIC
 >        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 >        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-><hibernate-mapping >
+> <hibernate-mapping >
 >    <class name="entity.Zzzxb" table="Zzzxb">
 >        <id name="id" column="id">
 >            <generator class="assigned"/>
 >        </id>
 >        <property name="name" column="name"/>
 >    </class>
-></hibernate-mapping>
+> </hibernate-mapping>
