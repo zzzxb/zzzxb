@@ -10,8 +10,8 @@ permalink: /reference/
 博客
 =====================
 
-[东海](http://www.shendonghai.com)
-[老孟](http://www.mengfansong.com)
+[程序海](http://www.shendonghai.com)
+[孟小松](http://www.mengfansong.com)
 
 常用API文档
 =====================
