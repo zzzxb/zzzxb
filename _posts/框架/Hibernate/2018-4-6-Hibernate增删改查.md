@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hibernate实现增删改查"
+title:  "Hibernate增删改查-三种状态"
 date:   2018-4-6 17:40:01 +0800
 categories:	框架
 tag: Hibernate
@@ -56,3 +56,21 @@ tag: Hibernate
 
 *增删改操作要在事务环境中进行完成。
 <code>tx = session.beginTrannsaction();</code>
+
+5.Hibernate中JAVA对象的三种状态
+-----------------------------
+[详解](https://www.cnblogs.com/s1294/archive/2016/08/23/5798172.html)
+
+1. 瞬时状态(Transient)
+	通过new创建对象后，对象并没有立刻持久化，它并未与数据库中的数据有任何的关联，此时java对象的状态为瞬时状态。
+2. 持久状态(Persistent)
+	当对象与session关联，被session管理时，它就处于持久状态。
+3. 游离状态(Detached)
+	处于持久状态的对象，脱离与其关联的Session的管理后，对象就处于游离状态
+
+6.脏检查及刷新缓存机制
+----------------------
+[详解](https://blog.csdn.net/qizhiqq/article/details/71122714?utm_source=itdadao&utm_medium=referral). 
+
+1. 状态前后发生变化的对象，就是脏对象(例如修改操作)
+2. Hibernate会对session中持久状态的对象进行检测，判断对象数据是否改变，这种判断称为脏检查
