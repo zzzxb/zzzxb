@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Copyright (c) 2016 hustcc
  * License: MIT
  * Version: v1.0.1
@@ -23,7 +23,7 @@
 			z: get_attribute(script, "zIndex", -1), //z-index
 			o: get_attribute(script, "opacity", 0.5), //透明度
 			c: get_attribute(script, "color", "255, 0, 255"), //color
-			n: get_attribute(script, "count", 199) //点数	299个点聚在一起时，明显感觉卡顿
+			n: get_attribute(script, "count", 106) //点数	299个点聚在一起时，明显感觉卡顿
 		};
 	}
 	//设置canvas的高宽
