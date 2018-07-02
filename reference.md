@@ -12,6 +12,9 @@ permalink: /reference/
 
 [程序海](http://www.shendonghai.com)
 [孟小松](http://www.mengfansong.com)
+[hpXuan](http://www.hpxuan.com)
+[dxGang](http://www.duxigang.com)
+[mtLin](http://www.mutianlin.com)
 
 常用API文档
 =====================
