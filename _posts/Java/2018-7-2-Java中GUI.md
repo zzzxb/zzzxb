@@ -10,6 +10,7 @@ tag: Java
 {:toc}
 
 *边学边写后边一一补充
+
 ### Swing组件
 	按钮(JButton)
 	单选按钮(JRadioButton)
@@ -20,7 +21,8 @@ tag: Java
 	面板(JPanel)
 	表格(JTable)
 	框架(JFrame)
-###布局管理
+	
+### 布局管理
 	流式布局(FlowLayout)
 	边界布局(BorderLayout)
 	卡片布局(CardLayout)
