@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "JDBC连接数据库"
+title:  "JavaGUI"
 date:   2018-7-2 15:03:01 +0800
 categories: Java
 tag: Java
@@ -21,7 +21,7 @@ tag: Java
 	面板(JPanel)
 	表格(JTable)
 	框架(JFrame)
-	
+
 ### 布局管理
 	流式布局(FlowLayout)
 	边界布局(BorderLayout)
