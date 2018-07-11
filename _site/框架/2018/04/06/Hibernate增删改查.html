@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hibernate增删改查-三种状态 - 赵小白的博客</title>
+
+	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
+	<link rel="icon" href="/styles/images/favicon.jpg">
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/css/syntax.css">
+	<link rel="canonical" href="/%E6%A1%86%E6%9E%B6/2018/04/06/Hibernate%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5.html">
+	<link rel="alternate" type="application/rss+xml" title="赵小白的博客" href="/feed.xml">
+	
+	<meta name="keywords" content="Hibernate增删改查-三种状态, 赵小白的博客, 远方有多远,请你告诉我!">
+	<meta name="description" content="远方有多远,请你告诉我!">
+
+	<script src="/styles/js/jquery.min.js"></script>
+	<script src="/styles/js/canvas-nest.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+
+  <body class="index">
+
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <img src="/styles/images/logo.jpg">
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">    
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/categories/">大类分解</a>
+        </li>
+        <li>
+          <a href="/tag">小类内聚</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span></a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/zzzxb">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="mailto:idearfree@163.com">联系作者</a></li>
+            <li><a rel="nofollow" href="/books">我的书单</a></li>
+            <li><a rel="nofollow" href="/reference">推荐博客</a></li>
+            <li><a href="/feed.xml">RSS订阅</a></li>
+            <li class="divider"></li>
+            <li><a rel="nofollow" target="_blank" href="https://github.com/zzzxb/zzzxb.github.io.git">本项目</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="docs-header" id="content">
+  <div class="container">
+  	
+  		<!--
+		    <h1>Hibernate增删改查-三种状态</h1>
+		    <p>Post on Apr 06, 2018 by <a href="/about">赵赵赵小白</a></p>
+		-->
+		    <h1>远方有多远,请你告诉我!</h1>
+    
+  </div>
+</div>
+    
+      <div class="banner">
+  <div class="container">
+  
+  	
+    	<a href="/categories/#框架-ref">框架</a>	/
+    	<a href="/tag/#Hibernate-ref">Hibernate</a>
+    
+  </div>
+</div>
+
+    
+
+    <div class="container docs-container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar hidden-print" role="complementary">
+        <div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav">
+<!--
+    
+      
+      
+      
+      
+
+      
+        <li><a href="#year_2018">2018</a>
+          <ul class="nav">
+            <li><a href="#month_2018_July">July</a></li>
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2018_April">April</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2018_March">March</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2018_January">January</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+        
+            </ul>
+          </li>
+          <li><a href="#year_2017">2017</a>
+            <ul class="nav">
+              <li><a href="#month_2017_December">December</a></li>
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_November">November</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_October">October</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_August">August</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_July">July</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_June">June</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_May">May</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            </ul>
+          </li>
+      
+    
+-->
+  </ul>
+</div> 
+      </div>
+    </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">Hibernate增删改查-三种状态</h1>
+              <!--
+                <p class="post-meta">Apr 6, 2018</p>
+              -->
+              <div class="meta">Posted on <span class="postdate">Apr 06, 2018</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
+              <br />
+            </header>
+            <article class="post-content">
+              <ul id="markdown-toc">
+  <li><a href="#1hibernate按主键查询" id="markdown-toc-1hibernate按主键查询">1.Hibernate按主键查询</a></li>
+  <li><a href="#2增加操作" id="markdown-toc-2增加操作">2.增加操作</a></li>
+  <li><a href="#3修改操作" id="markdown-toc-3修改操作">3.修改操作</a></li>
+  <li><a href="#4删除操作" id="markdown-toc-4删除操作">4.删除操作</a></li>
+  <li><a href="#5hibernate中java对象的三种状态" id="markdown-toc-5hibernate中java对象的三种状态">5.Hibernate中JAVA对象的三种状态</a></li>
+  <li><a href="#6脏检查及刷新缓存机制" id="markdown-toc-6脏检查及刷新缓存机制">6.脏检查及刷新缓存机制</a></li>
+</ul>
+
+<h2 id="1hibernate按主键查询">1.Hibernate按主键查询</h2>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">GetAndLoad</span><span class="o">(){</span>
+		<span class="k">try</span> <span class="o">{</span>
+			 <span class="n">Session</span> <span class="n">session</span> <span class="o">=</span> <span class="n">HibernateUtil</span><span class="o">.</span><span class="na">currentSession</span><span class="o">();</span>
+			 <span class="cm">/*在进行修改或删除操作时，应先加载对象，然后再执行修改或删除操作。
+			  *hibernate提供了两种方法按照主键加载对象：load()和get()
+			  */</span>
+			 
+			 <span class="c1">//get()方法,按主键查找,找不到的话会报-指针为空的异常</span>
+<span class="c1">//			 Dept dept = (Dept) session.get(Dept.class, new Byte("11"));</span>
+<span class="c1">//			 System.out.println(dept.getDeptno() + "\t" + dept.getDname() + "\t"</span>
+<span class="c1">//					 + dept.getLoc());</span>
+			 <span class="c1">//load()方法,找不到会报-对象找不的异常</span>
+			 <span class="n">Dept</span> <span class="n">dept1</span> <span class="o">=</span> <span class="o">(</span><span class="n">Dept</span><span class="o">)</span> <span class="n">session</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="n">Dept</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="k">new</span> <span class="n">Byte</span><span class="o">(</span><span class="s">"11"</span><span class="o">));</span>
+			 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">dept1</span><span class="o">.</span><span class="na">getDeptno</span><span class="o">()</span> <span class="o">+</span> <span class="s">"\t"</span> <span class="o">+</span> <span class="n">dept1</span><span class="o">.</span><span class="na">getDname</span><span class="o">()</span> <span class="o">+</span> <span class="s">"\t"</span>
+					 <span class="o">+</span> <span class="n">dept1</span><span class="o">.</span><span class="na">getLoc</span><span class="o">());</span>
+		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+		<span class="o">}</span><span class="k">finally</span><span class="o">{</span>
+			<span class="n">HibernateUtil</span><span class="o">.</span><span class="na">closeSession</span><span class="o">();</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="2增加操作">2.增加操作</h2>
+<ol>
+  <li>new一个实体类Zzzxb并设置属性</li>
+  <li>通过session.save(Zzzxb);持久化操作</li>
+  <li>通过tx.commit();提交事务</li>
+</ol>
+
+<h2 id="3修改操作">3.修改操作</h2>
+<ol>
+  <li>通过load或get先获取对象</li>
+  <li>通过对象的set属性来更改</li>
+  <li>通过commit提交事务</li>
+</ol>
+
+<h2 id="4删除操作">4.删除操作</h2>
+<ol>
+  <li>先获取对象</li>
+  <li>通过sessiion.delete();来持久化操作</li>
+  <li>通过commit提交事务</li>
+</ol>
+
+<p>*增删改操作要在事务环境中进行完成。
+<code>tx = session.beginTrannsaction();</code></p>
+
+<h2 id="5hibernate中java对象的三种状态">5.Hibernate中JAVA对象的三种状态</h2>
+<p><a href="https://www.cnblogs.com/s1294/archive/2016/08/23/5798172.html">详解</a></p>
+
+<ol>
+  <li>瞬时状态(Transient)
+ 通过new创建对象后，对象并没有立刻持久化，它并未与数据库中的数据有任何的关联，此时java对象的状态为瞬时状态。</li>
+  <li>持久状态(Persistent)
+ 当对象与session关联，被session管理时，它就处于持久状态。</li>
+  <li>游离状态(Detached)
+ 处于持久状态的对象，脱离与其关联的Session的管理后，对象就处于游离状态</li>
+</ol>
+
+<h2 id="6脏检查及刷新缓存机制">6.脏检查及刷新缓存机制</h2>
+<p><a href="https://blog.csdn.net/qizhiqq/article/details/71122714?utm_source=itdadao&amp;utm_medium=referral">详解</a>.</p>
+
+<ol>
+  <li>状态前后发生变化的对象，就是脏对象(例如修改操作)</li>
+  <li>Hibernate会对session中持久状态的对象进行检测，判断对象数据是否改变，这种判断称为脏检查</li>
+</ol>
+
+            </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<p class="copyright">Copyright &copy; 2017-2018 <a href=""><code>赵赵赵小白</code></a>.</p>
+		<p>Powered by <a href="http://jekyllrb.com">Jekyll</a>, themed from <a href="http://lesscss.cn/">Less</a>, refactored by <a href="http://www.hifreud.com/">Freud Kang</a></p>
+	</div>
+</footer>
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/canvas-nest.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+<script src="/styles/js/application.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hibernate关联映射 - 赵小白的博客</title>
+
+	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
+	<link rel="icon" href="/styles/images/favicon.jpg">
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/css/syntax.css">
+	<link rel="canonical" href="/%E6%A1%86%E6%9E%B6/2018/04/07/Hibernate%E5%85%B3%E8%81%94%E6%98%A0%E5%B0%84.html">
+	<link rel="alternate" type="application/rss+xml" title="赵小白的博客" href="/feed.xml">
+	
+	<meta name="keywords" content="Hibernate关联映射, 赵小白的博客, 远方有多远,请你告诉我!">
+	<meta name="description" content="远方有多远,请你告诉我!">
+
+	<script src="/styles/js/jquery.min.js"></script>
+	<script src="/styles/js/canvas-nest.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+
+  <body class="index">
+
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <img src="/styles/images/logo.jpg">
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">    
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/categories/">大类分解</a>
+        </li>
+        <li>
+          <a href="/tag">小类内聚</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span></a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/zzzxb">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="mailto:idearfree@163.com">联系作者</a></li>
+            <li><a rel="nofollow" href="/books">我的书单</a></li>
+            <li><a rel="nofollow" href="/reference">推荐博客</a></li>
+            <li><a href="/feed.xml">RSS订阅</a></li>
+            <li class="divider"></li>
+            <li><a rel="nofollow" target="_blank" href="https://github.com/zzzxb/zzzxb.github.io.git">本项目</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="docs-header" id="content">
+  <div class="container">
+  	
+  		<!--
+		    <h1>Hibernate关联映射</h1>
+		    <p>Post on Apr 07, 2018 by <a href="/about">赵赵赵小白</a></p>
+		-->
+		    <h1>远方有多远,请你告诉我!</h1>
+    
+  </div>
+</div>
+    
+      <div class="banner">
+  <div class="container">
+  
+  	
+    	<a href="/categories/#框架-ref">框架</a>	/
+    	<a href="/tag/#Hibernate-ref">Hibernate</a>
+    
+  </div>
+</div>
+
+    
+
+    <div class="container docs-container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar hidden-print" role="complementary">
+        <div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav">
+<!--
+    
+      
+      
+      
+      
+
+      
+        <li><a href="#year_2018">2018</a>
+          <ul class="nav">
+            <li><a href="#month_2018_July">July</a></li>
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2018_April">April</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2018_March">March</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2018_January">January</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+        
+            </ul>
+          </li>
+          <li><a href="#year_2017">2017</a>
+            <ul class="nav">
+              <li><a href="#month_2017_December">December</a></li>
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_November">November</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_October">October</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_August">August</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_July">July</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_June">June</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_May">May</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            </ul>
+          </li>
+      
+    
+-->
+  </ul>
+</div> 
+      </div>
+    </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">Hibernate关联映射</h1>
+              <!--
+                <p class="post-meta">Apr 7, 2018</p>
+              -->
+              <div class="meta">Posted on <span class="postdate">Apr 07, 2018</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
+              <br />
+            </header>
+            <article class="post-content">
+              <ul id="markdown-toc">
+  <li><a href="#1关联关系" id="markdown-toc-1关联关系">1.关联关系</a></li>
+  <li><a href="#2延迟加载" id="markdown-toc-2延迟加载">2.延迟加载</a></li>
+  <li><a href="#3open-session-in-view-模式" id="markdown-toc-3open-session-in-view-模式">3.Open Session In View 模式</a></li>
+</ul>
+
+<h2 id="1关联关系">1.关联关系</h2>
+<ol>
+  <li>多对一
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">//单项多对一关联</span>
+ <span class="c1">//例:Dept.java（部门）,Emp.java(员工)</span>
+ <span class="c1">//Dept.java</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dept</span> <span class="kd">implements</span> <span class="n">Serializable</span><span class="o">{</span>
+     <span class="kd">private</span> <span class="n">Byte</span> <span class="n">deptNo</span><span class="o">;</span><span class="c1">//部门编号</span>
+     <span class="kd">private</span> <span class="n">String</span> <span class="n">deptName</span><span class="o">;</span><span class="c1">//部门名称</span>
+     <span class="kd">private</span> <span class="n">String</span> <span class="n">location</span><span class="o">;</span><span class="c1">//部门地址</span>
+     <span class="c1">//构造方法和setter和getter方法省略</span>
+ <span class="o">}</span>
+ <span class="c1">//Emp.java</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Emp</span> <span class="kd">implements</span> <span class="n">Serializable</span><span class="o">{</span>
+     <span class="kd">private</span> <span class="n">Integer</span> <span class="n">empNo</span><span class="o">;</span><span class="c1">//员工编号</span>
+     <span class="kd">private</span> <span class="n">String</span> <span class="n">empName</span><span class="o">;</span><span class="c1">//员工姓名</span>
+     <span class="kd">private</span> <span class="n">Dept</span> <span class="n">dept</span><span class="o">;</span><span class="c1">//所属部门</span>
+ <span class="o">}</span>
+ <span class="c1">//Emp.hbm.xml</span>
+ <span class="o">...</span>
+     <span class="c1">//Emp表关联的表以及主键</span>
+ <span class="o">&lt;</span><span class="n">many</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">one</span> <span class="n">name</span><span class="o">=</span><span class="s">"dept"</span> <span class="n">column</span><span class="o">=</span><span class="s">"DEPTNO"</span>
+     <span class="kd">class</span><span class="err">="</span><span class="nc">src</span><span class="err">下实体类的位置</span><span class="s">"&gt;&lt;/many-to-one&gt;
+
+ //添加-删除和数据库中的删除性质相同，不过是用面向对象方式解决而已
+ Dept dept = new Dept(nnew Byte("</span><span class="mi">22</span><span class="s">"),"</span><span class="err">学习部</span><span class="s">","</span><span class="err">校部</span><span class="s">");
+ session.save(dept);
+ Emp emp = new Emp(10,"</span><span class="n">Zzzxb</span><span class="err">"</span><span class="o">,</span><span class="n">dept</span><span class="o">);</span>
+ <span class="n">session</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
+ <span class="n">tx</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+</code></pre></div>    </div>
+  </li>
+  <li>一对多
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">//一对多和多对一是相对的，下面只是对上边多对一的修改</span>
+ <span class="c1">//双向一对多关联</span>
+ <span class="c1">//Dept.java</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dept</span> <span class="n">implemennts</span> <span class="n">Serializalole</span><span class="o">{</span>
+     <span class="kd">private</span> <span class="n">Byte</span> <span class="n">deptNo</span><span class="o">;</span> <span class="c1">//部门编号</span>
+     <span class="kd">private</span> <span class="n">String</span> <span class="n">deptName</span><span class="o">;</span> <span class="c1">//部门名称</span>
+     <span class="kd">private</span> <span class="n">String</span> <span class="n">location</span><span class="o">;</span> <span class="c1">//部门地址</span>
+     <span class="n">priavet</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Emp</span><span class="o">&gt;</span> <span class="n">emps</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">Emp</span><span class="o">&gt;();</span><span class="c1">//员工集合</span>
+     <span class="kd">public</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">Emp</span><span class="o">&gt;</span> <span class="nf">getEmps</span><span class="o">(){</span>
+         <span class="k">return</span> <span class="n">emps</span><span class="o">;</span>
+     <span class="o">}</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">SetEmps</span> <span class="o">(</span><span class="n">Set</span><span class="o">&lt;</span><span class="n">Emp</span><span class="o">&gt;</span> <span class="n">emps</span><span class="o">){</span>
+         <span class="k">this</span><span class="o">.</span><span class="na">emps</span><span class="o">=</span><span class="n">emps</span><span class="o">;</span>
+     <span class="o">}</span>
+     <span class="o">...</span><span class="na">setter</span> <span class="n">and</span> <span class="n">getter</span>
+ <span class="o">}</span>
+ <span class="c1">//Dept.hbm.xml</span>
+ <span class="o">&lt;</span><span class="n">set</span> <span class="n">name</span><span class="o">=</span><span class="s">"emps"</span><span class="o">&gt;</span><span class="c1">//emps是员工类集合</span>
+     <span class="o">&lt;</span><span class="n">key</span> <span class="n">column</span><span class="o">=</span><span class="s">"DEPTNO"</span><span class="o">&gt;&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">one</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">many</span> <span class="kd">class</span><span class="err">="</span><span class="nc">emp</span><span class="err">实体类位置"</span><span class="o">/&gt;</span>
+ <span class="o">&lt;/</span><span class="n">set</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
+    <p>*双向关联关系下的增删改操作
+ 1.set中cascade属性(Oracle中的级联操作)
+     1.none
+     2.save-update
+     3.delete
+     3.all</p>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">//增-(删 改和查与之前操作一样这里不一一赘述了）</span>
+ <span class="n">Dept</span> <span class="n">dept</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dept</span><span class="o">(</span><span class="k">new</span> <span class="n">Byte</span><span class="o">(</span><span class="s">"22"</span><span class="o">),</span><span class="s">"学习部"</span><span class="o">,</span><span class="s">"系部"</span><span class="o">);</span>
+ <span class="n">Emp</span> <span class="n">emp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Emp</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="s">"Zzzxb"</span><span class="o">);</span>
+ <span class="n">emp</span><span class="o">.</span><span class="na">setDept</span><span class="o">(</span><span class="n">dept</span><span class="o">);</span>
+ <span class="n">dept</span><span class="o">.</span><span class="na">getEmps</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
+ <span class="n">session</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">dept</span><span class="o">);</span>
+ <span class="n">tx</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+
+ <span class="n">Dept</span> <span class="n">dept</span> <span class="o">=</span> <span class="o">(</span><span class="n">Dept</span><span class="o">)</span><span class="n">sessssion</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="n">Dept</span><span class="o">.</span><span class="na">class</span><span class="o">,</span><span class="k">new</span> <span class="n">Byte</span><span class="o">(</span><span class="s">"22"</span><span class="o">));</span>
+ <span class="n">sessionn</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">dept</span><span class="o">);</span>
+ <span class="n">tx</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+</code></pre></div>    </div>
+    <p>2.set中inverse属性
+     1.inverse译为”反转”,false为主动方,一般在one方使用true</p>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">//更换绑定，即把学生从部门中的学习部转到纪律部</span>
+ <span class="n">Dept</span> <span class="n">dept</span> <span class="o">=</span> <span class="o">(</span><span class="n">Dept</span><span class="o">)</span> <span class="n">session</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="n">Dept</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="k">new</span> <span class="n">Byte</span><span class="o">(</span><span class="s">"7"</span><span class="o">));</span>
+ <span class="n">Emp</span> <span class="n">emp</span> <span class="o">=</span> <span class="o">(</span><span class="n">Emp</span><span class="o">)</span> <span class="n">session</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="n">Emp</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="k">new</span> <span class="n">Integer</span><span class="o">(</span><span class="s">"4"</span><span class="o">));</span>
+ <span class="c1">//建立Dept和Emp的关联关系</span>
+ <span class="n">emp</span><span class="o">.</span><span class="na">setDept</span><span class="o">(</span><span class="n">dept</span><span class="o">);</span>
+ <span class="n">dept</span><span class="o">.</span><span class="na">getEmps</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
+ <span class="n">tx</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+</code></pre></div>    </div>
+    <p>3.set中order-by属性
+     1.asc和desc（升序降序）只对set中元素排序</p>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1">//加载持久化对象Dept和Emp</span>
+ <span class="n">Dept</span> <span class="n">dept</span> <span class="o">=</span> <span class="o">(</span><span class="n">Dept</span><span class="o">)</span> <span class="n">session</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">Dept</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="k">new</span> <span class="n">Byte</span><span class="o">(</span><span class="s">"10"</span><span class="o">));</span>
+ <span class="n">Set</span><span class="o">&lt;</span><span class="n">Emp</span><span class="o">&gt;</span> <span class="n">emps</span> <span class="o">=</span> <span class="n">dept</span><span class="o">.</span><span class="na">getEmps</span><span class="o">();</span>
+ <span class="k">for</span><span class="o">(</span><span class="n">Emp</span> <span class="n">emp</span> <span class="o">:</span> <span class="n">emps</span><span class="o">){</span>
+     <span class="n">syso</span><span class="o">(</span><span class="n">emp</span><span class="o">.</span><span class="na">getEmpName</span><span class="o">());</span>
+ <span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>多对多
+    <ol>
+      <li>通过中间表关联(例:项目(Project)-中间表(Proemp)-员工(Employee))
+```java
+ //在Project类中定义employeess属性的代码如下:
+ public class Project implemennts java.io.Serializable{
+ private Integer proid;
+ private Sstrinng proname;
+ private Seet<Employee> employees=new HashSet<Employee>(0);
+ }
+ //在Project.hbm.xml文件中,映射Project类的employees属性代码如下:</Employee></Employee></li>
+    </ol>
+    <set name="employees" table="PROEMP" cascade="save-update">
+     <key column="RPROID" />
+     <many-to-many class="employee实体类位置" column="REMPID" />
+ </set>
+    <p>//多对多中不建议把cascade属性设为all(多对多级连删除容易出错)
+ Employee employee1 = new Employee(5,”Zzzxb”);
+ Employee employee2 = new Employee(6,”Zpp”);
+ Project project1 = new Project(5,”5号项目”);
+ Project project2 = new Project(6,”6号项目”);
+ project1.getEmployees().add(employee1);
+ project1.getEmployees().add(employee2);
+ project2.getEmployees().add(employee1);
+ session.save(project1);
+ session.save(project2);
+ tx.commit();</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 2. 配置双向多对多关联
+ *对于双向多对多关联，需要把其中一段的inverse属性改为true
+```java
+ //Project.hbm.xml
+ &lt;set name="employees" table="PROEMP" cascade="save-update"&gt;
+     &lt;key column="RPROID"/&gt;
+     &lt;many-to-many class="Employee实体类" column="REMPID"/&gt;
+ &lt;/set&gt;
+ //Employee.hbm.xml
+ &lt;set name="projects" inverse="true" table="PROEMP"&gt;
+     &lt;key column="REMPID"/&gt;
+     &lt;many-to-many class="Project实体类位置 column="RPROID"/&gt;
+ &lt;/set&gt;
+</code></pre></div>    </div>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   * 一对多和多对一是相对这种关系跟数据库中外键的意思是相同的。通过反向生成工具可生成。
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="2延迟加载">2.延迟加载</h2>
+<p>当Hibernate从数据库中加载Dept对象时，如果同时自动加载所有关联的Emp对象，而程序世界上仅仅需要访问Dept对象,那么这些关联的Emp对象就白白浪费了许多内存空间。</p>
+
+<p>Hibernate查询Dept对象时,立即查询并加载与之关联的Emp对象，这种策咯称为立即加载。立即加载存在两大不足。</p>
+<blockquote>
+  <p>(1)select语句数目太多，需要频繁地访问数据库，会影响查询性能。
+(2)在应用程序只需要访问Dept对象，而不需要访问Emp对象的场合，加载Emp对象完全是多余操作，这些多余的Emp对象白白浪费了许多空间。</p>
+</blockquote>
+
+<blockquote>
+  <p>Hibernate允许对象-关系映射文件中配置加载策略。</p>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th>类别名</th>
+      <th style="text-align: center"><class>元素中lazy属性可选值为:默true(延迟加载) false(立即加载)</class></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>一对多关联级别</td>
+      <td style="text-align: center"><set>中lazy属性可选值为:true(延迟加载) extra(增强延迟加载) 和 false(立即加载)</set></td>
+    </tr>
+    <tr>
+      <td>多对多关联级别</td>
+      <td style="text-align: center"><many-to-many>元素中lazy属性可选proxy(延迟加载) no-proxy(无代理延迟加载)和false(立即加载);<many-to-one>元素中的lazy属性默认为proxy</many-to-one></many-to-many></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="3open-session-in-view-模式">3.Open Session In View 模式</h2>
+<p>内容不完全，更多自行查找</p>
+
+            </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<p class="copyright">Copyright &copy; 2017-2018 <a href=""><code>赵赵赵小白</code></a>.</p>
+		<p>Powered by <a href="http://jekyllrb.com">Jekyll</a>, themed from <a href="http://lesscss.cn/">Less</a>, refactored by <a href="http://www.hifreud.com/">Freud Kang</a></p>
+	</div>
+</footer>
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/canvas-nest.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+<script src="/styles/js/application.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  </body>
+</html>

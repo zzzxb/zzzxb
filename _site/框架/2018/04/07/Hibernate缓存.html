@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hibernate缓存 - 赵小白的博客</title>
+
+	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
+	<link rel="icon" href="/styles/images/favicon.jpg">
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/css/syntax.css">
+	<link rel="canonical" href="/%E6%A1%86%E6%9E%B6/2018/04/07/Hibernate%E7%BC%93%E5%AD%98.html">
+	<link rel="alternate" type="application/rss+xml" title="赵小白的博客" href="/feed.xml">
+	
+	<meta name="keywords" content="Hibernate缓存, 赵小白的博客, 远方有多远,请你告诉我!">
+	<meta name="description" content="远方有多远,请你告诉我!">
+
+	<script src="/styles/js/jquery.min.js"></script>
+	<script src="/styles/js/canvas-nest.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+
+  <body class="index">
+
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <img src="/styles/images/logo.jpg">
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">    
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/categories/">大类分解</a>
+        </li>
+        <li>
+          <a href="/tag">小类内聚</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span></a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/zzzxb">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="mailto:idearfree@163.com">联系作者</a></li>
+            <li><a rel="nofollow" href="/books">我的书单</a></li>
+            <li><a rel="nofollow" href="/reference">推荐博客</a></li>
+            <li><a href="/feed.xml">RSS订阅</a></li>
+            <li class="divider"></li>
+            <li><a rel="nofollow" target="_blank" href="https://github.com/zzzxb/zzzxb.github.io.git">本项目</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="docs-header" id="content">
+  <div class="container">
+  	
+  		<!--
+		    <h1>Hibernate缓存</h1>
+		    <p>Post on Apr 07, 2018 by <a href="/about">赵赵赵小白</a></p>
+		-->
+		    <h1>远方有多远,请你告诉我!</h1>
+    
+  </div>
+</div>
+    
+      <div class="banner">
+  <div class="container">
+  
+  	
+    	<a href="/categories/#框架-ref">框架</a>	/
+    	<a href="/tag/#Hibernate-ref">Hibernate</a>
+    
+  </div>
+</div>
+
+    
+
+    <div class="container docs-container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar hidden-print" role="complementary">
+        <div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav">
+<!--
+    
+      
+      
+      
+      
+
+      
+        <li><a href="#year_2018">2018</a>
+          <ul class="nav">
+            <li><a href="#month_2018_July">July</a></li>
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2018_April">April</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2018_March">March</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2018_January">January</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+        
+            </ul>
+          </li>
+          <li><a href="#year_2017">2017</a>
+            <ul class="nav">
+              <li><a href="#month_2017_December">December</a></li>
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_November">November</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_October">October</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_August">August</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_July">July</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_June">June</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_May">May</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            </ul>
+          </li>
+      
+    
+-->
+  </ul>
+</div> 
+      </div>
+    </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">Hibernate缓存</h1>
+              <!--
+                <p class="post-meta">Apr 7, 2018</p>
+              -->
+              <div class="meta">Posted on <span class="postdate">Apr 07, 2018</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
+              <br />
+            </header>
+            <article class="post-content">
+              <ul id="markdown-toc">
+  <li><a href="#1hibernate缓存" id="markdown-toc-1hibernate缓存">1.Hibernate缓存</a></li>
+  <li><a href="#2hibernate一级缓存" id="markdown-toc-2hibernate一级缓存">2.Hibernate一级缓存</a></li>
+  <li><a href="#3hibernate二级缓存" id="markdown-toc-3hibernate二级缓存">3.Hibernate二级缓存</a></li>
+</ul>
+
+<h2 id="1hibernate缓存">1.Hibernate缓存</h2>
+
+<p>缓存是计算机领域的概念，他介于应用程序和永久性数据存储源(如硬盘上的文件或者数据库之间)，起作用是降低应用程序直接读写永久性数据存储源的频率，从而提高应用的运行性能。缓存中的数据是是数据存储源中数据的复制，应用程序在运行时直接读写缓存中的数据，只在某些特定时刻按照缓存中的数据来同步更新数据存储源。</p>
+
+<p>缓存的物理介质通常是内存，而永久性数据存储源的物理介质通常是硬盘或磁盘，应用程序读写内存的速度显然比读写硬盘的速度快。如果缓存中存放的数据量非常大，也会用硬盘作为缓存的物理介质。</p>
+
+<p>###hibernate的缓存一般分为三类：</p>
+<ol>
+  <li><strong>一级缓存</strong>：Session缓存称为一级缓存。由于Session对象的生命周期通常对应一个数据库事务，因此它的缓存是事务范围的缓存。一级缓存是必须的。在一级缓存中，持久化类的每个实例都具有唯一的OID。</li>
+  <li><strong>二级缓存</strong>：SessionFactory缓存分为内置缓存和外置缓存。内置缓存是Hibernate自带的，不可拆卸，是只读缓存，用来存放映射元数据和预定义SQL语句。外置缓存是一个可配置的缓存插件，默认SessionFactory不会启用这个缓存插件你。外置缓存中的数据是数据库的复制。SesssionFactory的外置缓存称为hibernate的二级缓存。二级缓存由SessionFactory负责管理。SesssionFactory对象的生命周期和应用程序的整个进程对应。二级缓存是可选的，可以在每个类或每个集合的粒度上配置二级缓存。</li>
+  <li><strong>查询缓存</strong>：他是Hibernate为查询结果提供的，依赖于二级缓存.</li>
+</ol>
+
+<p>###缓存的作用范围分为3类：</p>
+<ol>
+  <li><strong>事务范围</strong>:每个事务都有自己的缓存，缓存内数据不会被多事务并发访问。例如：hibernate的一级缓存，事务是不能跨多个Session的，Session内数据只能被当前事务访问，因此它属于事务范围的缓存。</li>
+  <li><strong>进程范围</strong>：进程内的所有事物共享缓存，进程结束，缓存结束生命周期。例如，Hibernate的二级缓存，SessionFactory对象的生命周期对应应用程序的整个进程，因此它属于进程范围的缓存。</li>
+  <li><strong>集群范围</strong>：缓存被一个或多个机器上的多个进程共享。Hibernate的二级缓存也可以作为集群范围的缓存。</li>
+</ol>
+
+<h2 id="2hibernate一级缓存">2.Hibernate一级缓存</h2>
+<p>Session内的缓存即一级缓存，位于缓存中的对象称谓持久化对象，它和数据库中的相关记录对应。Session能够在某些时间点，按照缓存中的变化来执行相关sql语句，从而同步更新数据库，这一过程称为刷新缓存。</p>
+
+<p>当应用程序调用Session的save(),update(),saveOrUpdate(),load()或get()方法，以及调用Query查询接口的list()或iterate()方法时，如果在Session的缓存中还不存在相应的对象，Hibernate就会把该对象加入到一级缓存中。在刷新缓存时，Hibernate会根据缓存中对象的状态变化来同步更新数据库。由此可见，Session缓存有两大作用：</p>
+
+<ol>
+  <li>减少访问数据库的频率。</li>
+  <li>保证数据库中的相关记录于缓存中的相应对象同步。</li>
+</ol>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="n">Dept</span> <span class="n">dept1</span> <span class="o">=</span> <span class="o">(</span><span class="n">Dept</span><span class="o">)</span> <span class="n">sessionn</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">Dept</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="k">new</span> <span class="n">Byte</span><span class="o">(</span><span class="s">"1"</span><span class="o">));</span>
+	<span class="n">Dept</span> <span class="n">dept2</span> <span class="o">=</span> <span class="o">(</span><span class="n">Dept</span><span class="o">)</span> <span class="n">sessionn</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">Dept</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="k">new</span> <span class="n">Byte</span><span class="o">(</span><span class="s">"1"</span><span class="o">));</span>
+	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">dept1</span> <span class="o">==</span> <span class="n">dept2</span><span class="o">);</span>
+	<span class="c1">//第一行第一次进行加载，get()方法先到一级缓存中查找OID为1的Dept对象，由于还不存在这个Dept对象，因此通过select语句到数据库中年加载该对象，并把它放到一级缓存中。第2行第二次执行Session的get()方法，get()方法先到一级缓存中查找OID为1的Dept对象，由于已经存在这个Dept对象，就直接返回该Dept对象的引用，不会再执行select查询语句。因此再示例7中，只执行了一次select语句，变量dept1和dept2引用的时同一个Dept对象，第三行输出true</span>
+</code></pre></div></div>
+
+<p>Sessionn为应用程序提供了两个管理缓存的方法。</p>
+<ol>
+  <li>evict(Objecto) :从缓存中清除指定的持久化对象。</li>
+</ol>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="n">Dept</span> <span class="n">dept1</span> <span class="o">=</span> <span class="o">(</span><span class="n">Dept</span><span class="o">)</span> <span class="n">session</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">Dept</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="k">new</span> <span class="n">Byte</span><span class="o">(</span><span class="s">"1"</span><span class="o">));</span>
+	<span class="n">session</span><span class="o">.</span><span class="na">evict</span><span class="o">(</span><span class="n">dept1</span><span class="o">);</span>
+	<span class="n">Dept</span> <span class="n">dept2</span> <span class="o">=</span> <span class="o">(</span><span class="n">Dept</span><span class="o">)</span> <span class="n">session</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">Dept</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="k">new</span> <span class="n">Byte</span><span class="o">(</span><span class="s">"1"</span><span class="o">));</span>
+	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">dept1</span> <span class="o">+</span> <span class="s">"~~~"</span> <span class="o">+</span> <span class="n">dept2</span><span class="o">);</span>
+	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">dept1</span> <span class="o">==</span> <span class="n">dept2</span><span class="o">);</span>
+	<span class="c1">//第1次执行Sessionn的get()方法，get()方法先到一级缓存中查找OID为1的Dept对象，由于还不存在这个Dept对象，因此通过select语句到数据库中加载该对象，并把它放到一级缓存中。第2行session.evict()方法清除了缓存中的Dept对象。第3行第二次执行Session的get()方法，get()方法先拿到一级缓存查找OID为1的Dept对象，由于荣然不存咋这个Dept对象，因此通过select语句到数据库中加载该对象，再次执行select查询语句。因此再这段代码中，执行了两次select语句，变量dept1和dept2指向了不同的Dept对象，第4行输出了false。</span>
+</code></pre></div></div>
+
+<ol>
+  <li>clear():清空缓存中的所有持久化对象。
+另外说一下flush().方法。
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">Dept</span> <span class="n">dept</span> <span class="o">=</span> <span class="o">(</span><span class="n">Dept</span><span class="o">)</span><span class="n">sessionn</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">Dept</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="k">new</span> <span class="n">Byte</span><span class="o">(</span><span class="s">"1"</span><span class="o">));</span>
+ <span class="n">dept</span><span class="o">.</span><span class="na">setDeptName</span><span class="o">(</span><span class="s">"测试部"</span><span class="o">);</span>
+ <span class="n">dept</span><span class="o">.</span><span class="na">setDeptName</span><span class="o">(</span><span class="s">"质控部"</span><span class="o">);</span>
+ <span class="n">tx</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+ <span class="c1">//Hibernate执行以下update语句:update dept set dname=?,loc=? where deptno=? Dname字段被修改为"质控部"。在上边基础上增加flush()方法执行。</span>
+
+ <span class="n">Dept</span> <span class="n">dept</span> <span class="o">=</span> <span class="o">(</span><span class="n">Dept</span><span class="o">)</span> <span class="n">ssession</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">Dept</span><span class="o">.</span><span class="na">classs</span><span class="o">,</span> <span class="k">new</span> <span class="n">Byte</span><span class="o">(</span><span class="s">"1"</span><span class="o">));</span>
+ <span class="n">dept</span><span class="o">.</span><span class="na">setDeptName</span><span class="o">(</span><span class="s">"开发部"</span><span class="o">);</span>
+ <span class="n">session</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
+ <span class="n">dept</span><span class="o">.</span><span class="na">setDeptName</span><span class="o">(</span><span class="s">"市场部"</span><span class="o">);</span>
+ <span class="n">tx</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+ <span class="c1">//这段代码中Hibernate执行了以下两条update语句：</span>
+ <span class="c1">//update dept set dname=?,loc=? where deptno=?</span>
+ <span class="c1">//update dept set dname=?,loc=? where deptno=?</span>
+</code></pre></div>    </div>
+    <p>在上面代码中增加session.flush()语句后，flush()方法会强制进行从缓存到数据库的同步。在通过Session进行批量操作时，可以使用flush()和clear()方法配合实现.</p>
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">Emp</span> <span class="n">emp</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+ <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10000</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+     <span class="n">emp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Emp</span><span class="o">(</span><span class="n">i</span><span class="o">,</span> <span class="s">"emp"</span><span class="o">+</span><span class="n">i</span><span class="o">);</span>
+     <span class="n">session</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">emp</span><span class="o">);</span>
+     <span class="k">if</span><span class="o">(</span><span class="n">i</span><span class="o">%</span><span class="mi">30</span> <span class="o">==</span> <span class="mi">0</span><span class="o">){</span>
+         <span class="n">session</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
+         <span class="n">session</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
+     <span class="o">}</span>
+ <span class="o">}</span>
+ <span class="n">tx</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+</code></pre></div>    </div>
+    <p>这段代码向Emp表中插入了10000条记录，每次批量插入30条Emp记录。程序执行sesion.fluh()方法时，会先向数据库批量插入30条记录，执行session.clear()方法把刚添加的30个Emp对象从一级缓存中清空。执行这段代码时注意以下两点:</p>
+  </li>
+  <li>如果希望提高批量插入的行你能，可以在hibernate.cfg.xml中,把hibernate.jdbc.batch_size 属性设置为30.但要注意，Emp对象的主键生成器不能为identity,因为如果使用了identity标识符生成器，hibernate会自动关闭JDBC的批量执行操作，batch_size的设置就不起作用。</li>
+  <li>也可以禁止使用二级缓存，因为如果使用了二级缓存，那么一级缓存中的对象会先复制到二级缓存中，再保存到数据库，这样会导致大量不必要的开销。</li>
+</ol>
+
+<p>一级缓存随着Session的开启而产生，随着Sessiion的关闭而结束，之前在程序中持久化在操作的都是一级缓存中的对象。要合理地管理好缓存，提高程序效率，可以通过clear() , evict()方法来清除缓存中的对象。</p>
+
+<h2 id="3hibernate二级缓存">3.Hibernate二级缓存</h2>
+<p>二级缓存时进程或集群范围内的缓存，可以被所有的Sesssion共享，其生命周期和SessionFactory一样。二级缓存是可配置的插件。Hibernate打包一些开源缓存实现，提供对他们的内置支持。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>缓存插件</th>
+      <th>缓存实现类</th>
+      <th>查询缓存</th>
+      <th>类型</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>EHCache</td>
+      <td>org.hibernate.cache.EHCacheProvider</td>
+      <td>支持</td>
+      <td>进程范围的缓存；内存或者硬盘</td>
+    </tr>
+    <tr>
+      <td>OSCache</td>
+      <td>org.hibernate.cache.OSCacheProvider</td>
+      <td>支持</td>
+      <td>进程范围的缓存；内存或者硬盘</td>
+    </tr>
+    <tr>
+      <td>SwarmCache</td>
+      <td>org.hibernate.cache.SwarmCacheProvider</td>
+      <td>不支持</td>
+      <td>集群范围的缓存</td>
+    </tr>
+    <tr>
+      <td>JBossCache</td>
+      <td>org.hibernate.cache.TreeCacheProvider</td>
+      <td>支持</td>
+      <td>集群范围的缓存</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>为了把表中的缓存插件集成到hibernate中,Hibernate提供了CacheProvider接口，它是缓存插件与hibernate之间的适配器。表中的缓存实现类就是CacheProvider的不同实现。</p>
+
+<p>###配置二级缓存的步骤如下:</p>
+<ol>
+  <li>选择合适的缓存插件，配置其自带的配置文件。</li>
+  <li>
+    <p>选择需要使用二级缓存的持久化类，设置它的二级缓存的并发访问策略。
+以EHCache配置为例:</p>
+  </li>
+  <li>将ehcache.xml文件添加到类路径下。
+    <blockquote>
+      <p>在路径hibernate-distrbution-3.3.2GA\project\etc下复制ehcache.xml</p>
+      <cache>标签为每个需要二级缓存的类和集合设定缓存的数据过期策略。配置如下
+</cache>
+    </blockquote>
+  </li>
+</ol>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="c">&lt;!--缓存的名称，取值为列的完整名称或类的集合的名称--&gt;</span>
+	<span class="nt">&lt;cache</span> <span class="na">name =</span><span class="s">"sampleCachel"</span>
+	<span class="err">&lt;!--基于缓存可存放的对象的最大数目--</span><span class="nt">&gt;</span>
+		macElementsInMemeory="1000"
+	<span class="c">&lt;!--如果true,表示对象永不过期，默认false--&gt;</span>
+		eternal="true"
+	<span class="c">&lt;!--设置允许对象处于空闲状态的最长时间，单位是秒--&gt;</span>
+		timeToldleSeconnds="0"
+	<span class="c">&lt;!--设置允许存在于缓存中的最长时间，单位是秒--&gt;</span>
+		timeToLiveSeconds="0"
+	<span class="c">&lt;!--是否将溢出的对象写到基子硬盘的缓存中--&gt;</span>
+		overflowToDisk="false"
+	/&gt;
+</code></pre></div></div>
+
+<ol>
+  <li>开启二级缓存：
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"hibernate.cache.use_second_level_cache"</span><span class="nt">&gt;</span>true<span class="nt">&lt;/property&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>指定缓存产品提供商
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"hibernate.cache.provider_class"</span><span class="nt">&gt;</span>
+     org.hibernate.cache.EhCacheProvider
+ <span class="nt">&lt;/property&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>指定使用二级缓存的持久化类。修改持久化类的映射文件,为&lt;class&gt;元素添加&lt;cache&gt;元素，配置如下:
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nt">&lt;class</span> <span class="na">name=</span><span class="s">"Student"</span> <span class="na">table=</span><span class="s">"STUDENT"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;cache</span> <span class="na">usage=</span><span class="s">""</span> <span class="na">region=</span><span class="s">""</span> <span class="na">include=</span><span class="s">""</span><span class="nt">/&gt;</span>
+ <span class="nt">&lt;/class&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<ul>
+  <li>&lt;cache&gt;的属性:
+    <ul>
+      <li>usage属性是必须的，指定并发访问策略，取值为transactional(事务缓存),read-write(读/写缓存)，nonstrict-read-write(非严格读/写缓存)或read-only(只读缓存).</li>
+      <li>region属性可选，默认为类或者集合的名称</li>
+      <li>include属性可选，取值为non-lazy(当缓存一个对象时，不会缓存它的映射为延迟加载的属性),all,默认取值为all.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>####注意
+配置EHCache二级缓存时，需要添加如下jar包到程序中:</p>
+<ol>
+  <li>ehcache-1.2.3.jar, EHCache包.</li>
+  <li>commons-logging-1.1.1.jar, 日志包。</li>
+</ol>
+
+            </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<p class="copyright">Copyright &copy; 2017-2018 <a href=""><code>赵赵赵小白</code></a>.</p>
+		<p>Powered by <a href="http://jekyllrb.com">Jekyll</a>, themed from <a href="http://lesscss.cn/">Less</a>, refactored by <a href="http://www.hifreud.com/">Freud Kang</a></p>
+	</div>
+</footer>
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/canvas-nest.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+<script src="/styles/js/application.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  </body>
+</html>
