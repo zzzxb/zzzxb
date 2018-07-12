@@ -13,7 +13,7 @@ tag: python
 
 用pip安装pygame时是路径不对还是怎么回事没法下载，我就去官网下了。
 
-**http://www.pygame.org/download.shtml** pygame下载地址
+[ pygame下载地址](http://www.pygame.org/download.shtml)
 
 下载后进行解压，解压后通过```sudo python3 setup.py```安装，然后就报错说我没有sdl-config
 
@@ -21,19 +21,23 @@ tag: python
 
 sudo apt-get install x11proto-xext-dev　和　sudo apt-get install libxext-dev)不过我安装不上
 
-然后我就又去官网下载**http://www.libsdl.org/download-1.2.php**
+然后我就又去官网下载
+
+[sdl下载地址](http://www.libsdl.org/download-1.2.php)
 
 下载后解压到**/usr/SDL/**里面，没有就新建文件夹.
 
 然后通过下面命令安装
 
-```./configure```
+```
+./configure
+make
+make install
+```
 
-```make```
-
-```make install``
 
 然而又很不幸，我又没安装成功，报错是：
+
 
 ```
 ./src/video/x11/SDL_x11sym.h:168:17: error: conflicting types for _XData32?
