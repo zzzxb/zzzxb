@@ -13,7 +13,7 @@ tag: python
 
 用pip安装pygame时是路径不对还是怎么回事没法下载，我就去官网下了。
 
-**http://www.pygame.org/download.shtml**pygame下载地址
+**http://www.pygame.org/download.shtml** pygame下载地址
 
 下载后进行解压，解压后通过```sudo python3 setup.py```安装，然后就报错说我没有sdl-config
 
