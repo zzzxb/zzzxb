@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Java连接数据库 - 赵小白的博客</title>
+
+	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
+	<link rel="icon" href="/styles/images/favicon.jpg">
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/css/syntax.css">
+	<link rel="canonical" href="/java/2017/10/18/Java%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93.html">
+	<link rel="alternate" type="application/rss+xml" title="赵小白的博客" href="/feed.xml">
+	
+	<meta name="keywords" content="Java连接数据库, 赵小白的博客, 远方有多远,请你告诉我!">
+	<meta name="description" content="远方有多远,请你告诉我!">
+
+	<script src="/styles/js/jquery.min.js"></script>
+	<script src="/styles/js/canvas-nest.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+
+  <body class="index">
+
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <img src="/styles/images/logo.jpg">
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">    
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/categories/">大类分解</a>
+        </li>
+        <li>
+          <a href="/tag">小类内聚</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+            <!--
+              <a><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span></a>
+            -->
+              <a href="http://www.idearfree.com/Over-Game"><span id="busuanzi_container_site_pv">Zzzxb's Projects</span></a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/zzzxb">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="mailto:idearfree@outlook.com">联系作者</a></li>
+            <li><a rel="nofollow" href="/books">我的书单</a></li>
+            <li><a rel="nofollow" href="/reference">推荐博客</a></li>
+            <li><a href="/feed.xml">RSS订阅</a></li>
+            <li class="divider"></li>
+            <li><a rel="nofollow" target="_blank" href="https://github.com/zzzxb/zzzxb.github.io.git">本项目</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="docs-header" id="content">
+  <div class="container">
+  	
+  		<!--
+		    <h1>Java连接数据库</h1>
+		    <p>Post on Oct 18, 2017 by <a href="/about">赵赵赵小白</a></p>
+		-->
+		    <h1>远方有多远,请你告诉我!</h1>
+    
+  </div>
+</div>
+    
+      <div class="banner">
+  <div class="container">
+  
+  	
+    	<a href="/categories/#Java-ref">Java</a>	/
+    	<a href="/tag/#Java-ref">Java</a>
+    
+  </div>
+</div>
+
+    
+
+    <div class="container docs-container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar hidden-print" role="complementary">
+        <div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav">
+<!--
+    
+      
+      
+      
+      
+
+      
+        <li><a href="#year_2018">2018</a>
+          <ul class="nav">
+            <li><a href="#month_2018_November">November</a></li>
+      
+
+      
+            
+          
+              <li><a href="#month_2018_July">July</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2018_March">March</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+        
+            </ul>
+          </li>
+          <li><a href="#year_2017">2017</a>
+            <ul class="nav">
+              <li><a href="#month_2017_November">November</a></li>
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_October">October</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_August">August</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_July">July</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_May">May</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            </ul>
+          </li>
+      
+    
+-->
+  </ul>
+</div> 
+      </div>
+    </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">Java连接数据库</h1>
+              <!--
+                <p class="post-meta">Oct 18, 2017</p>
+              -->
+              <div class="meta">Posted on <span class="postdate">Oct 18, 2017</span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
+              <br />
+            </header>
+            <article class="post-content">
+              <ul id="markdown-toc">
+  <li><a href="#1加载jdbc驱动程序" id="markdown-toc-1加载jdbc驱动程序">1.加载JDBC驱动程序</a>    <ul>
+      <li><a href="#2提供jdbc连接的url" id="markdown-toc-2提供jdbc连接的url">2.提供JDBC连接的URL</a></li>
+      <li><a href="#3创建数据库的连接" id="markdown-toc-3创建数据库的连接">3、创建数据库的连接</a></li>
+      <li><a href="#4创建一个statement" id="markdown-toc-4创建一个statement">4、创建一个Statement</a></li>
+      <li><a href="#5执行sql语句" id="markdown-toc-5执行sql语句">5、执行SQL语句</a></li>
+      <li><a href="#6处理结果" id="markdown-toc-6处理结果">6、处理结果</a></li>
+      <li><a href="#7关闭jdbc对象" id="markdown-toc-7关闭jdbc对象">7、关闭JDBC对象</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1加载jdbc驱动程序">1.加载JDBC驱动程序</h1>
+
+<p>在连接数据库之前，首先要加载想要连接的数据库的驱动到JVM（Java虚拟机）， 这通过
+java.lang.Class类的静态方法forName(String className)实现。</p>
+
+<p>例如:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="o">{</span>
+    <span class="c1">//加载MySql的驱动类&lt;br&gt;</span>
+    <span class="n">Class</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">"com.mysql.jdbc.Driver"</span><span class="o">);</span>
+    <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="n">ClassNotFoundException</span> <span class="n">e</span><span class="o">){</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"找不到驱动程序类，加载驱动失败！"</span><span class="o">);</span>
+    <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">()</span> <span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>成功加载后，会将Driver类的实例注册到DriverManager类中;</p>
+
+<h2 id="2提供jdbc连接的url">2.提供JDBC连接的URL</h2>
+
+<ul>
+  <li>连接URL定义了连接数据库时的协议、子协议、数据源标识.</li>
+  <li>书写形式：协议：子协议：数据源标识</li>
+</ul>
+
+<p>协议：在JDBC中总是以jdbc开始</p>
+
+<p>子协议：是桥连接的驱动程序或是数据库管理系统名称。</p>
+
+<p>数据源标识：标记找到数据库来源的地址与连接端口。</p>
+
+<p>例如：（MySql的连接URL）</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">jdbc:mysql:</span><span class="c1">//localhost:3306/test?useUnicode=true&amp;characterEncoding=gbk ;</span>
+<span class="n">useUnicode</span><span class="o">=</span><span class="kc">true</span><span class="err">：表示使用</span><span class="n">Unicode</span><span class="err">字符集。如果</span><span class="n">characterEncoding</span><span class="err">设置为</span>
+<span class="n">gb2312</span><span class="err">或</span><span class="n">GBK</span><span class="err">，本参数必须设置为</span><span class="kc">true</span> <span class="err">。</span><span class="n">characterEncoding</span><span class="o">=</span><span class="n">gbk</span><span class="err">：字符编码方式。</span>
+<span class="err">或者</span><span class="o">:</span><span class="s">"jdbc:mysql://localhost:3306/数据库名称?user=root&amp;password=happy&amp;useSSL=false"</span><span class="o">;</span>
+</code></pre></div></div>
+
+<h2 id="3创建数据库的连接">3、创建数据库的连接</h2>
+
+<ul>
+  <li>要连接数据库，需要向java.sql.DriverManager请求并获得Connection对象， 该对象就代表一个数据库的连接。</li>
+  <li>使用DriverManager的getConnectin(String url,String username,String password )方
+  法传入指定的欲连接的数据库的路径、数据库的用户名和 密码来获得。</li>
+</ul>
+
+<p>例如：</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="o">{</span>
+    <span class="n">Connection</span> <span class="n">con</span> <span class="o">=</span><span class="n">DriverManager</span><span class="o">.</span><span class="na">getConnection</span><span class="o">(</span><span class="n">url</span> <span class="o">,</span> <span class="n">username</span> <span class="o">,</span> <span class="n">password</span> <span class="o">)</span> <span class="o">;</span>
+<span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="n">SQLException</span> <span class="n">se</span><span class="o">){</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"数据库连接失败！"</span><span class="o">);</span>
+    <span class="n">se</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">()</span> <span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="4创建一个statement">4、创建一个Statement</h2>
+
+<ul>
+  <li>要执行SQL语句，必须获得java.sql.Statement实例，Statement实例分为以下3 种类型：</li>
+</ul>
+
+<p>1、执行静态SQL语句。通常通过Statement实例实现。<br />
+2、执行动态SQL语句。通常通过PreparedStatement实例实现。<br />
+3、执行数据库存储过程。通常通过CallableStatement实例实现。</p>
+
+<p>具体的实现方式：</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Statement</span> <span class="n">stmt</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">createStatement</span><span class="o">()</span> <span class="o">;</span>
+<span class="n">PreparedStatementpstmt</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span><span class="n">sql</span><span class="o">)</span> <span class="o">;</span>
+<span class="n">CallableStatementcstmt</span> <span class="o">=</span><span class="n">con</span><span class="o">.</span><span class="na">prepareCall</span><span class="o">(</span><span class="s">"{CALL demoSp(? , ?)}"</span><span class="o">)</span> <span class="o">;</span>
+<span class="n">String</span> <span class="n">sql</span><span class="o">=</span><span class="s">"insert student(id,name,sex) VALUES(?,?,?);"</span><span class="o">;</span>
+<span class="n">ps</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span><span class="n">sql</span><span class="o">);</span>
+<span class="n">ps</span><span class="o">.</span><span class="na">setInt</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="n">id</span><span class="o">);</span>
+<span class="n">ps</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span><span class="n">name</span><span class="o">);</span>
+<span class="n">ps</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span><span class="n">sex</span><span class="o">);</span>
+<span class="n">ps</span><span class="o">.</span><span class="na">executeUpdate</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>或:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">st</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">createStatement</span><span class="o">();</span>
+<span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="na">executeUpdate</span><span class="o">(</span><span class="n">sql</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>又或者:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ss</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="na">executeQuery</span><span class="o">(</span><span class="n">sql1</span><span class="o">);</span><span class="c1">//返回结果集</span>
+<span class="k">while</span><span class="o">(</span><span class="n">ss</span><span class="o">.</span><span class="na">next</span><span class="o">()){</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+    <span class="n">ss</span><span class="o">.</span><span class="na">getInt</span><span class="o">(</span><span class="mi">1</span><span class="o">)+</span><span class="s">"\t"</span><span class="o">+</span><span class="n">ss</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="mi">2</span><span class="o">)+</span><span class="s">"\t"</span> <span class="o">+</span> <span class="n">ss</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="mi">3</span><span class="o">));</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="5执行sql语句">5、执行SQL语句</h2>
+
+<p>Statement接口提供了三种执行SQL语句的方法：executeQuery、executeUpdate 和execute<br />
+1、ResultSetexecuteQuery(String sqlString)：执行查询数据库的SQL语句 ，返回一个结果集（ResultSet）对象。<br />
+2、intexecuteUpdate(String sqlString)：用于执行INSERT、UPDATE或
+DELETE语句以及SQL DDL语句，如：CREATE TABLE和DROP TABLE等<br />
+3、execute(sqlString):用于执行返回多个结果集、多个更新计数或二者组合的 语句。</p>
+
+<p>具体实现的代码</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ResultSetrs</span> <span class="o">=</span> <span class="n">stmt</span><span class="o">.</span><span class="na">executeQuery</span><span class="o">(</span><span class="s">"SELECT * FROM ..."</span><span class="o">)</span> <span class="o">;</span>
+<span class="kt">int</span> <span class="n">rows</span> <span class="o">=</span> <span class="n">stmt</span><span class="o">.</span><span class="na">executeUpdate</span><span class="o">(</span><span class="s">"INSERT INTO ..."</span><span class="o">)</span> <span class="o">;</span>
+<span class="kt">boolean</span> <span class="n">flag</span> <span class="o">=</span> <span class="n">stmt</span><span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="n">String</span> <span class="n">sql</span><span class="o">)</span> <span class="o">;</span>
+</code></pre></div></div>
+
+<h2 id="6处理结果">6、处理结果</h2>
+
+<p>两种情况:<br />
+1、执行更新返回的是本次操作影响到的记录数。<br />
+2、执行查询返回的结果是一个ResultSet对象。</p>
+
+<ul>
+  <li>ResultSet包含符合SQL语句中条件的所有行，并且它通过一套get方法提供了对这些 行中数据的访问。</li>
+  <li>使用结果集（ResultSet）对象的访问方法获取数据：</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span><span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">next</span><span class="o">()){</span>
+<span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">"name"</span><span class="o">)</span> <span class="o">;</span>
+<span class="n">String</span> <span class="n">pass</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">;</span> <span class="c1">// 此方法比较高效</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>（列是从左到右编号的，并且从列1开始</p>
+
+<h2 id="7关闭jdbc对象">7、关闭JDBC对象</h2>
+
+<p>操作完成以后要把所有使用的JDBC对象全都关闭，以释放JDBC资源，关闭顺序和声 明顺序相反：</p>
+
+<p>1、关闭记录集</p>
+
+<p>2、关闭声明</p>
+
+<p>3、关闭连接对象</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span><span class="o">(</span><span class="n">rs</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">){</span> <span class="c1">// 关闭记录集</span>
+    <span class="k">try</span><span class="o">{</span>
+        <span class="n">rs</span><span class="o">.</span><span class="na">close</span><span class="o">()</span> <span class="o">;</span>
+    <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="n">SQLException</span> <span class="n">e</span><span class="o">){</span>
+        <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="k">if</span><span class="o">(</span><span class="n">stmt</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">){</span> <span class="c1">// 关闭声明</span>
+    <span class="k">try</span><span class="o">{</span>
+        <span class="n">stmt</span><span class="o">.</span><span class="na">close</span><span class="o">()</span> <span class="o">;</span>
+    <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="n">SQLException</span> <span class="n">e</span><span class="o">){</span>
+         <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="k">if</span><span class="o">(</span><span class="n">conn</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">){</span>
+    <span class="c1">// 关闭连接对象</span>
+    <span class="k">try</span><span class="o">{</span>
+        <span class="n">conn</span><span class="o">.</span><span class="na">close</span><span class="o">()</span> <span class="o">;</span>
+    <span class="o">}</span><span class="k">catch</span><span class="o">(</span><span class="n">SQLException</span> <span class="n">e</span><span class="o">){</span>
+        <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><a href="http://blog.csdn.net/javaniuniu/article/details/52403509">原文连接</a>
+为了方便学习而转载的如有不妥请作者联系我,我会尽快删除.</p>
+
+            </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<p class="copyright">Copyright &copy; 2017-2018 <a href=""><code>赵赵赵小白</code></a>.</p>
+		<p>Powered by <a href="http://jekyllrb.com">Jekyll</a>, themed from <a href="http://lesscss.cn/">Less</a>, refactored by <a href="http://www.hifreud.com/">Freud Kang</a></p>
+	</div>
+</footer>
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/canvas-nest.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+<script src="/styles/js/application.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  </body>
+</html>
