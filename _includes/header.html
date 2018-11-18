@@ -1,4 +1,28 @@
 <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <script type="text/javascript">
+    function startTime()
+    {
+      var today = new Date()
+      var h = today.getHours()
+      var m = today.getMinutes()
+      var s = today.getSeconds()
+
+      // add a zero in front of numbers < 10
+      m = checkTime(m)
+      s = checkTime(s)
+      document.getElementById('time').innerHTML=h+":"+m+":"+s
+      t=setTimeout('startTime()',500)
+    }
+
+    function checkTime(i)
+    {
+      if (i < 10)
+      {
+        i = "0" + i
+      }
+      return i;
+    }
+  </script>
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -23,6 +47,7 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li>离专升本还剩<span id="time"></span>天</li>
         <li>
             <!--
               <a><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span></a>
