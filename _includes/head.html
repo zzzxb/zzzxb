@@ -29,10 +29,40 @@
 		  var s = document.getElementsByTagName("script")[0]; 
 		  s.parentNode.insertBefore(hm, s);
 		})();
+
+		// 升本计时
+		function startTime()
+		{
+			var today=new Date()
+			var h=today.getHours()
+			var m=today.getMinutes()
+			var s=today.getSeconds()
+			var day = 200;
+			// add a zero in front of numbers<10
+			m=checkTime(60 - m)
+			s=checkTime(60 - s)
+			if(h == 0 && m == 0 && s == 0){
+				day --;
+			}
+
+			//这里更改说明
+			document.getElementById('txt').innerHTML=
+			day + "天" + (24-h) + ":" + m + ":"+ s;
+
+			t=setTimeout('startTime()',500)
+		}
+
+		// 个位数后补0
+		function checkTime(i)
+			{
+			if (i<10) 
+  			{i="0" + i}
+  			return i
+		}
 	</script>
-  	<style type="text/css">
-	  	.docs-content{
-	  		margin-bottom: 10px;
-	  	}
-  	</style>
+ 	<style type="text/css">
+			.docs-content{
+				margin-bottom: 10px;
+			}
+ 	</style>
 </head>
