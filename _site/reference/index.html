@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>相关博客 - 赵小白的博客</title>
+
+	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
+	<link rel="icon" href="/styles/images/favicon.jpg">
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/css/syntax.css">
+	<link rel="canonical" href="/reference/">
+	<link rel="alternate" type="application/rss+xml" title="赵小白的博客" href="/feed.xml">
+	
+	<meta name="keywords" content="相关博客, 赵小白的博客, 远方有多远,请你告诉我!">
+	<meta name="description" content="远方有多远,请你告诉我!">
+
+	<script src="/styles/js/jquery.min.js"></script>
+	<script src="/styles/js/canvas-nest.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+
+		//倒计时
+		function startTime()
+		{
+			var endDate = new Date("2019-6,6")
+			var nowDate = new Date();
+			var totalSeconds = parseInt((endDate - nowDate) / 1000);
+
+			//天数
+			var days = Math.floor(totalSeconds / (60 * 60 * 24));
+			var modulo = totalSeconds % (60 * 60 * 24)
+			//小时
+			var hours = Math.floor(modulo / (60 * 60))
+			modulo = modulo % (60 * 60)
+
+			//分钟
+			var minutes = Math.floor(modulo / 60)
+
+			//秒
+			var seconds = Math.floor(modulo % 60)
+			
+			//这里更改说明
+			document.getElementById('txt').innerHTML="距离升本考试还剩:" + 
+			days + "天" + hours + "时" + minutes + "分" + seconds + "秒"
+
+			t=setTimeout('startTime()',1000)
+		}
+	</script>
+ 	<style type="text/css">
+			.docs-content{
+				margin-bottom: 10px;
+			}
+ 	</style>
+</head>
+
+  <body class="index" onload="startTime()">
+
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <img src="/styles/images/logo.jpg">
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">    
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/categories/">大类分解</a>
+        </li>
+        <li>
+          <a href="/tag">小类内聚</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+            <!--
+              <a><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span></a>
+            -->
+              <a href="http://www.idearfree.com/Over-Game">
+                <span id="busuanzi_container_site_pv">
+                  <span id="txt"></span>
+                </span></a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/zzzxb">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="mailto:idearfree@outlook.com">联系作者</a></li>
+            <li><a rel="nofollow" href="/books">我的书单</a></li>
+            <li><a rel="nofollow" href="/reference">推荐博客</a></li>
+            <li><a href="/feed.xml">RSS订阅</a></li>
+            <li class="divider"></li>
+            <li><a rel="nofollow" target="_blank" href="https://github.com/zzzxb/zzzxb.github.io.git">本项目</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="docs-header" id="content">
+  <div class="container">
+  	
+  		<!--
+		    <h1>相关博客</h1>
+		    <p>Post on  by <a href="/about">赵赵赵小白</a></p>
+		-->
+		    <h1>远方有多远,请你告诉我!</h1>
+    
+  </div>
+</div>
+    
+      <div class="banner">
+  <div class="container">
+  
+  	
+    	学而不思则罔，思而不学则殆。
+    
+  </div>
+</div>
+
+    
+
+    <div class="container docs-container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar hidden-print" role="complementary">
+        <div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav">
+<!--
+    
+      
+      
+      
+      
+
+      
+        <li><a href="#year_2018">2018</a>
+          <ul class="nav">
+            <li><a href="#month_2018_November">November</a></li>
+      
+
+      
+            
+          
+              <li><a href="#month_2018_July">July</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2018_March">March</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+        
+            </ul>
+          </li>
+          <li><a href="#year_2017">2017</a>
+            <ul class="nav">
+              <li><a href="#month_2017_November">November</a></li>
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_October">October</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_August">August</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_July">July</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2017_May">May</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            </ul>
+          </li>
+      
+    
+-->
+  </ul>
+</div> 
+      </div>
+    </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">相关博客</h1>
+              <!--
+                <p class="post-meta"></p>
+              -->
+              <div class="meta">Posted on <span class="postdate"></span> By <a target="_blank" href="http://www.idearfree.com">赵赵赵小白</a></div>
+              <br />
+            </header>
+            <article class="post-content">
+              <ul id="markdown-toc">
+  <li><a href="#博客" id="markdown-toc-博客">博客</a></li>
+  <li><a href="#常用api文档" id="markdown-toc-常用api文档">常用API文档</a></li>
+  <li><a href="#linux下技巧" id="markdown-toc-linux下技巧">Linux下技巧</a></li>
+  <li><a href="#jekyll-blog-作者" id="markdown-toc-jekyll-blog-作者">Jekyll Blog 作者</a></li>
+</ul>
+
+<h1 id="博客">博客</h1>
+
+<p><a href="http://www.shendonghai.com">程序海</a><br />
+<a href="http://www.mengfansong.com">孟小松</a><br />
+<a href="http://www.hpxuan.com">hpXuan</a><br />
+<a href="http://www.duxigang.com">dxGang</a>
+<a href="http://www.mutianlin.com">mtLin</a></p>
+
+<h1 id="常用api文档">常用API文档</h1>
+
+<p><a href="http://tool.oschina.net/apidocs">常用API文档</a></p>
+
+<p><a href="https://www.appinn.com/markdown/basic.html">markdown文档</a></p>
+
+<h1 id="linux下技巧">Linux下技巧</h1>
+
+<p><a href="https://segmentfault.com/a/1190000007446170">vim使用技巧</a>
+<a href="http://blog.csdn.net/redguardtoo/article/details/7222501/">Emacs</a>
+<a href="http://blog.binchen.org/">Linux下编程</a></p>
+
+<h1 id="jekyll-blog-作者">Jekyll Blog 作者</h1>
+
+<p>点击左下角的 Freud Kang 也能找到作者.</p>
+
+<p><a href="http://www.hifreud.com/">博客模板作者</a></p>
+
+            </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<p class="copyright">Copyright &copy; 2017-2018 <a href=""><code>赵赵赵小白</code></a>.</p>
+		<p>Powered by <a href="http://jekyllrb.com">Jekyll</a>, themed from <a href="http://lesscss.cn/">Less</a>, refactored by <a href="http://www.hifreud.com/">Freud Kang</a></p>
+	</div>
+</footer>
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+<script src="/styles/js/application.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  </body>
+</html>
