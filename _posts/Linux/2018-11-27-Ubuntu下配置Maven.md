@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ubuntu下安配置Maven"
+title:  "Ubuntu下配置Maven"
 date:   2018-11-27 02:00:00 +0800
 categories: Linux
 tag: Linux
