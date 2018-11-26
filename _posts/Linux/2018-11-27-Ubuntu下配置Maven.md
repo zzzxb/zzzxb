@@ -36,6 +36,7 @@ Linux|终端|java -version
     # wget http://mirrors.hust.edu.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
     # tar -xvf  apache-maven-3.3.9-bin.tar.gz
     # sudo mv -f apache-maven-3.3.9 /usr/local/
+
 * 编辑 **/etc/profile** 文件,末尾添加
 
 ```profile
