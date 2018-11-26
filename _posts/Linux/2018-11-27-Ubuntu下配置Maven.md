@@ -38,6 +38,7 @@ Linux|终端|java -version
     # tar -xvf  apache-maven-3.3.9-bin.tar.gz
     # sudo mv -f apache-maven-3.3.9 /usr/local/
 * 编辑 **/etc/profile** 文件,末尾添加
+
     export MAVEN_HOME=/usr/local/apache-maven-3.6.0
     export PATH=${PATH}:${MAVEN_HOME}/bin
 
