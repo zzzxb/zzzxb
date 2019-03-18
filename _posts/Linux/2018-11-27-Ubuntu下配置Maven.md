@@ -46,3 +46,31 @@ export PATH=${PATH}:${MAVEN_HOME}/bin
 
 * 保存文件并运行**source /etc/profile**使环境变量生效
 * **mvn -v** 查看Maven版本信息
+
+# maven存储库使用
+
+    现在大部分ide上都有maven的相关插件使用也是相当方便，但是用外部扩展的时候总找不到是否有这个存储库等，线面就是maven的存储库搜索网站和在pos.xml中的用法
+
+    [maven存储库](https://mvnrepository.com)
+
+    ```xml
+    <!-- 例如使用mybatis 存储库搜索到的是 org.mybatis >> mybatis -->
+    <dependencies>
+    <!-- 外部存储库 -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <!-- 查看过后选择使用版本 -->
+            <version>3.4.6</version>
+        </dependency>
+    <!-- 内部存储库 -->
+        <dependency>
+            <groupId>com.xxx</groupId>
+            <artifactId>xxx</artifactId>
+            <version>1.0</version>
+            <scoper>system</scoper>
+            <!-- 自己创建一个lib包来存放本地存储库 -->
+            <systemPath>${project.basedir}/lib/xxx.jar</systemPath>
+        </dependency>
+    </dependencies>
+    ```

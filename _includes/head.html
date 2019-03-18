@@ -51,8 +51,12 @@
 			var seconds = Math.floor(modulo % 60)
 			
 			//这里更改说明
-			document.getElementById('txt').innerHTML="距离升本考试还剩:" + 
-			days + "天" + hours + "时" + minutes + "分" + seconds + "秒"
+			if (days <= 0 && hours <= 0 && minutes <= 0 && seconds <=0) {
+				document.getElementById('txt').innerHTML="无论结果如何,你仍需前行."
+			}else{
+				document.getElementById('txt').innerHTML="距离升本考试还剩:" + 
+				days + "天" + hours + "时" + minutes + "分" + seconds + "秒"
+			}
 
 			t=setTimeout('startTime()',1000)
 		}
