@@ -9,7 +9,7 @@ tag: LibGDX
 * content
 {:toc}
 
-![role]({{ '/styles/images/rous.png' | prepend: site.baseurl  }}
+![role]({{ '/styles/images/rous.png' | prepend: site.baseurl }})
 
 ``` java
 public class Role {
@@ -117,4 +117,4 @@ public class Role {
     }
 ```
 
-![Animation](https://github.com/zzzxb/zzzxb.github.io/blob/master/styles/images/animation.gif)
+![animation]({{ '/styles/images/animation.gif' | prepend: site.baseurl }})
