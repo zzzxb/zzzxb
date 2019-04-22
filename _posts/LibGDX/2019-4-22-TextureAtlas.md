@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  "十年自学编程"
-date:   2019-4-6 21:29:01 +0800
-categories: HelloBlog
-tag: HelloBlog
+title:  "Texturepacker工具与TextureAtlas类"
+date:   2019-4-22 8:40:01 +0800
+categories: LibGDX
+tag: LibGDX
 ---
 
 * content
 {:toc}
+
 
 ## Texturepacker工具的使用
 
@@ -24,10 +25,9 @@ atlas 合成后图片内容是每个小图在大图中的名字,位置等信息.
 
 ## TextureAtlas类的使用
 
+![moveButton]({{ '/styles/images/moveButton.png' | prepend: site.baseurl  }}
+
 ```java
-/**
- * 游戏主程序的启动入口类
- */
 public class MainGame extends ApplicationAdapter {
 	private SpriteBatch batch;
 	
@@ -74,6 +74,7 @@ public class MainGame extends ApplicationAdapter {
 		 * 
 		 * 因此下面获取按钮的纹理区域时使用 "button" 作为名称并加上对应的索引值来获取。
 		 */
+
 		button1Region = atlas.findRegion(BUTTON, 1);
 		button2Region = atlas.findRegion(BUTTON, 2);
 		
@@ -117,3 +118,5 @@ public class MainGame extends ApplicationAdapter {
 	}
 }
 ```
+
+![Animation]({{ '/styles/images/animation.gif' | prepend: site.baseurl  }}

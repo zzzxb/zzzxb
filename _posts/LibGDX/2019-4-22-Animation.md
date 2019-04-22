@@ -9,6 +9,8 @@ tag: LibGDX
 * content
 {:toc}
 
+![role]({{ '/styles/images/rous.png' | prepend: site.baseurl  }}
+
 ``` java
 public class Role {
     private Texture walkSheetTexture;
@@ -114,3 +116,5 @@ public class Role {
             walkSheetTexture.dispose();
     }
 ```
+
+![Animation](https://github.com/zzzxb/zzzxb.github.io/blob/master/styles/images/animation.gif)
