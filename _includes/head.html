@@ -29,37 +29,6 @@
 		  var s = document.getElementsByTagName("script")[0]; 
 		  s.parentNode.insertBefore(hm, s);
 		})();
-
-		//倒计时
-		function startTime()
-		{
-			var endDate = new Date("2019-6,6")
-			var nowDate = new Date();
-			var totalSeconds = parseInt((endDate - nowDate) / 1000);
-
-			//天数
-			var days = Math.floor(totalSeconds / (60 * 60 * 24));
-			var modulo = totalSeconds % (60 * 60 * 24)
-			//小时
-			var hours = Math.floor(modulo / (60 * 60))
-			modulo = modulo % (60 * 60)
-
-			//分钟
-			var minutes = Math.floor(modulo / 60)
-
-			//秒
-			var seconds = Math.floor(modulo % 60)
-			
-			//这里更改说明
-			if (days <= 0 && hours <= 0 && minutes <= 0 && seconds <=0) {
-				document.getElementById('txt').innerHTML="无论结果如何,你仍需前行."
-			}else{
-				document.getElementById('txt').innerHTML="距离升本考试还剩:" + 
-				days + "天" + hours + "时" + minutes + "分" + seconds + "秒"
-			}
-
-			t=setTimeout('startTime()',1000)
-		}
 	</script>
  	<style type="text/css">
 			.docs-content{
