@@ -106,9 +106,9 @@ function Init() {
   }
 
   cw = canvas.width = window.innerWidth,
-    cx = cw / 2;
+    cx = cw;
   ch = canvas.height = window.innerHeight,
-    cy = ch / 2;
+    cy = ch;
 
   Draw();
 };
