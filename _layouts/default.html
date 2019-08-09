@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
-
+   <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="{{'/styles/assets/css/style.css' | prepend: site.baseurl}}">
   {% include head.html %}
 
   <body class="index" onload="startTime()">
+    	<main class="cd-main-content container max-width-sm margin-top-lg margin-bottom-lg">
+      <article class="article text-component">
 
     {% include header.html %}
     {% include docs_header.html %}
@@ -14,6 +17,12 @@
     {{ content }}
     
     {% include footer.html %}
-
+    
+    <!-- back to top-->
+    <a href="#" class="cd-top text-replace js-cd-top">Top</a>
+	  <script src="{{ '/styles/assets/js/util.js' | prepend: site.baseurl}}"></script>
+    <script src="{{ '/styles/assets/js/main.js'| prepend: site.baseurl}}"></script>
+    </article>
+    </main>
   </body>
 </html>
