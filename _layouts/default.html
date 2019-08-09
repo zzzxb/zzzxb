@@ -5,6 +5,7 @@
   {% include head.html %}
 
   <body class="index" onload="startTime()">
+
     {% include header.html %}
     {% include docs_header.html %}
     {% if page.title %}
@@ -18,11 +19,11 @@
 
     <!-- back to top-->
     <a href="#" class="cd-top text-replace js-cd-top">Top</a>
-	  <script src="{{ '/styles/assets/js/util.js' | prepend: site.baseurl}}"></script>
-    <script src="{{ '/styles/assets/js/main.js'| prepend: site.baseurl}}"></script>
-    
-    {% include footer.html %}
     </article>
     </main>
+
+    {% include footer.html %}
+	  <script src="{{ '/styles/assets/js/util.js' | prepend: site.baseurl}}"></script>
+    <script src="{{ '/styles/assets/js/main.js'| prepend: site.baseurl}}"></script>
   </body>
 </html>
