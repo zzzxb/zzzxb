@@ -5,22 +5,23 @@
   {% include head.html %}
 
   <body class="index" onload="startTime()">
-
     {% include header.html %}
     {% include docs_header.html %}
     {% if page.title %}
       {% include banner.html %}
     {% endif %}
+
     <main class="cd-main-content container max-width-sm margin-top-lg margin-bottom-lg">
     <article class="article text-component">
+
     {{ content }}
-    
-    {% include footer.html %}
-    
+
     <!-- back to top-->
     <a href="#" class="cd-top text-replace js-cd-top">Top</a>
 	  <script src="{{ '/styles/assets/js/util.js' | prepend: site.baseurl}}"></script>
     <script src="{{ '/styles/assets/js/main.js'| prepend: site.baseurl}}"></script>
+    
+    {% include footer.html %}
     </article>
     </main>
   </body>
