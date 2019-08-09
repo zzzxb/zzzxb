@@ -1,9 +1,9 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var cw = canvas.width = window.innerWidth,
-  cx = cw;
+  cx = cw / 2;
 var ch = canvas.height = window.innerHeight,
-  cy = ch;
+  cy = ch / 2;
 
 ctx.fillStyle = "#000";
 var linesNum = 16;
@@ -106,9 +106,9 @@ function Init() {
   }
 
   cw = canvas.width = window.innerWidth,
-    cx = cw;
+    cx = cw / 2;
   ch = canvas.height = window.innerHeight,
-    cy = ch;
+    cy = ch / 2;
 
   Draw();
 };
