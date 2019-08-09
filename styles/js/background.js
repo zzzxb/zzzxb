@@ -1,16 +1,14 @@
-function run() {
-    var canvas = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
-    var cw = canvas.width = window.innerWidth,
-        cx = cw / 2;
-    var ch = canvas.height = window.innerHeight,
-        cy = ch / 2;
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var cw = canvas.width = window.innerWidth,
+  cx = cw / 2;
+var ch = canvas.height = window.innerHeight,
+  cy = ch / 2;
 
-    ctx.fillStyle = "#000";
-    var linesNum = 16;
-    var linesRy = [];
-    var requestId = null;
-}
+ctx.fillStyle = "#000";
+var linesNum = 16;
+var linesRy = [];
+var requestId = null;
 
 function Line(flag) {
   this.flag = flag;
@@ -147,4 +145,4 @@ function markPoint(p) {
 
 function randomIntFromInterval(mn, mx) {
   return ~~(Math.random() * (mx - mn + 1) + mn);
-}</script>
+}
