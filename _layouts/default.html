@@ -5,15 +5,14 @@
   {% include head.html %}
 
   <body class="index" onload="startTime()">
-    	<main class="cd-main-content container max-width-sm margin-top-lg margin-bottom-lg">
-      <article class="article text-component">
 
     {% include header.html %}
     {% include docs_header.html %}
     {% if page.title %}
       {% include banner.html %}
     {% endif %}
-
+    <main class="cd-main-content container max-width-sm margin-top-lg margin-bottom-lg">
+    <article class="article text-component">
     {{ content }}
     
     {% include footer.html %}
