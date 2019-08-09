@@ -1,9 +1,9 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var cw = canvas.width = window.innerWidth,
-  cx = cw / 2;
+  cx = cw;
 var ch = canvas.height = window.innerHeight,
-  cy = ch / 2;
+  cy = ch;
 
 ctx.fillStyle = "#000";
 var linesNum = 16;
