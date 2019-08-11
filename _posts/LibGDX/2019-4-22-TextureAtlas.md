@@ -29,7 +29,6 @@ atlas 合成后图片内容是每个小图在大图中的名字,位置等信息.
 ```java
 public class MainGame extends ApplicationAdapter {
 	private SpriteBatch batch;
-	
 	// 纹理图集
 	private TextureAtlas atlas;
 	
