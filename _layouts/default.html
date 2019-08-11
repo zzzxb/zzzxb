@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="{{'/styles/assets/css/style.css' | prepend: site.baseurl}}">
+  {% include head.html %}
+  <body class="index">
+
+    {% include header.html %}
+    {% include docs_header.html %}
+	
+    {% if page.title %}
+      {% include banner.html %}
+    {% endif %}
+
+    {{ content }}
+        <!-- back to top-->
+    <a href="#" class="cd-top text-replace js-cd-top">Top</a>
+    {% include footer.html %}
+
+
+  </body>
+</html>
