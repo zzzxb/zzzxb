@@ -6414,7 +6414,7 @@ hr {
   position: relative;
   overflow: hidden;
   background: #fff;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0);
   padding: 1px 60px 80px 60px;
   margin: 0 -15px;
   border: none;
