@@ -8,7 +8,7 @@ layout: default
           <div class="sidebar hidden-print" role="complementary">
             <div id="navigation">
               <h1>目录</h1>
-              <ul class="nav sidenav" style="opacity: 0.8">
+              <ul class="nav sidenav" style="opacity: 0.4">
                 {% for post in site.posts  %}
                   {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
                   {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
@@ -45,7 +45,7 @@ layout: default
           </div>
         </div>
         <div class="col-md-9" role="main">
-          <div class="panel docs-content">
+          <div class="panel docs-content" style="opacity: 0.4">
             <div class="wrapper">
               <div class="home" style="opacity: 0.6">
                 {% for post in site.posts  %}
