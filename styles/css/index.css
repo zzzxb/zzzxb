@@ -6104,7 +6104,10 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  background-color: #f7f7f7;
+  background-color:#7fc1c0;
+  background-image: url("../styles/images/bg.jpeg");
+  background-repeat:no-repeat;
+  background-size: 100%;
 }
 input,
 button,
@@ -6317,6 +6320,7 @@ hr {
 .docs-home {
   color: #b9c8e0;
   background-color:#7fc1c0;
+  margin-top: 10px;
 }
 /* Page headers */
 .docs-header {
