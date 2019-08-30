@@ -32,9 +32,7 @@
   		if(images != undefined && images.length > 0){
   			for(var i=0; i< images.length;i++){
   				var imgWidth = images[i].width;
-  				if( imgWidth >= 757 ){
   					 images[i].width = post_content.width;
-  				}
   			}
   		}
   	}
