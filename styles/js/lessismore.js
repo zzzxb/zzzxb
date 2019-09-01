@@ -34,7 +34,7 @@
   				var imgWidth = images[i].width;
   				if( imgWidth >= 757 ){
                        images[i].width = 800;
-                       images[i].height= 600;
+                        images[i].height= 450;
   				}
   			}
   		}
