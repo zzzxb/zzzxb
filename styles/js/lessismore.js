@@ -33,8 +33,8 @@
   			for(var i=0; i< images.length;i++){
   				var imgWidth = images[i].width;
   				if( imgWidth >= 757 ){
-                       images[i].width = 640;
-                       images[i].height= 480;
+                       images[i].width = 800;
+                       images[i].height= 600;
   				}
   			}
   		}
