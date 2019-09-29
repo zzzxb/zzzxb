@@ -36,3 +36,9 @@ Spring的一个关键元素是在应用程序级别的基础架构支持：Sprin
 目前自己不具备系统总结能力,就以官方文档替代
 
 [spirng frameword 5.1.10](https://docs.spring.io/spring/docs/5.1.10.RELEASE/spring-framework-reference/)
+
+## IOC(控制反转)
+
+## DI(依赖注入)
+
+## AOP(面向切面)
