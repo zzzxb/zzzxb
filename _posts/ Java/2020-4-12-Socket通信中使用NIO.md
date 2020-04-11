@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Socket通信中使用NIO"
-date:   2020-3-25 17:33:00 +0800
+date:   2020-4-12 01:08:00 +0800
 categories: Java
 tag: Java
 ---
@@ -40,7 +40,7 @@ public class NIOServer {
         // clientSelector 负责轮询连接是否有数据可读
         Selector clientSelector  = Selector.open();
 
-        // 扶着监听是否有客户端连接
+        // 负责监听是否有客户端连接
         new Thread(() -> {
             try {
                 // 对应IO中的服务端启动
@@ -113,4 +113,4 @@ public class NIOServer {
 }
 ```
 
-> (出处)https://snailclimb.gitee.io/javaguide/#/docs/java/BIO-NIO-AIO
+[出处](https://snailclimb.gitee.io/javaguide/#/docs/java/BIO-NIO-AIO)
