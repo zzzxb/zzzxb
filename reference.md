@@ -11,22 +11,21 @@ permalink: /reference/
 
 [程序海](http://www.shendonghai.com)  
 [孟小松](https://blog.csdn.net/MmmxsBlogs)  
-[hpXuan](http://www.hpxuan.com)  
-[dxGang](http://www.duxigang.com)  
-[mtLin](http://www.mutianlin.com)  
+~~[hpXuan](http://www.hpxuan.com)~~  
+~~[dxGang](http://www.duxigang.com)~~  
+~~[mtLin](http://www.mutianlin.com)~~  
 
 ## 常用API文档
 
-[常用API文档](http://tool.oschina.net/apidocs)
-
-[markdown文档](https://www.appinn.com/markdown/basic.html)
-[markdownlint](https://github.com/DavidAnson/markdownlint/tree/v0.16.0)
+[常用API文档](http://tool.oschina.net/apidocs)  
+[markdown文档](https://www.appinn.com/markdown/basic.html)  
+[markdownlint](https://github.com/DavidAnson/markdownlint/tree/v0.16.0)  
 
 ## Linux下技巧
 
-[vim使用技巧](https://segmentfault.com/a/1190000007446170)
-[Emacs](http://blog.csdn.net/redguardtoo/article/details/7222501/)
-[Linux下编程](http://blog.binchen.org/)
+[vim使用技巧](https://segmentfault.com/a/1190000007446170)  
+[Emacs](http://blog.csdn.net/redguardtoo/article/details/7222501/)  
+[Linux下编程](http://blog.binchen.org/)  
 
 ## Jekyll Blog 作者
 
