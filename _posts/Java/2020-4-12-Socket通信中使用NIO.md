@@ -136,8 +136,8 @@ public class NIOServer {
 ```
 * 只有自己能临时看懂的流程图
 
-[!大概流程图]({{'/styles/images/nio.jpg' | prepend: site.baseurl}})
+![大概流程图]({{'/styles/images/nio.jpg' | prepend: site.baseurl}})
 
-[!Slector]({{'/styles/images/Slector.png' | prepend: site.baseurl}})
+![Slector]({{'/styles/images/Slector.png' | prepend: site.baseurl}})
 
 [引自JavaGuid](https://snailclimb.gitee.io/javaguide/#/docs/java/BIO-NIO-AIO)
