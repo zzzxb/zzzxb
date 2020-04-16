@@ -6,6 +6,9 @@ categories: Dubbo
 tag: Dubbo, Spring Boot
 ---
 
+* content
+{:toc}
+
 今天早上本打算用 SpringBoot + ZK +Dubbo 写个小 Demo 呢，捣鼓了半天都没捣鼓明白哪里出的错，网上说的 zk 和 curator 版本的问题，换了好几版本都有问题，索性把zk换到最新的3.6.0版本，依赖也用新的，结果，莫问题了,正常运行,你说气人不气人，下次写东西的一定要养成一个习惯 - 加版本号。
 
 [Apache Zookeeper 官网](https://zookeeper.apache.org/)  
