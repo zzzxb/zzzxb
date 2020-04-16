@@ -3,7 +3,7 @@ layout: post
 title:  "Spring Boot + ZK + Dubbo"
 date:   2020-4-16 19:44:01 +0800
 categories: Dubbo
-tag: Dubbo, Spring Boot
+tag: Dubbo
 ---
 
 * content
