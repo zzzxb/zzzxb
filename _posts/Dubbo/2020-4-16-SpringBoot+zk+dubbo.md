@@ -12,7 +12,7 @@ tag: Dubbo
 今天早上本打算用 SpringBoot + ZK +Dubbo 写个小 Demo 呢，捣鼓了半天都没捣鼓明白哪里出的错，网上说的 zk 和 curator 版本的问题，换了好几版本都有问题，索性把zk换到最新的3.6.0版本，依赖也用新的，结果，莫问题了,正常运行,你说气人不气人，下次写东西的一定要养成一个习惯 - 加版本号。
 
 [Apache Zookeeper 官网](https://zookeeper.apache.org/)  
-[Zookeeper Download](https://zookeeper.apache.org/) 3.6.0目前最新的稳定版本
+[Zookeeper Download](https://zookeeper.apache.org/) 3.6.0目前最新的稳定版本  
 [Dubbo Admin 旧, 可视化监控界面](https://github.com/apache/dubbo-admin/tree/master)  
 [Dubbo Admin 新](https://github.com/apache/dubbo-admin/tree/develop)
 
@@ -201,7 +201,7 @@ SpringBoot_ZK_Dubbo
 —— Provider  
 ———— xyz.zzzxb.provider  
 —————— service  
-———————— DemoService.java
+———————— DemoService.java  
 ———————— impl  
 —————————— DemoServiceImpl.java  
 —————— ProviderApp.java  
@@ -214,7 +214,7 @@ SpringBoot_ZK_Dubbo
 —————— service  
 ———————— DemoService.java
 
-这个service接口可以单独分出来，让provider 和 consumer 共同使用，也可以通过这种方式进行使用
+这个service接口可以单独分出来写进一个进的项目并打包，让provider 和 consumer 共同使用，也可以通过这种方式进行使用
 
 ```java
 package xyz.zzzxb.provider.service;
