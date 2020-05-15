@@ -11,6 +11,7 @@ meta_description: 远方有多远,请你告诉我!
 motto: 远方有多远,请你告诉我!
 banner: 学而不思则罔，思而不学则殆。
 permalink: /404.html
+theme: jekyll-theme-cayman
 
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/
