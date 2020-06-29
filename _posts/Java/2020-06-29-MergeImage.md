@@ -15,7 +15,7 @@ tag: Java
 
 ![Snake]({{'/styles/images/Snake.png' | prepend: site.baseurl}})
 
-![MergeImages]({{'/styles/images/MergeImage.png' | prepend: site.baseurl}})
+![MergeImages]({{'/styles/images/mergeImage.png' | prepend: site.baseurl}})
 
 
 
