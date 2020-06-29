@@ -103,8 +103,8 @@ public class MergeImages {
         for (int i = 0; i < logoHeight; i++) {
             for (int j = 0; j < logoWidth; j++) {
                 int rgb1 = imageLogo.getRGB(i, j);
-                if ((i+logoPositionX) > bgWidth || (j+logoPositionY) >bgHeight) {
-                    break;
+                if ((i+logoPositionX) > bgWidth || (j+logoPositionY) > bgHeight) {
+                    continue;
                 }
                 imageSaved.setRGB(i + logoPositionX, j + logoPositionY, rgb1);
             }
