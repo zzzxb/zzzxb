@@ -7,6 +7,10 @@ permalink: /books/
 * content
 {:toc}
 
+# 2020年书单
+
+* 《Java编程思想》 - 优先级1
+
 # 2019年书单
 
 * 《LibGDX游戏开发指南》
