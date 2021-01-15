@@ -9,8 +9,8 @@ permalink: /books/
 
 # 2021年书单
 
-* Java 编程思想
-* Nginx Http Server
+* 《Java编程思想》
+* 《Nginx Http Server》 
 
 # 2020年书单
 
