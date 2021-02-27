@@ -11,7 +11,7 @@ meta_description: 远方有多远,请你告诉我!
 motto: 远方有多远,请你告诉我!
 banner: 我从未如此热爱我的生活.
 permalink: /404.html
-theme: jekyll-theme-cayman
+#theme: jekyll-theme-cayman
 
 #permalink: /:categories/:year/:month/:day/:title/
 permalink: /:year/:month/:day/:title/

@@ -14,7 +14,7 @@
     height: 10px;
     background-color:red;
     position: fixed;
-    top: -9px;
+    top: -16px;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -23,8 +23,8 @@
     height: 10px;
     background-color:red;
     position: fixed;
-    top: 5px;
-    left: -14px;
+    top: 10px;
+    left: -18px;
     border-radius: 10px 10px 0px 0px;
     transform: rotate(-90deg);
 }

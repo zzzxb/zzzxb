@@ -6,8 +6,14 @@ var time; // 定时器
 var a = document.getElementById("drawing_"+shape);
 var l = document.getElementById("left_"+shape);
 var r = document.getElementById("right_"+shape);
+var vanish = 0;
+var vanish_r = 0;
+var vanish_l = 0;
 
 document.onmousedown= function(e) {
+    if (count != 0) {
+        return;
+    }
     flag = true;
     clearInterval(time);
     drawingGraphics(e.clientX, e.clientY);
@@ -16,9 +22,9 @@ document.onmousedown= function(e) {
 
 function drawingGraphics(x, y) {
     a.style.opacity = 1;
-    a.style.left= (x-10)+"px";
-    a.style.top = (y-10)+"px";
-    randomColor = Math.floor(Math.random() * 8);
+    a.style.left= (x+5)+"px";
+    a.style.top = (y-15)+"px";
+    let randomColor = Math.floor(Math.random() * 16);
     a.style.backgroundColor = colorLibrary[randomColor];
     l.style.backgroundColor = colorLibrary[randomColor];
     r.style.backgroundColor = colorLibrary[randomColor];
@@ -28,7 +34,8 @@ function drawingGraphics(x, y) {
 function heart_move() {
     if (flag && count <= 50) {
         count++;
-        a.style.top = (a.offsetTop-2) + "px";
+        vanish = (a.offsetTop-2);
+        a.style.top = vanish + "px";
         a.style.opacity = 1.4 - (count*2)/100;
     }else {
         a.style.opacity = 0;
