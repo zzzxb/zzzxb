@@ -6442,7 +6442,7 @@ hr {
   margin-bottom: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  /*text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);*/
   border-radius: 5px;
 }
 /* All levels of nav */
