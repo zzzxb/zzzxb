@@ -6103,7 +6103,7 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, 'Microsoft YaHei', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333333;
+  /*color: #333333;*/
 }
 input,
 button,
@@ -6315,13 +6315,13 @@ hr {
 }
 .docs-header,
 .docs-home {
-  color: #b9c8e0;
+  /*color: #b9c8e0;*/
   background-color:rgba(0,0,0,0);
-  margin-top: 10px;
+  /*margin-top: 10px;*/
 }
 /* Page headers */
 .docs-header {
-  padding: 30px 15px 50px;
+  padding: 0px 15px 15px 50px;
   /* side padding builds on .container 15px, so 30px */
   font-size: 16px;
   text-align: center;
@@ -6444,13 +6444,12 @@ hr {
   padding-top: 10px;
   padding-bottom: 10px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  background-color: #f7f7f7;
   border-radius: 5px;
 }
 /* All levels of nav */
 .sidebar .nav > li > a {
   display: block;
-  color: #36556e;
+  color: rgb(0, 0, 0);
   padding: 5px 20px;
 }
 .sidebar .nav > li > a:hover,
