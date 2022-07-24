@@ -5,11 +5,14 @@
     	<ol class="breadcrumb">
     		<li class="active"><a href="{{ node.url | prepend: site.baseurl }}" class="active">{{ node.title }}</a></li>
     		<li style="float:right;"><span>{{ node.date | date: "%F" }}</span></li>
+            <li> {% for tag in site.tags %} <code>{{ tag[0] }}</code> {% endfor %}
     	</ol>
     	{% else %}
     	<ol class="breadcrumb">
     		<li><a href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a></li>
     		<li style="float:right;"><span>{{ node.date | date: "%F" }}</span></li>
+            <li> {% for tag in site.tags %} <code>{{ tag[0] }}</code> {% endfor %}
+            </li>
     	</ol>
     	{% endif %}
     {% endif %}
