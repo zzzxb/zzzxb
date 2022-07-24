@@ -60,6 +60,9 @@ layout: default
                             <ol class="breadcrumb">
                                 <li><span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a
                                         href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+                                {% for tag in post.tags %}
+                                    <li><code>{{ tag | xml_escape }}</code></li>
+                                {% endfor %}
                             </ol>
                             {% if forloop.last %}
                         </ul>
