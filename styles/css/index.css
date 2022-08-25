@@ -6414,11 +6414,11 @@ hr {
   position: relative;
   overflow: hidden;
   background: #fff;
-  background-color:rgba(0,0,0,0);
+  /*background-color:rgba(0,0,0,0);*/
   padding: 1px 20px 80px 20px;
   margin: 0 -15px;
   border: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 4px;
 }
 .docs-content .container-fluid {
   padding: 0;
