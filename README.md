@@ -1,1 +1,1 @@
-You want to learn the mature mood of waiting for the time, but also you must keep the efforts and persistence of the waiting.
+你学会等待时机成熟的情绪，也要你保有这份等待之外的努力和坚持
