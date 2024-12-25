@@ -1,0 +1,72 @@
+:root {
+  --c0: #3d4e28;
+  --c1: #3b4a28;
+  --c2: #567135;
+  --c3: #80ba03;
+  --c4: #aeff00;
+}
+body {
+  background-color: var(--c1);
+  padding: 0;
+  margin: 1%;
+}
+
+#container {
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 5px;
+  background-color: var(--c2);
+  margin: 0 auto;
+  padding: 0 1%;
+  width: 900px;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 900px){
+  #container {
+    width: 97%;
+  } 
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: auto;
+  text-shadow: 
+   0 -2px 10px rgba(255, 255, 255, 0.5),
+   0 5px 5px black;
+}
+
+li>a {
+  color: var(--c3);
+  text-shadow: 0 0 10px black;
+}
+
+li>a:hover {
+  color: var(--c4);
+  text-shadow: 
+   0 -2px 10px rgba(255, 255, 255, 0.3),
+   0 5px 5px black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: 
+   0 0px 10px rgba(255, 255, 255, 0.65),
+   0 2px 5px black;
+}
+
+.content {
+  background-color: #eeeeed20;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin: 10px auto;
+}
+
+.no_select, h1, h2, h3, h4, h5, h6 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
