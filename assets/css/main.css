@@ -1,12 +1,17 @@
 :root {
   --c0: #3d4e28;
   --c1: #3b4a28;
-  --c2: #567135;
+  --c2: #5671355e;
   --c3: #80ba03;
   --c4: #aeff00;
 }
 body {
-  background-color: var(--c1);
+  background-color: var(--c0);
+  background-image: url(../images/bg.jpg) ;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
   padding: 0;
   margin: 1%;
 }
@@ -21,11 +26,13 @@ body {
   width: 900px;
   list-style-type: none;
   overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 950px){
   #container {
     width: 97%;
+    border: 1px red solid;
   } 
 }
 
@@ -35,7 +42,7 @@ a {
   cursor: auto;
   text-shadow: 
    0 -2px 10px rgba(255, 255, 255, 0.5),
-   0 5px 5px black;
+   0 0 0 black;
 }
 
 li>a {
@@ -57,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content {
-  background-color: #eeeeed20;
+  background-color: #eeeeed50;
   border-radius: 5px;
   padding: 10px 10px;
   margin: 10px auto;
