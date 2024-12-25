@@ -1,36 +1,68 @@
 <link rel="shortcut icon" href="https://gitlab.com/zzzxb/Snake/-/raw/master/vim-snake/assets/favicon.ico?ref_type=heads" type="image/x-icon" />
----
-permalink: /404.html
-layout: default
----
+<link href="/assets/css/main.css" rel="stylesheet"/>
 
-<style type="text/css" media="screen">
-  body {
-      background-color: #586e3d;
-  }
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    #container{
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.96;
+    }
+    @media screen and (min-width: 1200px) {
+      #container{
+        width: 50%;
+        height: inherit;
+      }
+      .screen {
+        width: 100%;
+      }
+      .ctrl {
+        display: none;
+      }
+    }
 </style>
 
-<div id="container">
+<div id="container" class="no_select">
   <div class="box" id="box">
     <div class="title">
-        <h1></h1>
-        <p>
-            <span id ="score">&numsp;</span>
-        </p>
+        <span id ="score">&numsp;</span>
     </div>
 
-    <div class="screen" id="screen">
+    <div class="screen" id="screen"></div>
+    <div class="ctrl" style="position: relative">
+    <div class="ctrl" style="position: absolute; left: 128px;" onclick="touch('u')">
+        <svg t="1735145609552" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13464" width="128" height="128"><path d="M512 32C248 32 32 248 32 512s216 480 480 480 480-216 480-480S776 32 512 32z" fill="#FFFFFF" p-id="13465"></path><path d="M512 0C228.8 0 0 228.8 0 512s228.8 512 512 512 512-228.8 512-512S795.2 0 512 0z m0 992C248 992 32 776 32 512S248 32 512 32s480 216 480 480-216 480-480 480z" fill="" p-id="13466"></path><path d="M512 512m-392 0a392 392 0 1 0 784 0 392 392 0 1 0-784 0Z" fill="#9DE8F7" p-id="13467"></path><path d="M466.745166 507.4745166l0 199.12126958 81.4587012 0 0-199.12126958 99.56063479 0-142.55272709-201.38401128-142.55272709 201.38401128z" fill="#FFFFFF" p-id="13468"></path><path d="M581.01362184 538.02152955l128.97627689 0-203.64675298-289.63093758-203.64675298 289.63093758 133.50176029 0 0 199.12126958 144.81546878 0 0-199.12126958z m66.75088015-30.54701295l-99.56063479 0 0 199.12126958-81.4587012 0 0-199.12126958-104.08611819 0 142.55272709-201.38401128 142.55272709 201.38401128z" fill="" p-id="13469"></path></svg>
     </div>
-    <p>
-            <span id = "highest"></span>
-    </p>
+    <div class="ctrl" style="position: absolute; top:256px; left: 128px;" onclick="touch('d')">
+        <svg t="1735145662679" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13868" width="128" height="128"><path d="M512 32C248 32 32 248 32 512s216 480 480 480 480-216 480-480S776 32 512 32z" fill="#FFFFFF" p-id="13869"></path><path d="M512 0C228.8 0 0 228.8 0 512s228.8 512 512 512 512-228.8 512-512S795.2 0 512 0z m0 992C248 992 32 776 32 512S248 32 512 32s480 216 480 480-216 480-480 480z" fill="" p-id="13870"></path><path d="M512 512m-392 0a392 392 0 1 0 784 0 392 392 0 1 0-784 0Z" fill="#9DE8F7" p-id="13871"></path><path d="M557.254834 516.5254834l0-199.12126958-81.4587012 0 0 199.12126958-99.56063479 0 142.55272709 201.38401128 142.55272709-201.38401128z" fill="#FFFFFF" p-id="13872"></path><path d="M442.98637816 485.97847045l-128.97627689 0 203.64675298 289.63093758 203.64675298-289.63093758-133.50176029 0 0-199.12126958-144.81546878 0 0 199.12126958z m-66.75088015 30.54701295l99.56063479 0 0-199.12126958 81.4587012 0 0 199.12126958 104.08611819 0-142.55272709 201.38401128-142.55272709-201.38401128z" fill="" p-id="13873"></path></svg>
+    </div>
+    <div class="ctrl" style="position: absolute;top:128px; left: 0;" onclick="touch('l')">
+        <svg t="1735145829369" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="14562" width="128" height="128"><path d="M512 32C248 32 32 248 32 512s216 480 480 480 480-216 480-480S776 32 512 32z" fill="#FFFFFF" p-id="14563"></path><path d="M512 0C228.8 0 0 228.8 0 512s228.8 512 512 512 512-228.8 512-512S795.2 0 512 0z m0 992C248 992 32 776 32 512S248 32 512 32s480 216 480 480-216 480-480 480z" fill="" p-id="14564"></path><path d="M512 512m-392 0a392 392 0 1 0 784 0 392 392 0 1 0-784 0Z" fill="#9DE8F7" p-id="14565"></path><path d="M507.4745166 557.254834l199.12126958 0 0-81.4587012-199.12126958 0 0-99.56063479-201.38401128 142.55272709 201.38401128 142.55272709z" fill="#FFFFFF" p-id="14566"></path><path d="M538.02152955 442.98637816l0-128.97627689-289.63093758 203.64675298 289.63093758 203.64675298 0-133.50176029 199.12126958 0 0-144.81546878-199.12126958 0z m-30.54701295-66.75088015l0 99.56063479 199.12126958 0 0 81.4587012-199.12126958 0 0 104.08611819-201.38401128-142.55272709 201.38401128-142.55272709z" fill="" p-id="14567"></path></svg>
+    </div>
+    <div class="ctrl" style="position: absolute;top:128px; left: 256px;" onclick="touch('r')">
+        <svg t="1735145695424" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="14360" width="128" height="128"><path d="M512 32C248 32 32 248 32 512s216 480 480 480 480-216 480-480S776 32 512 32z" fill="#FFFFFF" p-id="14361"></path><path d="M512 0C228.8 0 0 228.8 0 512s228.8 512 512 512 512-228.8 512-512S795.2 0 512 0z m0 992C248 992 32 776 32 512S248 32 512 32s480 216 480 480-216 480-480 480z" fill="" p-id="14362"></path><path d="M512 512m-392 0a392 392 0 1 0 784 0 392 392 0 1 0-784 0Z" fill="#9DE8F7" p-id="14363"></path><path d="M516.5254834 466.745166l-199.12126958 0 0 81.4587012 199.12126958 0 0 99.56063479 201.38401128-142.55272709-201.38401128-142.55272709z" fill="#FFFFFF" p-id="14364"></path><path d="M485.97847045 581.01362184l0 128.97627689 289.63093758-203.64675298-289.63093758-203.64675298 0 133.50176029-199.12126958 0 0 144.81546878 199.12126958 0z m30.54701295 66.75088015l0-99.56063479-199.12126958 0 0-81.4587012 199.12126958 0 0-104.08611819 201.38401128 142.55272709-201.38401128 142.55272709z" fill="" p-id="14365"></path></svg>
+    </div>
+    <div class="ctrl" style="position: absolute; right: 0px;" onclick="touch('e')">
+        <svg t="1735147383935" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="25442" width="128" height="128"><path d="M512 85.333a425.813 425.813 0 0 1 330.368 156.63L572.331 512l270.037 270.037A425.813 425.813 0 0 1 512 938.667C276.352 938.667 85.333 747.648 85.333 512S276.352 85.333 512 85.333z m0 128a64 64 0 1 0 0 128 64 64 0 0 0 0-128z" fill="#e6a612" p-id="25443"></path></svg>
+    </div>
+    <div class="ctrl" style="position: absolute;top:256px; right: 0px;" onclick="touch('i')">
+        <svg t="1735147413075" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1485" width="128" height="128"><path d="M1014.272 511.488c0 71.68-58.368 130.048-130.56 130.048s-130.56-58.368-130.56-130.048 58.368-130.048 130.56-130.048 130.56 57.856 130.56 130.048z m-192 268.8c1.024 8.704-2.048 17.408-7.68 24.064-120.832 144.384-317.952 199.68-496.128 139.264C140.288 882.688 17.92 718.848 10.24 530.944 3.072 342.016 111.616 168.96 284.672 94.208c172.544-74.752 373.76-35.84 505.856 98.304 6.144 6.144 9.728 14.336 9.728 23.04 0 8.704-3.584 16.896-9.728 23.04-71.168 66.048-218.112 211.968-276.992 270.336 60.928 51.712 209.408 178.176 296.96 248.32 6.656 6.144 11.264 14.336 11.776 23.04zM394.24 330.752c0-28.672-23.552-52.224-52.224-52.224S289.792 302.08 289.792 330.752s23.552 52.224 52.224 52.224S394.24 359.424 394.24 330.752z" p-id="1486" fill="#e6a612"></path></svg>
+    </div>
+    </div>
+    </div>
 </div>
 </div>
 <script>
   window.onload = run;
   document.onkeydown = keyDown;
 
-  const world = {width:60, height:60, size: 8};
+  const world = initWorld();
   const init_snakeLength = 3;
 
 let goto_xy = objArray(world.width, world.height);
@@ -41,6 +73,22 @@ let bgc="#586e3d";
 let gameOverAudio = new Audio("https://gitlab.com/zzzxb/Snake/-/raw/master/vim-snake/assets/over.mp3?ref_type=heads");
 let bgm = new Audio("https://gitlab.com/zzzxb/Snake/-/raw/master/vim-snake/assets/bg.mp3?ref_type=heads");
 let gold = new Audio("https://gitlab.com/zzzxb/Snake/-/raw/master/vim-snake/assets/sfx.wav?ref_type=heads");
+
+function initWorld() {
+    h = window.innerHeight;
+    w = window.innerWidth;
+    width = 60;
+    height = 60;
+    size = 10;
+    if(w < 800){
+        size = (w - 10) / 60;
+    }
+    return{
+        width: width, 
+        height: height, 
+        size: size
+    }
+}
 
 function run() {
     createWorld();
@@ -117,6 +165,32 @@ function getFood() {
 }
 
 let start;
+function touch(bt) {
+    if(bt === 'e') {
+        mode = false
+    } else if(bt === 'i') {
+        mode = true;
+        if (!game) {
+            init();
+            bgm.loop = true;
+            bgm.play();
+            keyCode = 74;
+            game = true;
+            window.clearInterval(start);
+            clearScreen();
+            start = window.setInterval("render()", speed);
+        }
+    }
+    if(game && !mode) {
+        switch(bt) {
+            case 'l': if (keyCode != 76) keyCode = 72; break; // h -> left
+            case 'd': if (keyCode != 75) keyCode = 74; break; // j -> down
+            case 'u': if (keyCode != 74) keyCode = 75; break; // k -> up
+            case 'r': if (keyCode != 72) keyCode = 76; break; // l - right
+        }
+    }
+}
+
 function keyDown(e) {
     if (game && (e.which == 27 || (e.ctrlKey && e.which == 219))) { // esc 或 control + [
         mode = false;
@@ -211,6 +285,7 @@ function createWorld() {
         let tr = document.createElement("tr");
         for (let j = 0; j < world.width; j++) {
             let td = document.createElement("td");
+            td.style.cursor = 'none';
             td.style.height = world.size + "px";
             td.style.width = world.size + "px";
             goto_xy[i][j] = tr.appendChild(td);

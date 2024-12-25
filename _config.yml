@@ -30,6 +30,7 @@ github_username: Zzzxb
 # custom
 css: /assets/css
 js: /assets/js
+img: /assets/images
 about: /about
 
 # Build settings
