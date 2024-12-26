@@ -5,6 +5,10 @@ $(document).ready(function() {
   toTop();
 });
 
+$(window).resize(function() {
+    resetImgSize();
+});
+
 function resetImgSize() {
   var content = $(".content");
   var images = $(".content img");
@@ -12,11 +16,13 @@ function resetImgSize() {
     for(var i=0; i< images.length;i++){
       var imgWidth = images[i].width;
       var imgHeight = images[i].height;
-      if( imgWidth >= content.width() ){
+      var cw = content.width()
+      cw = Math.min(cw, $(window).width())
+    //   if( imgWidth >= cw){
           rate =  content.width() /imgWidth;
           images[i].width = content.width();
           images[i].height= imgHeight * rate;
-      }
+    //   }
     }
   }
 }
@@ -69,5 +75,5 @@ function pressToTop() {
         clearInterval(timer);
         timer = null;
       }
-    }, 100);
+    }, 10);
 }
