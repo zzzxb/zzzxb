@@ -3,14 +3,15 @@
   {% include head.html %}
   <body>
     <div id="container">
-    <h1 class="no_select" style="color: white;">
-      <a href="/">{{ site.title }}</a>
-    </h1>
-    <h4 class="no_select" >{{ site.description }}</h5>
-    <div class="content">
-      <h2>{{ page.title }}</h2>
-        {{ content }}
+      <h1 class="no_select" style="color: white;">
+        <a href="/">{{ site.title }}</a>
+      </h1>
+      <h4 class="no_select" >{{ site.description }}</h4>
+      <div class="content">
+        <h2>{{ page.title }}</h2>
+          {{ content }}
+      </div>
     </div>
-    </div>
+    {% include footer.html %}
   </body>
 </html>
