@@ -2,18 +2,7 @@ var timer = null;
 
 $(document).ready(function() {
   resetImgSize();
-
-  $('.top').mousedown(function() {
-    var speed = 1;
-    timer = setInterval(function() {
-      speed++;
-      var scrollPosition = document.documentElement.scrollTop;
-      window.scrollTo(0, scrollPosition - speed);
-      if(scrollPosition === 0) clearInterval(timer);
-    }, 10);
-  }).mouseup(function() {
-    clearInterval(timer);
-  });
+  toTop();
 });
 
 function resetImgSize() {
@@ -48,3 +37,37 @@ window.addEventListener('scroll', function() {
     });
   }
 })
+
+function toTop() {
+  $('.top').mousedown(function() {
+    if(timer === null) {
+      pressToTop();
+    }
+  }).mouseup(function() {
+    clearInterval(timer);
+    timer = null;
+  });
+
+  $('.top').on('touchstart', function() {
+    if(timer === null) {
+      pressToTop();
+    }
+  });
+  $('.top').on('touchend', function() {
+    clearInterval(timer);
+    timer =null;
+  })
+};
+
+function pressToTop() {
+    var speed = 1;
+    timer = setInterval(function() {
+      speed++;
+      var scrollPosition = document.documentElement.scrollTop;
+      window.scrollTo(0, scrollPosition - speed);
+      if(scrollPosition <= 100) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }, 100);
+}
