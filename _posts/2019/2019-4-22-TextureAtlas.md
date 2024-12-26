@@ -24,7 +24,7 @@ atlas 合成后图片内容是每个小图在大图中的名字,位置等信息.
 
 ## TextureAtlas类的使用
 
-![moveButton]({{ '/styles/images/moveButton.png' | prepend: site.baseurl  }})
+![moveButton]({{ '/moveButton.png' | prepend: site.img  }})
 
 ```java
 public class MainGame extends ApplicationAdapter {
@@ -117,4 +117,4 @@ public class MainGame extends ApplicationAdapter {
 }
 ```
 
-![Animation]({{ '/styles/images/animation.gif' | prepend: site.baseurl  }})
+![Animation]({{ '/animation.gif' | prepend: site.img  }})

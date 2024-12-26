@@ -67,4 +67,4 @@ public class Welcome extends ApplicationAdapter {
 }
 ```
 
-![pixmap_move]({{'/styles/images/pixmap_move.gif' | prepend: site.baseurl}})
+![pixmap_move]({{'/pixmap_move.gif' | prepend: site.img}})
