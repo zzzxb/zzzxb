@@ -18,11 +18,9 @@ function resetImgSize() {
       var imgHeight = images[i].height;
       var cw = content.width()
       cw = Math.min(cw, $(window).width())
-    //   if( imgWidth >= cw){
-          rate =  content.width() /imgWidth;
-          images[i].width = content.width();
-          images[i].height= imgHeight * rate;
-    //   }
+      rate =  content.width() /imgWidth;
+      images[i].width = content.width();
+      images[i].height= imgHeight * rate;
     }
   }
 }
@@ -46,23 +44,12 @@ window.addEventListener('scroll', function() {
 
 function toTop() {
   $('.top').mousedown(function() {
-    if(timer === null) {
-      pressToTop();
-    }
-  }).mouseup(function() {
-    clearInterval(timer);
-    timer = null;
+    if(timer === null) pressToTop();
   });
 
   $('.top').on('touchstart', function() {
-    if(timer === null) {
-      pressToTop();
-    }
+    if(timer === null) pressToTop(); 
   });
-  $('.top').on('touchend', function() {
-    clearInterval(timer);
-    timer =null;
-  })
 };
 
 function pressToTop() {
@@ -71,7 +58,7 @@ function pressToTop() {
       speed++;
       var scrollPosition = document.documentElement.scrollTop;
       window.scrollTo(0, scrollPosition - speed);
-      if(scrollPosition <= 100) {
+      if(scrollPosition <= 10) {
         clearInterval(timer);
         timer = null;
       }
