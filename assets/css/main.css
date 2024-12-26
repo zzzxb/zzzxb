@@ -3,16 +3,18 @@
   --c2: #5671355e;
   --c3: #9ce203;
   --c4: #aeff00;
+  --bgimg: url(https://www.umyun.com/agentfile/group2/M00/29/89/rBTsjWdtCxCAD0J9AALvcsWhSrU062.jpg);
+  --arrow: url(https://www.umyun.com/agentfile/group2/M00/29/8A/rBTsjWdtDfmAYmqRAAAA12fEfg4060.png);
 }
 
 * {
-  cursor: url('../images/arrow.png'), auto;
+  cursor: var(--arrow), auto;
   letter-spacing: 0.2px;
 }
 
 body {
   background-color: var(--c0);
-  background-image: url('../images/bg.jpg');
+  background-image: var(--bgimg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
