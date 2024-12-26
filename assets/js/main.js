@@ -55,7 +55,7 @@ function toTop() {
 function pressToTop() {
     var speed = 1;
     timer = setInterval(function() {
-      speed++;
+      speed *= 1.1;
       var scrollPosition = document.documentElement.scrollTop;
       window.scrollTo(0, scrollPosition - speed);
       if(scrollPosition <= 10) {
