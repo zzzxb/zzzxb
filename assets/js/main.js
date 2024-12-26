@@ -1,12 +1,10 @@
 var timer = null;
-
 $(document).ready(function() {
-  resetImgSize();
-  toTop();
-});
-
-$(window).resize(function() {
     resetImgSize();
+    toTop()
+});
+$(window).resize(function() {;
+    resetImgSize()
 });
 
 function resetImgSize() {
@@ -31,19 +29,14 @@ window.addEventListener('scroll', function() {
   var tv = windowHeight * 0.3;
   if(scrollPosition > tv) {
     var op = (scrollPosition - tv) * 0.001;
-    $('.top').css({
-      'display': 'block',
-      'opacity': Math.min(op, 1)
-    });
+    $('.top').css({ 'display': 'block', 'opacity': Math.min(op, 1) });
   }else {
-    $('.top').css({
-      'display': 'none',
-    });
+    $('.top').css({ 'display': 'none', });
   }
 })
 
 function toTop() {
-  $('.top').mousedown(function() {
+  $('.top').on('mousedown', function() {
     if(timer === null) pressToTop();
   });
 

@@ -51,7 +51,7 @@ a {
   transition: color 0.3s ease-in;
 }
 
-a[href],img[src] {
+a[href],img[src],iframe[src] {
   -moz-user-select: none;
   -webkit-user-drag: none;
   user-select: none;
