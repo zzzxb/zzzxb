@@ -62,5 +62,5 @@ function pressToTop() {
         clearInterval(timer);
         timer = null;
       }
-    }, 10);
+    }, 1);
 }
