@@ -4,6 +4,10 @@ $(document).ready(function() {
     toTop()
 });
 
+$(window).resize(function() {;
+    resetImgSize()
+});
+
 function resetImgSize() {
   var content = $(".content");
   var images = $(".content img");
@@ -13,9 +17,10 @@ function resetImgSize() {
       var imgHeight = images[i].height;
       var cw = content.width()
       cw = Math.min(cw, $(window).width())
-      rate =  content.width() /imgWidth;
-      images[i].width = content.width();
-      images[i].height= imgHeight * rate;
+      let rate =  Math.max(content.width() / imgWidth, 0.1);
+      let newHeight = imgHeight * rate;
+      images[i].width = cw;
+      images[i].height= newHeight === 0 ? imgHeight : newHeight;
     }
   }
 }
