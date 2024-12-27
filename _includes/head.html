@@ -2,14 +2,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="https://gitlab.com/zzzxb/Snake/-/raw/master/vim-snake/assets/favicon.ico?ref_type=heads" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{ site.img | append: '/snake.icon' }}" type="image/x-icon" />
   <title>{{ page.title | append: ' - ' | append: site.title }}</title>
 
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="{{ site.css | append: '/default.min.css' }}">
+  <script src="{{ site.js | append: '/highlight.min.js' }}"></script>
   <script> hljs.highlightAll(); </script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="{{ site.js | append: '/jquery.min.js' }}"></script>
   <link href="{{ site.css | append: '/main.css' }}" rel="stylesheet"/>
   <script src="{{ site.js | append: '/main.js' }}"></script>
 </head>
