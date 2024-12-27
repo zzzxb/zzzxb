@@ -51,7 +51,7 @@ a {
   transition: color 0.3s ease-in;
 }
 
-a[href],img[src],iframe[src] {
+a[href],iframe[src] {
   -moz-user-select: none;
   -webkit-user-drag: none;
   user-select: none;
@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px auto;
 }
 
-.no_select, h1, h2, h3, h4, h5, h6, img {
+.no_select, h1, h2, h3, h4, h5, h6 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
