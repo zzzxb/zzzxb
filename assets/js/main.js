@@ -1,8 +1,10 @@
 var timer = null;
 $(document).ready(function() {
-    resetImgSize();
+    // resetImgSize();
     toTop()
 });
+
+window.onload = resetImgSize;
 
 $(window).resize(function() {;
     resetImgSize()
@@ -20,7 +22,8 @@ function resetImgSize() {
       let rate =  Math.max(content.width() / imgWidth, 0.1);
       let newHeight = imgHeight * rate;
       images[i].width = cw;
-      images[i].height= newHeight === 0 ? imgHeight : newHeight;
+      images[i].height= newHeight == 0 ? imgHeight : newHeight;
+      console.log("img" + cw +"*" + newHeight)
     }
   }
 }
