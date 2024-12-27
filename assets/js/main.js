@@ -3,9 +3,6 @@ $(document).ready(function() {
     resetImgSize();
     toTop()
 });
-$(window).resize(function() {;
-    resetImgSize()
-});
 
 function resetImgSize() {
   var content = $(".content");
