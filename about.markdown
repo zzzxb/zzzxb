@@ -5,6 +5,7 @@ title: About
 
 ## 工具
 
+* [游戏资源](https://indienova.com/sp/gameDevResource)
 * [LibGDX](https://libgdx.com)
 * [Godot](https://godotengine.org)
 * [Pyxel](https://github.com/kitao/pyxel?tab=readme-ov-file)
