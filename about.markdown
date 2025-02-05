@@ -3,6 +3,10 @@ layout: post
 title: About
 ---
 
+## 博客
+
+* [Freud's Blog](https://www.hifreud.com) **以前博客模板用的这个**
+
 ## 工具
 
 * [游戏资源](https://indienova.com/sp/gameDevResource)
