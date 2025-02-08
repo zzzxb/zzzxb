@@ -8,7 +8,14 @@
       </h1>
       <h4 class="no_select" >{{ site.description }}</h4>
       <div class="content">
-        <h2>{{ page.title }}</h2>
+        <p>
+          <h2>
+            {{ page.title }} 
+            <span style="font-size: 12px; font-style: italic;"> 
+              {{page.date | date: "%b %d, %Y"}}
+            </span>
+          </h2>
+        </p>
           {{ content }}
       </div>
     </div>

@@ -1,8 +1,10 @@
 :root {
   --c0: #344a2c;
+  --c1: #3b5830;
   --c2: #5671355e;
   --c3: #9ce203;
   --c4: #aeff00;
+  /* --bgimg: url(https://yun.umfintech.com/agentfile/group2/M00/2C/A6/rBTsjWenGuGANPPZAABicTlqjv4997.jpg); */
   --bgimg: url(https://www.umyun.com/agentfile/group2/M00/29/89/rBTsjWdtCxCAD0J9AALvcsWhSrU062.jpg);
   --arrow: url(https://www.umyun.com/agentfile/group2/M00/29/8A/rBTsjWdtDfmAYmqRAAAA12fEfg4060.png);
 }
@@ -13,7 +15,7 @@
 }
 
 body {
-  background-color: var(--c0);
+  background-color: var(--c1);
   background-image: var(--bgimg);
   background-position: center;
   background-size: cover;
@@ -74,7 +76,7 @@ li>a:hover {
   color: var(--c4);
   text-shadow: 
    0 -2px 10px rgba(255, 255, 255, 0.3),
-   0 5px 5px black;
+   0 5px 8px black;
   transition: color 0.2s, text-shadow 0.2s ease-out;
 }
 
@@ -101,14 +103,14 @@ h1, h2, h3, h4, h5, h6 {
 .color_bg {
   text-shadow: 
    0 -2px 10px rgba(255, 255, 255, 1),
-   0 5px 10px black;
+   0 5px 8px black;
 }
 
 code {
   /* border: 1px solid white; */
-  border-radius: 3px;
+  border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.6);
-  color: rgb(218, 2, 2);
+  color: rgb(232, 11, 11);
   margin: 0 2px;
   padding: 2px 3px;
   /* text-shadow: -5px -3px 8px rgba(0, 0, 0, 0.3); */
