@@ -5,7 +5,7 @@
     <a href="{{ post.url | prepend: site.baseurl }}">
       {{ post.title }}
     </a>
-    <code style="opacity: 0.9;">{{ post.tag }}</code>
+    <code id='s_tag' style="opacity: 0.9">{{ post.tag }}</code>
     <!-- - {{ post.date | date: "%b %d" }} -->
   </li>
   {% endfor %}

@@ -42,6 +42,9 @@ body {
   #container {
     width: 97%;
   } 
+  #s_tag {
+    display: none;
+  }
 }
 
 a {
