@@ -49,14 +49,14 @@ body {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: #ffffff;
   text-shadow: 
    0 -2px 10px rgba(255, 255, 255, 0.5),
-   0 5px 10px black;
+   0 5px 5px black;
   transition: color 0.3s ease-in;
 }
 
-a[href],iframe[src], img[src] {
+a[href],iframe[src], img[src], table {
   -moz-user-select: none;
   -webkit-user-drag: none;
   user-select: none;
@@ -65,7 +65,7 @@ a[href],iframe[src], img[src] {
 }
 
 a:hover {
-    color:rgb(228, 103, 14);
+    color:rgb(255, 121, 25);
     transition: color 0.3s ease-out;
 }
 
@@ -135,4 +135,22 @@ code {
  
 .turnY {
   animation: rotateYAnimation 2s infinite linear;
+}
+
+table {
+  /* border-collapse: collapse; */
+  margin: 0 auto;
+}
+
+table, table th, table td {
+  padding: 6px;
+  border: 1px solid black;
+  white-space: nowrap;
+}
+
+table th {
+  background-color: #ff9d9d5e;
+}
+table td:hover {
+  background-color: #9defff5e;
 }
