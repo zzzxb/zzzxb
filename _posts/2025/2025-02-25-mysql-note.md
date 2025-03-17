@@ -135,3 +135,95 @@ alter table employees add hire_date_year year as (YEAR(hire_date)) virtual;
 ```
 
 [延申阅读](https://dev.mysql.com/doc/refman/8.0/en/create-table-generated-columns.html)
+
+## 窗口函数
+
+对于查询中的每一行，可以使用窗口函数，利用与该行相关的执行计算。使用`OVER`和`WINDOW` 子句完成.
+
+* `CUME_DIST()` 累计分布值
+* `DENSE_RANK()` 分区内当前行的等级(无间隔)
+* `FIRST_VALUE()` 窗口帧中第一行的参数值
+* `LAG()` 落后于分区内当前行的那一行的参数值
+* `LAST_VALUE()` 窗口帧中最末行的参数值
+* `LEAD()` 领先于分区内当前行的那一行的参数值 
+* `MTH_VALUE()` 窗口帧中的第N行的参数值
+* `NTILE()` 分区内当前行的桶的编号
+* `PERCENT_RANK()` 百分比排名值 
+* `RANK()` 分区中当前行的等级(有间隔)
+* `ROW_NUMBER()` 分区内当前行的编号
+
+[延申阅读](https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.html)
+[窗口函数行号方法ROW_NUMBER](https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.html#function_row-number)
+
+## 事务
+
+* 事务特性(ACID)
+  * 原子性(Atomicity)
+  * 一致性(Consistency)
+  * 隔离性(Isolation)
+  * 持久性(Durability)
+
+
+### 执行事务
+
+```sql
+-- BEGIN 或 START TRANSACTION 开启事务 
+BEGIN
+
+-- 要执行的 SQL 语句
+
+-- COMMIT 提交事务, ROLLBACK 回滚事务
+COMMIT
+```
+
+[延申阅读](https://dev.mysql.com/doc/refman/8.0/en/implicit-commit.html)
+
+### 保存点
+
+```sql
+BEGIN
+
+-- 需要执行的 SQL
+
+SAVEPOINT flag_name; # 这里是保存点
+
+-- 需要执行的 SQL
+
+ROLLBACK TO flag_name; # 这里是回滚点
+```
+
+### 隔离级别 
+
+* 读提交(read uncommitted) 当前事务读取另一个事务提交的数据(**不可重复读 non-repeatable read**)
+* 读未提交(read committed) 当前事务读取另一个事务未提交的写入数据(**脏读 dirty read**)
+* 可重复读取(repeatable read) 一个事务通过第一条语句只能看到相同的数据，即使另一个事务已提交数据。在同一个事务中，读取通过第一次建立快照的数据是一致的。
+* 序列化(serializable) 通过把选定的所有行锁起来，序列化可以提供最高级别隔离。
+
+### 锁
+
+* 内部锁(自身服务器内部执行的内部锁, 以管理多个会话对表内容的争用)
+  * 行级锁 *只有访问行会被锁定* 适用于多用户、高并发和OLTP程序， 只用**InnoDB**支持行级锁
+  * 表级锁 *一次只允许一个会话更新这些表*(MySQL 对 **MyISAM, MEMORY, MERGE**使用表级锁)适用以只读或读取操作为主的单用户程序
+* 外部锁(为客户会话提供选项来显式地获取表锁, 以阻止其他会话访问表)
+  * READ(共享锁) 多个会话可以从表中读取数据而不需要获取锁，如果想要有写入操作，除非释放锁
+  * WRITE(排他锁) 除持有该锁的会话之外，任何其他会话都不能读取或写入数据，除非释放锁
+
+* 示例
+```sql
+-- 加锁
+LOCK TABLE table_name [READ | WRITE]
+-- 释放锁
+UNLOCK TABLE;
+
+-- 冻结对数据库所有的写入操作 
+FLUSH TABLES WITH READ LOCK;
+```
+
+* 锁队列
+
+除共享锁(一个表可以有多个共享锁)之外，没有两个锁可以一起加在一个表上。如果一个表已经有一个共享锁，此时有一个排他锁进来，
+那么它将被保留在队列中，知道共享锁释放。
+
+* `SHOW PROCESSLIST` 查看执行列表
+
+[元数据锁](https://dev.mysql.com/doc/refman/8.0/en/metadata-locking.html)
