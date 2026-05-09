@@ -2,7 +2,7 @@
 layout: post
 title: "Mac docker 自动隐藏配置"
 date: 2026-03-16 13:59:44 +0800
-tag: 2026
+tag: mac
 ---
 
 * content
