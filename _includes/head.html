@@ -2,14 +2,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="{{ site.img | append: '/tofucat.ico' }}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{ site.baseurl }}{{ site.img }}/tofucat.ico" type="image/x-icon" />
   <title>{{ page.title | append: ' - ' | append: site.title }}</title>
 
-  <link rel="stylesheet" href="{{ site.css | append: '/default.min.css' }}">
-  <script src="{{ site.js | append: '/highlight.min.js' }}"></script>
+  <link rel="stylesheet" href="{{ site.baseurl }}{{ site.css }}/default.min.css">
+  <script src="{{ site.baseurl }}{{ site.js }}/highlight.min.js"></script>
   <script> hljs.highlightAll(); </script>
 
-  <script src="{{ site.js | append: '/jquery.min.js' }}"></script>
-  <link href="{{ site.css | append: '/main.css' }}" rel="stylesheet"/>
-  <script src="{{ site.js | append: '/main.js' }}"></script>
+  <script src="{{ site.baseurl }}{{ site.js }}/jquery.min.js"></script>
+  <link href="{{ site.baseurl }}{{ site.css }}/main.css" rel="stylesheet"/>
+  <script src="{{ site.baseurl }}{{ site.js }}/main.js"></script>
 </head>
