@@ -22,16 +22,17 @@ title: Zzzxb's Blog
 email: idearfree@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
   你要静心学习那份等待时机的成熟的情绪，也要你一定保有这份等待之外的努力和坚持。
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Zzzxb
 github_username: Zzzxb
+url: "https://zzzxb.github.io"
+baseurl: "/zzzxb"
 
 # custom
 css: /assets/css
 js: /assets/js
 img: /assets/images
 about: /about
+
 
 # Build settings
 plugins:
